@@ -20,11 +20,12 @@
         extend: {
           colors: {
             brandRed: {
-              DEFAULT: '#DC2626',
-              dark: '#B91C1C',
-              light: '#EF4444',
-              accent: '#E11D48',
-              hover: '#991B1B',
+              DEFAULT: '#C8102E', // Datamatics Pure Corporate Crimson Red (Zero Orange Tint)
+              dark: '#990000',
+              light: '#E31B23',
+              accent: '#B91C1C',
+              surface: '#FDF2F4',
+              border: '#F8D7DA'
             },
             corporateGraphite: {
               950: '#0F172A',
@@ -71,12 +72,12 @@
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .white-card-hover:hover {
-      border-color: rgba(220, 38, 38, 0.4);
+      border-color: rgba(200, 16, 46, 0.4);
       transform: translateY(-3px);
-      box-shadow: 0 16px 32px -10px rgba(220, 38, 38, 0.15);
+      box-shadow: 0 16px 32px -10px rgba(200, 16, 46, 0.18);
     }
-    .text-gradient-red {
-      background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+    .text-gradient-crimson {
+      background: linear-gradient(135deg, #C8102E 0%, #990000 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -91,17 +92,17 @@
       border-radius: 4px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #DC2626;
+      background: #C8102E;
     }
   </style>
 </head>
 <body class="bg-white text-slate-900 antialiased selection:bg-brandRed selection:text-white">
 
-  <!-- HEADER -->
-  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200">
+  <!-- HEADER & ENTERPRISE NAVIGATION BAR -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
-      <!-- Text-Only Brand Logo -->
+      <!-- Text-Only Brand Mark -->
       <a href="#" class="flex items-center space-x-3 group">
         <div class="w-10 h-10 rounded-xl bg-brandRed text-white flex items-center justify-center font-heading font-black text-xl shadow-md shadow-brandRed/20 group-hover:scale-105 transition-transform">
           R
@@ -114,21 +115,21 @@
         </div>
       </a>
 
-      <!-- Desktop Navigation Links -->
+      <!-- Desktop Navigation Menu (Datamatics Sitemap Structure) -->
       <nav class="hidden lg:flex items-center space-x-8 text-xs font-heading font-bold uppercase tracking-wider text-slate-700">
-        <a href="#products" class="hover:text-brandRed transition-colors">Products & SaaS</a>
-        <a href="#enterprise-mis" class="hover:text-brandRed transition-colors">Enterprise MIS</a>
-        <a href="#automation" class="hover:text-brandRed transition-colors">Process Automation</a>
+        <a href="#solutions" class="hover:text-brandRed transition-colors">Solutions & Services</a>
+        <a href="#products" class="hover:text-brandRed transition-colors">Fintech SaaS</a>
+        <a href="#case-studies" class="hover:text-brandRed transition-colors">Case Studies</a>
         <a href="#ecosystem" class="hover:text-brandRed transition-colors">Media & Ecosystem</a>
         <a href="#leadership" class="hover:text-brandRed transition-colors">Leadership</a>
-        <a href="#calculator" class="hover:text-brandRed transition-colors">ROI Calculator</a>
+        <a href="#faq" class="hover:text-brandRed transition-colors">FAQ</a>
       </nav>
 
       <!-- CTA Button -->
       <div class="flex items-center space-x-4">
         <button
           onclick="openModal()"
-          class="hidden sm:inline-flex px-5 py-2.5 rounded-xl bg-brandRed hover:bg-brandRed-dark text-white font-heading font-bold text-xs shadow-md shadow-brandRed/20 transition-all transform hover:-translate-y-0.5 items-center space-x-2"
+          class="hidden sm:inline-flex px-5 py-2.5 rounded-xl bg-brandRed hover:bg-brandRed-dark text-white font-heading font-bold text-xs shadow-md shadow-brandRed/25 transition-all transform hover:-translate-y-0.5 items-center space-x-2"
         >
           <span>Schedule Consultation</span>
           <i data-lucide="arrow-right" class="w-4 h-4"></i>
@@ -147,12 +148,12 @@
 
     <!-- Mobile Dropdown -->
     <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-3 text-xs font-heading font-bold">
-      <a href="#products" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 hover:text-brandRed">Products & SaaS</a>
-      <a href="#enterprise-mis" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 hover:text-brandRed">Enterprise MIS</a>
-      <a href="#automation" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 hover:text-brandRed">Process Automation</a>
+      <a href="#solutions" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 hover:text-brandRed">Solutions & Services</a>
+      <a href="#products" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 hover:text-brandRed">Fintech SaaS</a>
+      <a href="#case-studies" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 hover:text-brandRed">Case Studies</a>
       <a href="#ecosystem" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 hover:text-brandRed">Media & Ecosystem</a>
       <a href="#leadership" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 hover:text-brandRed">Leadership</a>
-      <a href="#calculator" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 hover:text-brandRed">ROI Calculator</a>
+      <a href="#faq" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 hover:text-brandRed">FAQ</a>
       <button
         onclick="toggleMobileMenu(); openModal();"
         class="w-full py-3 rounded-xl bg-brandRed text-white font-bold text-center block shadow-md"
@@ -162,26 +163,26 @@
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="relative pt-16 pb-24 md:pt-24 md:pb-32 overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50">
+  <!-- HERO SECTION (Datamatics Positioning) -->
+  <section class="relative pt-16 pb-24 md:pt-24 md:pb-32 overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
         <!-- Left Text Column (7 Cols) -->
         <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
           
-          <div class="inline-flex items-center space-x-2 bg-white border border-slate-200 px-4 py-1.5 rounded-full text-xs font-mono text-brandRed font-semibold shadow-sm">
+          <div class="inline-flex items-center space-x-2 bg-brandRed-surface border border-brandRed-border px-4 py-1.5 rounded-full text-xs font-mono text-brandRed font-bold shadow-sm">
             <span class="w-2 h-2 rounded-full bg-brandRed animate-pulse"></span>
-            <span>RUNIT INFOTECH • runito.in</span>
+            <span>RUNIT INFOTECH • Digital Operations & Data Automation</span>
           </div>
 
           <h1 class="font-heading text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-none">
-            Enterprise Software, <br class="hidden sm:inline" />
-            <span class="text-gradient-red">Fintech SaaS</span> & Data Automation
+            Intelligent Digital Operations, <br class="hidden sm:inline" />
+            <span class="text-gradient-crimson">Fintech SaaS</span> & Financial MIS
           </h1>
 
           <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
-            Architecting robust Cloud POS systems, micro ledgers, BFSI collections billing audit QC, and automated SQL data pipelines for high-growth enterprises and retail businesses.
+            Empowering global enterprises, retail supermarkets, and financial institutions with Cloud POS systems, micro ledgers, BFSI collections billing audit QC, and automated SQL data pipelines.
           </p>
 
           <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
@@ -189,15 +190,15 @@
               onclick="openModal()"
               class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brandRed hover:bg-brandRed-dark text-white font-heading font-bold text-sm shadow-xl shadow-brandRed/25 transition-all transform hover:-translate-y-0.5 flex items-center justify-center space-x-2"
             >
-              <span>Schedule Consultation</span>
+              <span>Schedule Enterprise Consultation</span>
               <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </button>
 
             <a
-              href="#products"
+              href="#solutions"
               class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-800 font-heading font-semibold text-sm transition-all text-center"
             >
-              Explore Products
+              Explore Solutions
             </a>
           </div>
 
@@ -208,7 +209,7 @@
           <div class="white-card p-8 rounded-3xl border border-slate-200 shadow-xl relative space-y-6">
             <div class="flex items-center justify-between border-b border-slate-200 pb-4">
               <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-xl bg-red-50 border border-red-200 flex items-center justify-center text-brandRed font-bold">
+                <div class="w-10 h-10 rounded-xl bg-brandRed-surface border border-brandRed-border flex items-center justify-center text-brandRed font-bold">
                   <i data-lucide="shield-check" class="w-5 h-5"></i>
                 </div>
                 <div>
@@ -223,13 +224,13 @@
               <div class="bg-slate-50 border border-slate-200 p-4 rounded-2xl">
                 <span class="text-xs text-slate-500 font-mono uppercase block">SaaS Ecosystem</span>
                 <span class="font-heading font-bold text-xl text-slate-900">PowerBooks</span>
-                <span class="text-[11px] text-brandRed font-mono block mt-1 font-semibold">Cloud POS & ERP</span>
+                <span class="text-[11px] text-brandRed font-mono block mt-1 font-bold">Cloud POS & ERP</span>
               </div>
 
               <div class="bg-slate-50 border border-slate-200 p-4 rounded-2xl">
                 <span class="text-xs text-slate-500 font-mono uppercase block">Micro Ledger</span>
                 <span class="font-heading font-bold text-xl text-slate-900">FireBooks</span>
-                <span class="text-[11px] text-emerald-600 font-mono block mt-1 font-semibold">Instant Ledger</span>
+                <span class="text-[11px] text-emerald-600 font-mono block mt-1 font-bold">Instant Ledger</span>
               </div>
             </div>
 
@@ -238,7 +239,7 @@
                 <span class="text-xs text-slate-500 font-mono uppercase block">Bio Link Generator</span>
                 <span class="font-heading font-bold text-base text-slate-900">1lybio.in</span>
               </div>
-              <a href="https://1lybio.in/" target="_blank" rel="noreferrer" class="px-3 py-1.5 rounded-lg bg-red-50 hover:bg-red-100 text-brandRed text-xs font-mono font-bold transition-colors">
+              <a href="https://1lybio.in/" target="_blank" rel="noreferrer" class="px-3 py-1.5 rounded-lg bg-brandRed-surface hover:bg-red-100 text-brandRed text-xs font-mono font-bold transition-colors">
                 Visit Site ↗
               </a>
             </div>
@@ -251,7 +252,7 @@
       <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 pt-12 border-t border-slate-200 text-center">
         <div class="space-y-1">
           <p class="font-heading font-black text-3xl sm:text-4xl text-slate-900 font-mono">10+ Years</p>
-          <p class="text-xs text-slate-500 font-mono uppercase tracking-wider font-semibold">Enterprise Data & Audit Expertise</p>
+          <p class="text-xs text-slate-500 font-mono uppercase tracking-wider font-semibold">Enterprise MIS & Audit Expertise</p>
         </div>
         <div class="space-y-1">
           <p class="font-heading font-black text-3xl sm:text-4xl text-brandRed font-mono">98.5%</p>
@@ -270,226 +271,251 @@
     </div>
   </section>
 
-  <!-- HERITAGE SECTION -->
-  <section class="py-20 bg-slate-50 border-t border-b border-slate-200">
+  <!-- SOLUTIONS & DIGITAL OPERATIONS GRID (Datamatics Concept) -->
+  <section id="solutions" class="py-20 md:py-28 bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-        <div class="inline-flex items-center space-x-2 bg-white border border-slate-200 px-3.5 py-1.5 rounded-full text-xs font-mono text-brandRed font-semibold">
-          <i data-lucide="award" class="w-3.5 h-3.5 text-brandRed"></i>
-          <span>ENTERPRISE STANDARDS</span>
+        <div class="inline-flex items-center space-x-2 bg-slate-100 border border-slate-200 px-3.5 py-1.5 rounded-full text-xs font-mono text-brandRed font-semibold">
+          <i data-lucide="layers" class="w-3.5 h-3.5 text-brandRed"></i>
+          <span>SOLUTIONS & DIGITAL OPERATIONS</span>
         </div>
 
         <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
-          Built for <span class="text-gradient-red">Enterprise Scale</span> & Audit Reliability
+          Comprehensive Solutions for <span class="text-gradient-crimson">Enterprise Excellence</span>
         </h2>
 
         <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
-          Engineered to institutional specifications, combining deep domain knowledge in BFSI collections billing audit QC with modern, reactive web architectures.
+          RUNIT delivers specialized enterprise capabilities spanning BFSI quality control billing audit, cloud POS retail management, and automated SQL data pipelines.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
-        <div class="white-card white-card-hover p-8 rounded-3xl space-y-4">
-          <div class="w-12 h-12 rounded-2xl bg-red-50 border border-red-200 flex items-center justify-center text-brandRed">
-            <i data-lucide="database" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-heading font-bold text-xl text-slate-900">Institutional Data Rigor</h3>
-          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-            Battle-tested financial data reconciliation models handling millions of records across multi-tier database pipelines with zero data-loss tolerance.
-          </p>
-        </div>
-
-        <div class="white-card white-card-hover p-8 rounded-3xl space-y-4">
-          <div class="w-12 h-12 rounded-2xl bg-red-50 border border-red-200 flex items-center justify-center text-brandRed">
-            <i data-lucide="layers" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-heading font-bold text-xl text-slate-900">Proprietary SaaS Ecosystem</h3>
-          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-            In-house developed cloud solutions including PowerBooks (Cloud POS ERP), FireBooks (Micro Ledger), and 1lybio (Digital Card Utility).
-          </p>
-        </div>
-
-        <div class="white-card white-card-hover p-8 rounded-3xl space-y-4">
-          <div class="w-12 h-12 rounded-2xl bg-red-50 border border-red-200 flex items-center justify-center text-brandRed">
-            <i data-lucide="cpu" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-heading font-bold text-xl text-slate-900">Process Automation</h3>
-          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-            Custom SQL data pipelines and automated messaging workflows that replace manual Excel reporting with live PowerBI operational intelligence.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- PRODUCT PILLARS SECTION -->
-  <section id="products" class="py-20 md:py-28 relative bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-        <div class="inline-flex items-center space-x-2 bg-slate-100 border border-slate-200 px-3.5 py-1.5 rounded-full text-xs font-mono text-brandRed font-semibold">
-          <i data-lucide="layout-grid" class="w-3.5 h-3.5 text-brandRed"></i>
-          <span>CORE ARCHITECTURAL PILLARS</span>
-        </div>
-
-        <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
-          Three Pillars of <span class="text-gradient-red">Digital Capability</span>
-        </h2>
-
-        <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
-          Select a domain pillar below to examine RUNIT’s software ecosystem, technical specifications, and enterprise service offerings.
-        </p>
-      </div>
-
-      <!-- Tab Switcher Navigation -->
-      <div class="flex flex-wrap justify-center gap-3 mb-12">
-        <button
-          onclick="switchTab('saas')"
-          id="tab-btn-saas"
-          class="tab-btn px-6 py-3 rounded-2xl text-xs sm:text-sm font-heading font-bold transition-all bg-brandRed text-white shadow-md"
-        >
-          1. Fintech SaaS & Web Apps
-        </button>
-
-        <button
-          onclick="switchTab('mis')"
-          id="tab-btn-mis"
-          class="tab-btn px-6 py-3 rounded-2xl text-xs sm:text-sm font-heading font-bold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200"
-        >
-          2. Enterprise MIS & Analytics
-        </button>
-
-        <button
-          onclick="switchTab('automation')"
-          id="tab-btn-automation"
-          class="tab-btn px-6 py-3 rounded-2xl text-xs sm:text-sm font-heading font-bold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200"
-        >
-          3. Process Automation & Pipelines
-        </button>
-      </div>
-
-      <!-- Tab 1: Fintech SaaS -->
-      <div id="tab-content-saas" class="tab-content space-y-8">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
-          <div class="white-card p-8 rounded-3xl space-y-6 flex flex-col justify-between">
-            <div class="space-y-4">
-              <div class="flex items-center justify-between">
-                <span class="px-3 py-1 rounded-full bg-red-50 text-brandRed font-mono text-[10px] font-bold border border-red-200">FLAGSHIP POS</span>
-                <span class="text-xs text-slate-500 font-mono font-semibold">v2.4 Active</span>
-              </div>
-              <h3 class="font-heading font-extrabold text-2xl text-slate-900">PowerBooks</h3>
-              <p class="text-xs text-brandRed font-mono font-bold">Cloud POS & Supermarket ERP</p>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Full-featured cloud point-of-sale platform built for retail stores and supermarkets with multi-MRP rate pricing, barcode scanning, offline queue sync, and GST billing.
-              </p>
+        <!-- Service Card 1 -->
+        <div class="white-card white-card-hover p-8 rounded-3xl space-y-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-brandRed-surface border border-brandRed-border flex items-center justify-center text-brandRed">
+              <i data-lucide="file-check-2" class="w-6 h-6"></i>
             </div>
-            <button onclick="openModal('PowerBooks POS SaaS')" class="w-full py-3 rounded-xl bg-slate-100 hover:bg-brandRed hover:text-white text-slate-800 text-xs font-bold font-heading transition-colors border border-slate-200">
-              Request Demo
-            </button>
-          </div>
-
-          <div class="white-card p-8 rounded-3xl space-y-6 flex flex-col justify-between">
-            <div class="space-y-4">
-              <div class="flex items-center justify-between">
-                <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 font-mono text-[10px] font-bold border border-emerald-200">MICRO LEDGER</span>
-                <span class="text-xs text-slate-500 font-mono font-semibold">Active</span>
-              </div>
-              <h3 class="font-heading font-extrabold text-2xl text-slate-900">FireBooks</h3>
-              <p class="text-xs text-emerald-700 font-mono font-bold">Micro Cloud Accounting</p>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Lightweight cloud ledger for small businesses, contractors, and freelancers offering simplified income/expense logging, payment receipts, and automated PDF export.
-              </p>
-            </div>
-            <button onclick="openModal('FireBooks Micro Ledger')" class="w-full py-3 rounded-xl bg-slate-100 hover:bg-brandRed hover:text-white text-slate-800 text-xs font-bold font-heading transition-colors border border-slate-200">
-              Learn More
-            </button>
-          </div>
-
-          <div class="white-card p-8 rounded-3xl space-y-6 flex flex-col justify-between">
-            <div class="space-y-4">
-              <div class="flex items-center justify-between">
-                <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 font-mono text-[10px] font-bold border border-blue-200">BIO LINK UTILITY</span>
-                <a href="https://1lybio.in/" target="_blank" class="text-xs text-blue-600 hover:underline font-mono font-semibold">1lybio.in ↗</a>
-              </div>
-              <h3 class="font-heading font-extrabold text-2xl text-slate-900">1lybio</h3>
-              <p class="text-xs text-blue-600 font-mono font-bold">Digital Bio-Link Generator</p>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Instant digital profile & link hub creator empowering creators, professionals, and brands to aggregate social channels, portfolios, and contact cards into a single link.
-              </p>
-            </div>
-            <a href="https://1lybio.in/" target="_blank" class="w-full py-3 rounded-xl bg-slate-100 hover:bg-brandRed hover:text-white text-slate-800 text-xs font-bold font-heading transition-colors border border-slate-200 text-center block">
-              Launch 1lybio.in
-            </a>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Tab 2: Enterprise MIS -->
-      <div id="tab-content-mis" class="tab-content hidden space-y-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          
-          <div class="white-card p-8 rounded-3xl space-y-4">
-            <div class="flex items-center space-x-3">
-              <div class="w-10 h-10 rounded-xl bg-red-50 text-brandRed flex items-center justify-center font-bold border border-red-200">
-                <i data-lucide="file-check-2" class="w-5 h-5"></i>
-              </div>
-              <h3 class="font-heading font-bold text-2xl text-slate-900">BFSI Collections Billing QC Audit</h3>
-            </div>
+            <h3 class="font-heading font-extrabold text-2xl text-slate-900">BFSI Collections Billing QC Audit</h3>
+            <p class="text-xs text-brandRed font-mono font-bold">Financial Reconciliation Engine</p>
             <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Specialized quality control audit and billing reconciliation models engineered for Banking, Financial Services, and Collections recovery operations, ensuring 98.5% billing audit accuracy.
+              Specialized quality control audit and billing reconciliation models engineered for Banking, Financial Services, and Recovery operations, ensuring 98.5% billing audit accuracy.
             </p>
           </div>
+          <button onclick="openModal('BFSI Collections & Billing QC')" class="w-full py-3 rounded-xl bg-slate-100 hover:bg-brandRed hover:text-white text-slate-800 text-xs font-bold font-heading transition-colors border border-slate-200">
+            Request Audit Overview
+          </button>
+        </div>
 
-          <div class="white-card p-8 rounded-3xl space-y-4">
-            <div class="flex items-center space-x-3">
-              <div class="w-10 h-10 rounded-xl bg-red-50 text-brandRed flex items-center justify-center font-bold border border-red-200">
-                <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
-              </div>
-              <h3 class="font-heading font-bold text-2xl text-slate-900">PowerBI & SQL Analytics Dashboards</h3>
+        <!-- Service Card 2 -->
+        <div class="white-card white-card-hover p-8 rounded-3xl space-y-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-brandRed-surface border border-brandRed-border flex items-center justify-center text-brandRed">
+              <i data-lucide="database" class="w-6 h-6"></i>
             </div>
+            <h3 class="font-heading font-extrabold text-2xl text-slate-900">Automated SQL Data Pipelines</h3>
+            <p class="text-xs text-brandRed font-mono font-bold">ETL & Exception Workflows</p>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Eliminating manual spreadsheet consolidation through automated SQL extraction, ETL validation, scheduled triggers, and automated messaging alerts (WhatsApp / Email digests).
+            </p>
+          </div>
+          <button onclick="openModal('Automated Data Pipelines')" class="w-full py-3 rounded-xl bg-slate-100 hover:bg-brandRed hover:text-white text-slate-800 text-xs font-bold font-heading transition-colors border border-slate-200">
+            Schedule Pipeline Consultation
+          </button>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="white-card white-card-hover p-8 rounded-3xl space-y-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-brandRed-surface border border-brandRed-border flex items-center justify-center text-brandRed">
+              <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-heading font-extrabold text-2xl text-slate-900">PowerBI & SQL Executive MIS</h3>
+            <p class="text-xs text-brandRed font-mono font-bold">Real-time KPI Intelligence</p>
             <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
               Custom interactive PowerBI & SQL data dashboards that transform fragmented transactional data into real-time executive KPI visualizations and operational decision boards.
             </p>
           </div>
-
+          <button onclick="openModal('PowerBI & SQL Analytics')" class="w-full py-3 rounded-xl bg-slate-100 hover:bg-brandRed hover:text-white text-slate-800 text-xs font-bold font-heading transition-colors border border-slate-200">
+            View Analytics Architecture
+          </button>
         </div>
-      </div>
 
-      <!-- Tab 3: Automation -->
-      <div id="tab-content-automation" class="tab-content hidden space-y-8">
-        <div class="white-card p-8 rounded-3xl space-y-6">
-          <h3 class="font-heading font-bold text-2xl text-slate-900">Automated SQL Data Pipelines</h3>
-          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-            Eliminating manual spreadsheet consolidation through automated SQL extraction, ETL validation, scheduled triggers, and automated messaging alerts (WhatsApp / Email digests).
-          </p>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-mono text-slate-700">
-            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
-              <span class="text-brandRed font-bold block mb-1">✓ Automated ETL</span>
-              Direct database to report sync
-            </div>
-            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
-              <span class="text-brandRed font-bold block mb-1">✓ 85% Hours Saved</span>
-              Zero spreadsheet grinding
-            </div>
-            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
-              <span class="text-brandRed font-bold block mb-1">✓ Audit Verified</span>
-              Precision error validation
-            </div>
-          </div>
-        </div>
       </div>
 
     </div>
   </section>
 
-  <!-- LAVISH DREAMERS & MEDIA SYNERGY SECTION -->
-  <section id="ecosystem" class="py-20 bg-slate-50 border-t border-b border-slate-200">
+  <!-- FINTECH SAAS PRODUCTS SECTION -->
+  <section id="products" class="py-20 md:py-28 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <div class="inline-flex items-center space-x-2 bg-white border border-slate-200 px-3.5 py-1.5 rounded-full text-xs font-mono text-brandRed font-semibold">
+          <i data-lucide="layout-grid" class="w-3.5 h-3.5 text-brandRed"></i>
+          <span>PROPRIETARY SAAS SUITE</span>
+        </div>
+
+        <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+          Cloud Products & <span class="text-gradient-crimson">SaaS Solutions</span>
+        </h2>
+
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+          High-performance cloud software built in-house for retail businesses, contractors, and creators.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- PowerBooks -->
+        <div class="white-card p-8 rounded-3xl space-y-6 flex flex-col justify-between shadow-md">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-brandRed-surface text-brandRed font-mono text-[10px] font-bold border border-brandRed-border">FLAGSHIP POS</span>
+              <span class="text-xs text-slate-500 font-mono font-semibold">v2.4 Active</span>
+            </div>
+            <h3 class="font-heading font-extrabold text-2xl text-slate-900">PowerBooks</h3>
+            <p class="text-xs text-brandRed font-mono font-bold">Cloud POS & Supermarket ERP</p>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Full-featured cloud point-of-sale platform built for retail stores and supermarkets with multi-MRP rate pricing, barcode scanning, offline queue sync, and GST billing.
+            </p>
+          </div>
+          <button onclick="openModal('PowerBooks POS SaaS')" class="w-full py-3 rounded-xl bg-slate-100 hover:bg-brandRed hover:text-white text-slate-800 text-xs font-bold font-heading transition-colors border border-slate-200">
+            Request Demo
+          </button>
+        </div>
+
+        <!-- FireBooks -->
+        <div class="white-card p-8 rounded-3xl space-y-6 flex flex-col justify-between shadow-md">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 font-mono text-[10px] font-bold border border-emerald-200">MICRO LEDGER</span>
+              <span class="text-xs text-slate-500 font-mono font-semibold">Active</span>
+            </div>
+            <h3 class="font-heading font-extrabold text-2xl text-slate-900">FireBooks</h3>
+            <p class="text-xs text-emerald-700 font-mono font-bold">Micro Cloud Accounting</p>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Lightweight cloud ledger for small businesses, contractors, and freelancers offering simplified income/expense logging, payment receipts, and automated PDF export.
+            </p>
+          </div>
+          <button onclick="openModal('FireBooks Micro Ledger')" class="w-full py-3 rounded-xl bg-slate-100 hover:bg-brandRed hover:text-white text-slate-800 text-xs font-bold font-heading transition-colors border border-slate-200">
+            Learn More
+          </button>
+        </div>
+
+        <!-- 1lybio -->
+        <div class="white-card p-8 rounded-3xl space-y-6 flex flex-col justify-between shadow-md">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 font-mono text-[10px] font-bold border border-blue-200">BIO LINK UTILITY</span>
+              <a href="https://1lybio.in/" target="_blank" class="text-xs text-blue-600 hover:underline font-mono font-semibold">1lybio.in ↗</a>
+            </div>
+            <h3 class="font-heading font-extrabold text-2xl text-slate-900">1lybio</h3>
+            <p class="text-xs text-blue-600 font-mono font-bold">Digital Bio-Link Generator</p>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Instant digital profile & link hub creator empowering creators, professionals, and brands to aggregate social channels, portfolios, and contact cards into a single link.
+            </p>
+          </div>
+          <a href="https://1lybio.in/" target="_blank" class="w-full py-3 rounded-xl bg-slate-100 hover:bg-brandRed hover:text-white text-slate-800 text-xs font-bold font-heading transition-colors border border-slate-200 text-center block">
+            Launch 1lybio.in
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CASE STUDIES & DETAILED PROVEN IMPACT SECTION (Replacing Calculator) -->
+  <section id="case-studies" class="py-20 md:py-28 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <div class="inline-flex items-center space-x-2 bg-slate-100 border border-slate-200 px-3.5 py-1.5 rounded-full text-xs font-mono text-brandRed font-semibold">
+          <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-brandRed"></i>
+          <span>PROVEN IMPACT & CASE STUDIES</span>
+        </div>
+
+        <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+          Real-World Enterprise <span class="text-gradient-crimson">Case Studies</span>
+        </h2>
+
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+          Demonstrating measurable operational performance gains across BFSI billing audits, retail supermarket POS, and automated SQL data pipelines.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Case Study 1 -->
+        <div class="white-card white-card-hover p-8 rounded-3xl space-y-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-brandRed-surface text-brandRed font-mono text-[10px] font-bold border border-brandRed-border">BFSI COLLECTIONS</span>
+              <span class="text-xs text-emerald-700 font-mono font-bold">✓ 98.5% Accuracy</span>
+            </div>
+            <h3 class="font-heading font-extrabold text-xl text-slate-900">Recovery Billing QC Audit</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              <span class="font-bold text-slate-900">Challenge:</span> Managing agency billing reconciliation across multi-tier recovery commissions without manual fee leakage.
+            </p>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              <span class="font-bold text-slate-900">Solution:</span> Automated audit engine validating payout slabs, agency collections data, and call center logs.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200">
+            <span class="text-xs font-mono font-bold text-brandRed block">Result: 98.5% Billing Audit Accuracy</span>
+          </div>
+        </div>
+
+        <!-- Case Study 2 -->
+        <div class="white-card white-card-hover p-8 rounded-3xl space-y-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 font-mono text-[10px] font-bold border border-emerald-200">RETAIL SUPERMARKET</span>
+              <span class="text-xs text-emerald-700 font-mono font-bold">✓ 40% Queue Reduction</span>
+            </div>
+            <h3 class="font-heading font-extrabold text-xl text-slate-900">Supermarket Cloud POS Deployment</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              <span class="font-bold text-slate-900">Challenge:</span> High-volume cashiers needing multi-MRP rate pricing and zero billing interruption during network drops.
+            </p>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              <span class="font-bold text-slate-900">Solution:</span> PowerBooks Cloud POS with local offline queue sync and instant barcode scanning.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200">
+            <span class="text-xs font-mono font-bold text-emerald-700 block">Result: 100% Billing Uptime</span>
+          </div>
+        </div>
+
+        <!-- Case Study 3 -->
+        <div class="white-card white-card-hover p-8 rounded-3xl space-y-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 font-mono text-[10px] font-bold border border-blue-200">DATA PIPELINES</span>
+              <span class="text-xs text-blue-700 font-mono font-bold">✓ 85% Hours Saved</span>
+            </div>
+            <h3 class="font-heading font-extrabold text-xl text-slate-900">Automated SQL Data Pipeline</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              <span class="font-bold text-slate-900">Challenge:</span> Finance teams spending 25+ hours weekly manually aggregating Excel reports.
+            </p>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              <span class="font-bold text-slate-900">Solution:</span> Automated SQL extraction pipeline synced directly to live PowerBI executive dashboards.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-200">
+            <span class="text-xs font-mono font-bold text-blue-700 block">Result: 85% Reduction in Labor</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MEDIA & ECOSYSTEM SYNERGY (Lavish Dreamers lavishdreamers.com) -->
+  <section id="ecosystem" class="py-20 bg-slate-50 border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
@@ -499,7 +525,7 @@
         </div>
 
         <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
-          Lavish Dreamers <span class="text-gradient-red">Media & Community Synergy</span>
+          Lavish Dreamers <span class="text-gradient-crimson">Media & Community Synergy</span>
         </h2>
 
         <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
@@ -513,7 +539,7 @@
         <div class="white-card white-card-hover p-8 rounded-3xl space-y-6 flex flex-col justify-between">
           <div class="space-y-4">
             <div class="flex items-center space-x-4">
-              <div class="w-14 h-14 rounded-2xl bg-red-50 border border-red-200 flex items-center justify-center text-brandRed">
+              <div class="w-14 h-14 rounded-2xl bg-brandRed-surface border border-brandRed-border flex items-center justify-center text-brandRed">
                 <i data-lucide="video" class="w-7 h-7"></i>
               </div>
               <div>
@@ -550,7 +576,7 @@
         <div class="white-card white-card-hover p-8 rounded-3xl space-y-6 flex flex-col justify-between">
           <div class="space-y-4">
             <div class="flex items-center space-x-4">
-              <div class="w-14 h-14 rounded-2xl bg-red-50 border border-red-200 flex items-center justify-center text-brandRed">
+              <div class="w-14 h-14 rounded-2xl bg-brandRed-surface border border-brandRed-border flex items-center justify-center text-brandRed">
                 <i data-lucide="sparkles" class="w-7 h-7"></i>
               </div>
               <div>
@@ -589,178 +615,18 @@
     </div>
   </section>
 
-  <!-- ROI CALCULATOR SECTION -->
-  <section id="calculator" class="py-20 md:py-28 relative bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      
-      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-        <div class="inline-flex items-center space-x-2 bg-slate-100 border border-slate-200 px-3.5 py-1.5 rounded-full text-xs font-mono text-brandRed font-semibold">
-          <i data-lucide="calculator" class="w-3.5 h-3.5 text-brandRed"></i>
-          <span>BUSINESS AUTOMATION ROI CALCULATOR</span>
-        </div>
-
-        <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
-          Calculate Your <span class="text-gradient-red">Operational Time & Cost Savings</span>
-        </h2>
-
-        <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
-          Estimate how much operational time and financial expense your business saves by eliminating manual spreadsheet reporting with automated SQL data pipelines.
-        </p>
-      </div>
-
-      <!-- Calculator Box -->
-      <div class="white-card max-w-5xl mx-auto rounded-3xl p-6 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 shadow-xl">
-        
-        <!-- Controls Column (7 Cols) -->
-        <div class="lg:col-span-7 space-y-8">
-          
-          <div class="flex items-center justify-between border-b border-slate-200 pb-4">
-            <h3 class="font-heading font-bold text-xl text-slate-900">Operational Parameters</h3>
-            
-            <!-- Currency Toggle -->
-            <div class="flex items-center bg-slate-100 border border-slate-200 rounded-xl p-1 text-xs font-mono">
-              <button
-                id="curr-inr"
-                onclick="setCurrency('INR')"
-                class="px-3 py-1 rounded-lg font-bold bg-brandRed text-white transition-colors"
-              >
-                ₹ INR
-              </button>
-              <button
-                id="curr-usd"
-                onclick="setCurrency('USD')"
-                class="px-3 py-1 rounded-lg font-bold text-slate-600 hover:text-slate-900 transition-colors"
-              >
-                $ USD
-              </button>
-            </div>
-          </div>
-
-          <!-- Slider 1 -->
-          <div class="space-y-3">
-            <div class="flex justify-between items-center text-xs sm:text-sm font-semibold">
-              <label class="text-slate-700 flex items-center space-x-2">
-                <i data-lucide="clock" class="w-4 h-4 text-brandRed"></i>
-                <span>Manual Reporting Hours Spent / Week</span>
-              </label>
-              <span id="weekly-hours-val" class="font-heading font-black text-xl text-brandRed font-mono bg-red-50 border border-red-200 px-3 py-1 rounded-xl">
-                25 Hours / wk
-              </span>
-            </div>
-
-            <input
-              type="range"
-              id="weekly-hours-range"
-              min="5"
-              max="100"
-              step="5"
-              value="25"
-              oninput="calculateROI()"
-              class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-red-600"
-            />
-            <div class="flex justify-between text-[10px] text-slate-500 font-mono">
-              <span>5 hrs (Small Team)</span>
-              <span>50 hrs (Enterprise Unit)</span>
-              <span>100 hrs (Global Operations)</span>
-            </div>
-          </div>
-
-          <!-- Slider 2 -->
-          <div class="space-y-3">
-            <div class="flex justify-between items-center text-xs sm:text-sm font-semibold">
-              <label class="text-slate-700 flex items-center space-x-2">
-                <i data-lucide="trending-up" class="w-4 h-4 text-emerald-600"></i>
-                <span>Monthly Vendor Invoices / Line Items</span>
-              </label>
-              <span id="monthly-invoices-val" class="font-heading font-black text-xl text-emerald-700 font-mono bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-xl">
-                500 Bills / mo
-              </span>
-            </div>
-
-            <input
-              type="range"
-              id="monthly-invoices-range"
-              min="50"
-              max="5000"
-              step="50"
-              value="500"
-              oninput="calculateROI()"
-              class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-emerald-600"
-            />
-            <div class="flex justify-between text-[10px] text-slate-500 font-mono">
-              <span>50 Bills</span>
-              <span>2,500 Bills</span>
-              <span>5,000+ Bills</span>
-            </div>
-          </div>
-
-          <div class="bg-slate-50 border border-slate-200 p-4 rounded-2xl text-xs text-slate-600 space-y-1">
-            <p class="font-semibold text-slate-800 font-mono">⚙️ Enterprise Calculation Benchmark:</p>
-            <p>Based on financial billing audit benchmarks (achieving 85% reduction in manual spreadsheet compilation hours).</p>
-          </div>
-
-        </div>
-
-        <!-- Output Column (5 Cols) -->
-        <div class="lg:col-span-5 bg-slate-900 text-white p-6 sm:p-8 rounded-2xl flex flex-col justify-between space-y-6 shadow-xl">
-          
-          <div class="space-y-6">
-            <h4 class="font-heading font-bold text-lg text-white border-b border-slate-800 pb-3">Estimated ROI & Output</h4>
-
-            <div class="space-y-1">
-              <p class="text-xs text-slate-400 font-mono uppercase">⏱️ Hours Saved Monthly</p>
-              <p id="res-hours-saved" class="font-heading font-black text-3xl sm:text-4xl text-brandRed-light font-mono">
-                92 Hours <span class="text-xs text-slate-400 font-normal">/ mo</span>
-              </p>
-              <p class="text-[11px] text-emerald-400 font-semibold font-mono">✓ 85% reduction in manual effort</p>
-            </div>
-
-            <div class="space-y-1">
-              <p class="text-xs text-slate-400 font-mono uppercase">💰 Estimated Monthly Savings</p>
-              <p id="res-monthly-savings" class="font-heading font-black text-3xl sm:text-4xl text-emerald-400 font-mono">
-                ₹70,950
-              </p>
-              <p class="text-[11px] text-slate-400 font-mono">
-                Annual Estimated Savings: <span id="res-annual-savings" class="text-white font-bold">₹851,400</span>
-              </p>
-            </div>
-
-            <div class="space-y-1">
-              <p class="text-xs text-slate-400 font-mono uppercase">📊 Reconciliation Accuracy</p>
-              <p class="font-heading font-bold text-xl text-white font-mono flex items-center space-x-2">
-                <i data-lucide="shield-check" class="w-5 h-5 text-emerald-400"></i>
-                <span>98.5% Audit Precision</span>
-              </p>
-            </div>
-          </div>
-
-          <button
-            onclick="openModal('Automated Data Pipelines')"
-            class="w-full py-3.5 bg-brandRed hover:bg-brandRed-dark text-white font-heading font-bold rounded-xl text-xs flex items-center justify-center space-x-2 shadow-lg transition-all"
-          >
-            <span>Implement Automation Model</span>
-            <i data-lucide="chevron-right" class="w-4 h-4"></i>
-          </button>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
   <!-- FOUNDER & LEADERSHIP SECTION -->
-  <section id="leadership" class="py-20 md:py-28 relative bg-slate-50 border-t border-slate-200">
+  <section id="leadership" class="py-20 md:py-28 relative bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-        <div class="inline-flex items-center space-x-2 bg-white border border-slate-200 px-3.5 py-1.5 rounded-full text-xs font-mono text-brandRed font-semibold">
+        <div class="inline-flex items-center space-x-2 bg-slate-100 border border-slate-200 px-3.5 py-1.5 rounded-full text-xs font-mono text-brandRed font-semibold">
           <i data-lucide="user" class="w-3.5 h-3.5 text-brandRed"></i>
           <span>FOUNDER & LEADERSHIP</span>
         </div>
 
         <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
-          Engineering Excellence & <span class="text-gradient-red">Technology Leadership</span>
+          Engineering Excellence & <span class="text-gradient-crimson">Technology Leadership</span>
         </h2>
 
         <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
@@ -775,7 +641,7 @@
         <div class="md:col-span-4 flex flex-col items-center text-center space-y-4">
           <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-3xl bg-brandRed p-1 shadow-xl shadow-brandRed/20">
             <div class="w-full h-full bg-white rounded-[22px] overflow-hidden flex flex-col items-center justify-center p-4">
-              <div class="w-20 h-20 rounded-full bg-red-50 border border-red-200 flex items-center justify-center text-brandRed font-heading font-black text-3xl">
+              <div class="w-20 h-20 rounded-full bg-brandRed-surface border border-brandRed-border flex items-center justify-center text-brandRed font-heading font-black text-3xl">
                 VA
               </div>
               <span class="text-xs font-heading font-bold text-slate-900 mt-2">Varun Akshay</span>
@@ -851,17 +717,17 @@
   </section>
 
   <!-- FAQ SECTION -->
-  <section id="faq" class="py-20 md:py-28 relative bg-white border-t border-slate-200">
+  <section id="faq" class="py-20 md:py-28 relative bg-slate-50">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center space-y-4 mb-16">
-        <div class="inline-flex items-center space-x-2 bg-slate-100 border border-slate-200 px-3.5 py-1.5 rounded-full text-xs font-mono text-brandRed font-semibold">
+        <div class="inline-flex items-center space-x-2 bg-white border border-slate-200 px-3.5 py-1.5 rounded-full text-xs font-mono text-brandRed font-semibold">
           <i data-lucide="help-circle" class="w-3.5 h-3.5 text-brandRed"></i>
           <span>FREQUENTLY ASKED QUESTIONS</span>
         </div>
 
         <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
-          Frequently Asked <span class="text-gradient-red">Questions</span>
+          Frequently Asked <span class="text-gradient-crimson">Questions</span>
         </h2>
       </div>
 
@@ -902,7 +768,7 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- FOOTER (Datamatics Enterprise Sitemap Structure) -->
   <footer class="bg-slate-950 text-slate-400 border-t border-slate-800 pt-16 pb-12 relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
       
@@ -921,7 +787,7 @@
           </div>
 
           <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
-            Empowering Enterprises & Businesses with Next-Gen Fintech SaaS, BFSI Billing QC Analytics, and Data Automation.
+            Empowering Global Enterprises & Businesses with Digital Operations, BFSI Billing QC Analytics, and Data Automation.
           </p>
 
           <div class="space-y-2 text-xs font-mono text-slate-400">
@@ -934,7 +800,7 @@
 
         <!-- Col 2 (3 Cols) -->
         <div class="md:col-span-3 space-y-3 text-xs">
-          <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider font-mono">Core Products & SaaS</h4>
+          <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider font-mono">Solutions & SaaS</h4>
           <ul class="space-y-2 text-slate-400">
             <li><a href="#products" class="hover:text-white transition-colors">PowerBooks (Cloud POS & ERP)</a></li>
             <li><a href="#products" class="hover:text-white transition-colors">FireBooks (Micro Ledger)</a></li>
@@ -947,10 +813,10 @@
         <div class="md:col-span-2 space-y-3 text-xs">
           <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider font-mono">Enterprise Services</h4>
           <ul class="space-y-2 text-slate-400">
-            <li><a href="#enterprise-mis" class="hover:text-white transition-colors">BFSI Billing QC Audit</a></li>
-            <li><a href="#enterprise-mis" class="hover:text-white transition-colors">PowerBI & SQL Analytics</a></li>
-            <li><a href="#automation" class="hover:text-white transition-colors">Process Automation</a></li>
-            <li><a href="#ecosystem" class="hover:text-white transition-colors">Lavish Dreamers Media</a></li>
+            <li><a href="#solutions" class="hover:text-white transition-colors">BFSI Billing QC Audit</a></li>
+            <li><a href="#solutions" class="hover:text-white transition-colors">PowerBI & SQL Analytics</a></li>
+            <li><a href="#solutions" class="hover:text-white transition-colors">Process Automation</a></li>
+            <li><a href="#case-studies" class="hover:text-white transition-colors">Enterprise Case Studies</a></li>
             <li><a href="#leadership" class="hover:text-white transition-colors">Varun Akshay Leadership</a></li>
           </ul>
         </div>
@@ -1130,67 +996,6 @@
       e.preventDefault();
       alert('Thank you for contacting RUNIT (Runit Infotech). We will connect with you shortly!');
       closeModal();
-    }
-
-    // Tab Switcher Logic
-    function switchTab(tabKey) {
-      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
-      document.querySelectorAll('.tab-btn').forEach(el => {
-        el.classList.remove('bg-brandRed', 'text-white', 'shadow-md');
-        el.classList.add('bg-slate-100', 'text-slate-700', 'border', 'border-slate-200');
-      });
-
-      const activeContent = document.getElementById(`tab-content-${tabKey}`);
-      if (activeContent) activeContent.classList.remove('hidden');
-
-      const activeBtn = document.getElementById(`tab-btn-${tabKey}`);
-      if (activeBtn) {
-        activeBtn.classList.remove('bg-slate-100', 'text-slate-700', 'border', 'border-slate-200');
-        activeBtn.classList.add('bg-brandRed', 'text-white', 'shadow-md');
-      }
-    }
-
-    // ROI Calculator Logic
-    let currentCurrency = 'INR';
-
-    function setCurrency(curr) {
-      currentCurrency = curr;
-      const inrBtn = document.getElementById('curr-inr');
-      const usdBtn = document.getElementById('curr-usd');
-
-      if (curr === 'INR') {
-        inrBtn.className = 'px-3 py-1 rounded-lg font-bold bg-brandRed text-white transition-colors';
-        usdBtn.className = 'px-3 py-1 rounded-lg font-bold text-slate-600 hover:text-slate-900 transition-colors';
-      } else {
-        usdBtn.className = 'px-3 py-1 rounded-lg font-bold bg-brandRed text-white transition-colors';
-        inrBtn.className = 'px-3 py-1 rounded-lg font-bold text-slate-600 hover:text-slate-900 transition-colors';
-      }
-      calculateROI();
-    }
-
-    function calculateROI() {
-      const weeklyHours = parseInt(document.getElementById('weekly-hours-range').value);
-      const monthlyInvoices = parseInt(document.getElementById('monthly-invoices-range').value);
-
-      document.getElementById('weekly-hours-val').innerText = `${weeklyHours} Hours / wk`;
-      document.getElementById('monthly-invoices-val').innerText = `${monthlyInvoices.toLocaleString()} Bills / mo`;
-
-      const monthlyHoursSpent = Math.round(weeklyHours * 4.33);
-      const hoursSavedMonthly = Math.round(monthlyHoursSpent * 0.85);
-
-      const hourlyRate = currentCurrency === 'INR' ? 600 : 25;
-      const invoiceProcessingRate = currentCurrency === 'INR' ? 45 : 1.5;
-
-      const laborSavings = hoursSavedMonthly * hourlyRate;
-      const invoiceSavings = Math.round(monthlyInvoices * invoiceProcessingRate * 0.7);
-      const totalMonthlySavings = laborSavings + invoiceSavings;
-      const annualSavings = totalMonthlySavings * 12;
-
-      const symbol = currentCurrency === 'INR' ? '₹' : '$';
-
-      document.getElementById('res-hours-saved').innerHTML = `${hoursSavedMonthly} Hours <span class="text-xs text-slate-400 font-normal">/ mo</span>`;
-      document.getElementById('res-monthly-savings').innerText = `${symbol}${totalMonthlySavings.toLocaleString()}`;
-      document.getElementById('res-annual-savings').innerText = `${symbol}${annualSavings.toLocaleString()}`;
     }
 
     // FAQ Accordion Logic
