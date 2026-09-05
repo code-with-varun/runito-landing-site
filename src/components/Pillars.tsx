@@ -1,26 +1,26 @@
 import React, { useState } from 'react';
-import { Layers, ShoppingCart, Cpu, Database, CheckCircle2, ArrowRight, Zap, Bot, Terminal, Code, Sparkles } from 'lucide-react';
+import { Layers, ShoppingCart, Database, CheckCircle2, ArrowRight, Code, Cpu, Workflow, FileText } from 'lucide-react';
 
 export const Pillars: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'saas' | 'mis' | 'aios'>('saas');
+  const [activeTab, setActiveTab] = useState<'saas' | 'mis' | 'automation'>('saas');
 
   return (
-    <section id="saas-suite" className="py-20 md:py-28 relative overflow-hidden">
+    <section id="products" className="py-20 md:py-28 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center space-x-2 bg-cyber-cyan/10 border border-cyber-cyan/30 px-3.5 py-1.5 rounded-full text-xs font-mono text-cyber-cyan">
+          <div className="inline-flex items-center space-x-2 bg-navy-800 border border-slate-700 px-3.5 py-1.5 rounded-full text-xs font-mono text-corporate-sky">
             <Layers className="w-3.5 h-3.5" />
-            <span>CORE ARCHITECTURE</span>
+            <span>CORE BUSINESS PILLARS</span>
           </div>
 
           <h2 className="font-heading text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            The Three Pillars of <span className="text-gradient-cyan">RUNITO Ecosystem</span>
+            The Three Pillars of <span className="text-corporate-sky">RUNITO Platform</span>
           </h2>
 
           <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-            From intuitive SaaS micro-apps for everyday MSMEs to high-scale Enterprise MIS analytics and autonomous AIOS n8n workflows.
+            From intuitive SaaS solutions for businesses to high-scale Enterprise MIS reporting and automated workflow execution.
           </p>
         </div>
 
@@ -28,38 +28,38 @@ export const Pillars: React.FC = () => {
         <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
           <button
             onClick={() => setActiveTab('saas')}
-            className={`px-6 py-3.5 rounded-2xl font-heading font-bold text-xs sm:text-sm flex items-center space-x-2.5 transition-all duration-300 ${
+            className={`px-6 py-3.5 rounded-2xl font-heading font-bold text-xs sm:text-sm flex items-center space-x-2.5 transition-all duration-200 ${
               activeTab === 'saas'
-                ? 'bg-cyber-gradient text-midnight-950 shadow-lg shadow-cyber-cyan/20 scale-105'
-                : 'bg-slate-900/80 text-slate-300 hover:text-white border border-slate-800'
+                ? 'bg-corporate-blue text-white shadow-lg shadow-corporate-blue/20 scale-105'
+                : 'bg-navy-800 text-slate-300 hover:text-white border border-navy-700'
             }`}
           >
             <ShoppingCart className="w-4 h-4" />
-            <span>Pillar 1: Flagship Fintech & Web SaaS</span>
+            <span>Pillar 1: Fintech & Retail SaaS Suite</span>
           </button>
 
           <button
             onClick={() => setActiveTab('mis')}
-            className={`px-6 py-3.5 rounded-2xl font-heading font-bold text-xs sm:text-sm flex items-center space-x-2.5 transition-all duration-300 ${
+            className={`px-6 py-3.5 rounded-2xl font-heading font-bold text-xs sm:text-sm flex items-center space-x-2.5 transition-all duration-200 ${
               activeTab === 'mis'
-                ? 'bg-cyber-gradient text-midnight-950 shadow-lg shadow-cyber-cyan/20 scale-105'
-                : 'bg-slate-900/80 text-slate-300 hover:text-white border border-slate-800'
+                ? 'bg-corporate-blue text-white shadow-lg shadow-corporate-blue/20 scale-105'
+                : 'bg-navy-800 text-slate-300 hover:text-white border border-navy-700'
             }`}
           >
             <Database className="w-4 h-4" />
-            <span>Pillar 2: Enterprise MIS & Analytics</span>
+            <span>Pillar 2: Enterprise MIS & Data Analytics</span>
           </button>
 
           <button
-            onClick={() => setActiveTab('aios')}
-            className={`px-6 py-3.5 rounded-2xl font-heading font-bold text-xs sm:text-sm flex items-center space-x-2.5 transition-all duration-300 ${
-              activeTab === 'aios'
-                ? 'bg-cyber-gradient text-midnight-950 shadow-lg shadow-cyber-cyan/20 scale-105'
-                : 'bg-slate-900/80 text-slate-300 hover:text-white border border-slate-800'
+            onClick={() => setActiveTab('automation')}
+            className={`px-6 py-3.5 rounded-2xl font-heading font-bold text-xs sm:text-sm flex items-center space-x-2.5 transition-all duration-200 ${
+              activeTab === 'automation'
+                ? 'bg-corporate-blue text-white shadow-lg shadow-corporate-blue/20 scale-105'
+                : 'bg-navy-800 text-slate-300 hover:text-white border border-navy-700'
             }`}
           >
-            <Bot className="w-4 h-4" />
-            <span>Pillar 3: RUNIT AIOS & Automation</span>
+            <Workflow className="w-4 h-4" />
+            <span>Pillar 3: Process Automation</span>
           </button>
         </div>
 
@@ -69,38 +69,38 @@ export const Pillars: React.FC = () => {
         {activeTab === 'saas' && (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-in fade-in duration-300">
             {/* PowerBooks Card */}
-            <div className="glass-panel p-8 rounded-3xl border border-slate-800 flex flex-col justify-between space-y-6 group hover:border-cyber-cyan/40 transition-colors">
+            <div className="corporate-card p-8 rounded-3xl border border-navy-800 flex flex-col justify-between space-y-6 group hover:border-corporate-sky/40 transition-colors">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-[10px] font-mono font-bold bg-cyber-cyan/10 text-cyber-cyan px-2.5 py-1 rounded-full border border-cyber-cyan/20">
-                    FLAGSHIP FINTECH
+                  <span className="text-[10px] font-mono font-bold text-corporate-sky bg-navy-800 border border-slate-700 px-2.5 py-1 rounded-full uppercase">
+                    RETAIL ERP
                   </span>
-                  <span className="text-xs text-slate-400 font-mono">v3.0 Cloud</span>
+                  <span className="text-xs text-slate-400 font-mono">v3.0 Platform</span>
                 </div>
-                <h3 className="font-heading font-bold text-2xl text-white mb-2 group-hover:text-cyber-cyan transition-colors">
+                <h3 className="font-heading font-bold text-2xl text-white mb-2 group-hover:text-corporate-sky transition-colors">
                   PowerBooks
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
-                  Comprehensive Cloud POS billing, multi-MRP rate pricing, real-time inventory deductions, and GSTR-1 ready tax register SaaS for retail supermarkets.
+                  Comprehensive Cloud POS billing, multi-MRP rate pricing, real-time inventory deductions, and GSTR-1 ready tax register SaaS for supermarkets and retail stores.
                 </p>
                 <div className="space-y-2 text-xs font-mono text-slate-400">
                   <div className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-neon-emerald" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-corporate-sky" />
                     <span>Barcode Scan Latency &lt;50ms</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-neon-emerald" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-corporate-sky" />
                     <span>Multi-MRP Rate Selector Engine</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-neon-emerald" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-corporate-sky" />
                     <span>Offline PWA Auto-Sync</span>
                   </div>
                 </div>
               </div>
               <a
                 href="#showcase"
-                className="inline-flex items-center space-x-2 text-xs font-bold text-cyber-cyan hover:underline pt-4 border-t border-slate-800"
+                className="inline-flex items-center space-x-2 text-xs font-bold text-corporate-sky hover:underline pt-4 border-t border-navy-800"
               >
                 <span>Explore PowerBooks Details</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -108,15 +108,15 @@ export const Pillars: React.FC = () => {
             </div>
 
             {/* FireBooks Card */}
-            <div className="glass-panel p-8 rounded-3xl border border-slate-800 flex flex-col justify-between space-y-6 group hover:border-cyber-blue/40 transition-colors">
+            <div className="corporate-card p-8 rounded-3xl border border-navy-800 flex flex-col justify-between space-y-6 group hover:border-corporate-sky/40 transition-colors">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-[10px] font-mono font-bold bg-cyber-blue/10 text-cyber-blue px-2.5 py-1 rounded-full border border-cyber-blue/20">
+                  <span className="text-[10px] font-mono font-bold text-corporate-sky bg-navy-800 border border-slate-700 px-2.5 py-1 rounded-full uppercase">
                     MICRO LEDGER
                   </span>
                   <span className="text-xs text-slate-400 font-mono">Cloud ERP</span>
                 </div>
-                <h3 className="font-heading font-bold text-2xl text-white mb-2 group-hover:text-cyber-blue transition-colors">
+                <h3 className="font-heading font-bold text-2xl text-white mb-2 group-hover:text-corporate-sky transition-colors">
                   FireBooks
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
@@ -124,22 +124,22 @@ export const Pillars: React.FC = () => {
                 </p>
                 <div className="space-y-2 text-xs font-mono text-slate-400">
                   <div className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-neon-emerald" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-corporate-sky" />
                     <span>Single-Touch Day Close & Cash Book</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-neon-emerald" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-corporate-sky" />
                     <span>Instant WhatsApp Invoice PDF</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-neon-emerald" />
-                    <span>Zero Training UI Simplicity</span>
+                    <CheckCircle2 className="w-3.5 h-3.5 text-corporate-sky" />
+                    <span>Zero Training Touch Interface</span>
                   </div>
                 </div>
               </div>
               <a
                 href="#showcase"
-                className="inline-flex items-center space-x-2 text-xs font-bold text-cyber-blue hover:underline pt-4 border-t border-slate-800"
+                className="inline-flex items-center space-x-2 text-xs font-bold text-corporate-sky hover:underline pt-4 border-t border-navy-800"
               >
                 <span>Explore FireBooks Details</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -147,15 +147,15 @@ export const Pillars: React.FC = () => {
             </div>
 
             {/* 1lybio Card */}
-            <div className="glass-panel p-8 rounded-3xl border border-slate-800 flex flex-col justify-between space-y-6 group hover:border-neon-emerald/40 transition-colors">
+            <div className="corporate-card p-8 rounded-3xl border border-navy-800 flex flex-col justify-between space-y-6 group hover:border-corporate-sky/40 transition-colors">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-[10px] font-mono font-bold bg-neon-emerald/10 text-neon-emerald px-2.5 py-1 rounded-full border border-neon-emerald/20">
+                  <span className="text-[10px] font-mono font-bold text-corporate-sky bg-navy-800 border border-slate-700 px-2.5 py-1 rounded-full uppercase">
                     DIGITAL UTILITY
                   </span>
                   <span className="text-xs text-slate-400 font-mono">1lybio.in</span>
                 </div>
-                <h3 className="font-heading font-bold text-2xl text-white mb-2 group-hover:text-neon-emerald transition-colors">
+                <h3 className="font-heading font-bold text-2xl text-white mb-2 group-hover:text-corporate-sky transition-colors">
                   1lybio (`1lybio.in`)
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
@@ -163,15 +163,15 @@ export const Pillars: React.FC = () => {
                 </p>
                 <div className="space-y-2 text-xs font-mono text-slate-400">
                   <div className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-neon-emerald" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-corporate-sky" />
                     <span>Custom Subdomain & QR Code Cards</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-neon-emerald" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-corporate-sky" />
                     <span>Social Links & Portfolio Aggregator</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-neon-emerald" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-corporate-sky" />
                     <span>Ultra-Fast Edge CDN Load</span>
                   </div>
                 </div>
@@ -180,7 +180,7 @@ export const Pillars: React.FC = () => {
                 href="https://1lybio.in/"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center space-x-2 text-xs font-bold text-neon-emerald hover:underline pt-4 border-t border-slate-800"
+                className="inline-flex items-center space-x-2 text-xs font-bold text-corporate-sky hover:underline pt-4 border-t border-navy-800"
               >
                 <span>Visit 1lybio.in</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -193,16 +193,16 @@ export const Pillars: React.FC = () => {
         {activeTab === 'mis' && (
           <div id="enterprise-mis" className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-in fade-in duration-300">
             {/* Custom Portals */}
-            <div className="glass-panel p-8 rounded-3xl border border-slate-800 flex flex-col justify-between space-y-6">
+            <div className="corporate-card p-8 rounded-3xl border border-navy-800 flex flex-col justify-between space-y-6">
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-cyber-cyan/10 text-cyber-cyan flex items-center justify-center mb-4">
+                <div className="w-12 h-12 rounded-2xl bg-navy-800 text-corporate-sky flex items-center justify-center mb-4 border border-slate-700">
                   <Code className="w-6 h-6" />
                 </div>
                 <h3 className="font-heading font-bold text-xl text-white mb-2">
-                  Custom MERN & PHP/Laravel Portals
+                  Custom Full-Stack Web Portals
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
-                  High-performance web applications, RESTful microservices, and custom back-office operational portals engineered for scale.
+                  High-performance web applications, RESTful microservices, and custom back-office operational portals engineered for enterprise scale.
                 </p>
               </div>
               <div className="text-xs font-mono text-slate-400 space-y-1">
@@ -212,13 +212,13 @@ export const Pillars: React.FC = () => {
             </div>
 
             {/* SQL & PowerBI Automation */}
-            <div className="glass-panel p-8 rounded-3xl border border-slate-800 flex flex-col justify-between space-y-6">
+            <div className="corporate-card p-8 rounded-3xl border border-navy-800 flex flex-col justify-between space-y-6">
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-cyber-blue/10 text-cyber-blue flex items-center justify-center mb-4">
+                <div className="w-12 h-12 rounded-2xl bg-navy-800 text-corporate-sky flex items-center justify-center mb-4 border border-slate-700">
                   <Database className="w-6 h-6" />
                 </div>
                 <h3 className="font-heading font-bold text-xl text-white mb-2">
-                  SQL & PowerBI Automation
+                  SQL & PowerBI Analytics Decks
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
                   Eliminates manual spreadsheet friction with automated SQL data extraction pipelines, SLA tracking, and dynamic PowerBI executive dashboards.
@@ -230,10 +230,10 @@ export const Pillars: React.FC = () => {
               </div>
             </div>
 
-            {/* Retail & Stall Solutions */}
-            <div className="glass-panel p-8 rounded-3xl border border-slate-800 flex flex-col justify-between space-y-6">
+            {/* Retail & Asset Solutions */}
+            <div className="corporate-card p-8 rounded-3xl border border-navy-800 flex flex-col justify-between space-y-6">
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-neon-emerald/10 text-neon-emerald flex items-center justify-center mb-4">
+                <div className="w-12 h-12 rounded-2xl bg-navy-800 text-corporate-sky flex items-center justify-center mb-4 border border-slate-700">
                   <ShoppingCart className="w-6 h-6" />
                 </div>
                 <h3 className="font-heading font-bold text-xl text-white mb-2">
@@ -251,14 +251,14 @@ export const Pillars: React.FC = () => {
           </div>
         )}
 
-        {/* TAB 3: RUNIT AIOS */}
-        {activeTab === 'aios' && (
-          <div id="aios-automation" className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-in fade-in duration-300">
+        {/* TAB 3: PROCESS AUTOMATION */}
+        {activeTab === 'automation' && (
+          <div id="automation" className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-in fade-in duration-300">
             {/* n8n Workflows */}
-            <div className="glass-panel p-8 rounded-3xl border border-slate-800 flex flex-col justify-between space-y-6">
+            <div className="corporate-card p-8 rounded-3xl border border-navy-800 flex flex-col justify-between space-y-6">
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-cyber-cyan/10 text-cyber-cyan flex items-center justify-center mb-4">
-                  <Zap className="w-6 h-6" />
+                <div className="w-12 h-12 rounded-2xl bg-navy-800 text-corporate-sky flex items-center justify-center mb-4 border border-slate-700">
+                  <Workflow className="w-6 h-6" />
                 </div>
                 <h3 className="font-heading font-bold text-xl text-white mb-2">
                   n8n Automated Workflows
@@ -269,45 +269,45 @@ export const Pillars: React.FC = () => {
               </div>
               <div className="text-xs font-mono text-slate-400 space-y-1">
                 <p>• Webhook & REST API Orchestration</p>
-                <p>• 85%+ Reduction in Manual Tasks</p>
+                <p>• Up to 85% Reduction in Manual Tasks</p>
               </div>
             </div>
 
-            {/* Dual AI OS (@TED & @NOVA) */}
-            <div className="glass-panel p-8 rounded-3xl border border-slate-800 flex flex-col justify-between space-y-6">
+            {/* API Integration */}
+            <div className="corporate-card p-8 rounded-3xl border border-navy-800 flex flex-col justify-between space-y-6">
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-purple-500/10 text-purple-400 flex items-center justify-center mb-4">
-                  <Bot className="w-6 h-6" />
+                <div className="w-12 h-12 rounded-2xl bg-navy-800 text-corporate-sky flex items-center justify-center mb-4 border border-slate-700">
+                  <Cpu className="w-6 h-6" />
                 </div>
                 <h3 className="font-heading font-bold text-xl text-white mb-2">
-                  Dual AI OS (@TED & @NOVA)
+                  Enterprise API Integration
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
-                  Custom AI agent orchestrations featuring <span className="text-cyber-cyan font-bold">@TED</span> (Runit Business Chief of Staff AI) and <span className="text-neon-emerald font-bold">@NOVA</span> (Personal Productivity OS).
+                  Secure system integration layer connecting ERP databases, payment gateways, and banking webhooks with zero data loss.
                 </p>
               </div>
               <div className="text-xs font-mono text-slate-400 space-y-1">
-                <p>• Human-in-the-Loop AI Architecture</p>
-                <p>• Contextual Business Task Delegation</p>
+                <p>• Real-time Payment Gateway Webhooks</p>
+                <p>• Enterprise System Interoperability</p>
               </div>
             </div>
 
-            {/* RAG Systems */}
-            <div className="glass-panel p-8 rounded-3xl border border-slate-800 flex flex-col justify-between space-y-6">
+            {/* Document Search & Synthesis */}
+            <div className="corporate-card p-8 rounded-3xl border border-navy-800 flex flex-col justify-between space-y-6">
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-neon-emerald/10 text-neon-emerald flex items-center justify-center mb-4">
-                  <Sparkles className="w-6 h-6" />
+                <div className="w-12 h-12 rounded-2xl bg-navy-800 text-corporate-sky flex items-center justify-center mb-4 border border-slate-700">
+                  <FileText className="w-6 h-6" />
                 </div>
                 <h3 className="font-heading font-bold text-xl text-white mb-2">
-                  RAG Knowledge Base & Memory
+                  Document Synthesis & Search
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
-                  Vector search memory tables and automated document synthesis allowing custom AI models to query enterprise files securely.
+                  Automated document parsing, invoice OCR text extraction, and enterprise knowledge repository indexing.
                 </p>
               </div>
               <div className="text-xs font-mono text-slate-400 space-y-1">
-                <p>• Vector Embedding Database Search</p>
-                <p>• Enterprise Document RAG Pipeline</p>
+                <p>• Automated PDF & Invoice Processing</p>
+                <p>• Enterprise Document Indexing</p>
               </div>
             </div>
           </div>

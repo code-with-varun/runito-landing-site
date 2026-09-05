@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, ShieldCheck, Sparkles, TrendingUp, Layers, CheckCircle2, Bot, Database, Zap } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Database, CheckCircle2, Building2, BarChart3, ChevronRight } from 'lucide-react';
 
 interface HeroProps {
   onOpenContact: () => void;
@@ -7,110 +7,105 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
   return (
-    <section className="relative pt-32 pb-20 md:pt-44 md:pb-28 overflow-hidden">
-      {/* Background Mesh Glows */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] radial-glow-cyan pointer-events-none opacity-60"></div>
-      <div className="absolute top-1/3 left-1/4 w-[500px] h-[350px] radial-glow-sapphire pointer-events-none opacity-40"></div>
+    <section className="relative pt-32 pb-20 md:pt-44 md:pb-28 overflow-hidden bg-gradient-to-b from-navy-900 via-navy-900 to-navy-950">
+      
+      {/* Background Accent Gradients */}
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-corporate-blue/10 to-transparent pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Top Announcement Pill */}
+        {/* Top Tag Pill */}
         <div className="flex justify-center mb-6">
-          <div className="inline-flex items-center space-x-2 bg-slate-900/90 border border-cyber-cyan/30 px-4 py-1.5 rounded-full text-xs text-slate-300 font-mono backdrop-blur-md shadow-lg shadow-cyber-cyan/10">
-            <Sparkles className="w-3.5 h-3.5 text-cyber-cyan animate-pulse" />
+          <div className="inline-flex items-center space-x-2 bg-navy-800/90 border border-slate-700/80 px-4 py-1.5 rounded-full text-xs text-slate-300 font-mono shadow-md">
+            <Building2 className="w-3.5 h-3.5 text-corporate-sky" />
             <span className="text-white font-semibold">RUNITO (runito.in)</span>
             <span className="text-slate-500">•</span>
-            <span className="text-slate-300">Master Digital Portal of RUNIT INFOTECH</span>
+            <span className="text-slate-300">Runit Infotech Master Enterprise Portal</span>
           </div>
         </div>
 
         {/* Hero Main Headline */}
         <div className="text-center max-w-4xl mx-auto space-y-6">
-          <h1 className="font-heading text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] text-white">
-            Empowering Enterprises & MSMEs with <br className="hidden sm:inline" />
-            <span className="text-gradient-cyan">Next-Gen Fintech, MIS Analytics</span> & <span className="text-gradient-emerald">AI Automation</span>
+          <h1 className="font-heading text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.15] text-white">
+            Enterprise Software, <span className="text-corporate-sky">Fintech SaaS</span> & <span className="text-white">Data Automation</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-base sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed font-normal">
-            From <span className="text-white font-semibold">BFSI Collections & Billing QC Automation</span> at Datamatics scale to AI-driven n8n workflows and SaaS solutions. <span className="text-cyber-cyan font-semibold">RUNITO</span> unifies enterprise precision with AI-first agility.
+            Bridging financial audit rigor with modern full-stack software engineering. <span className="text-white font-semibold">RUNITO</span> delivers high-velocity POS platforms, enterprise MIS reporting, and automated data pipelines.
           </p>
 
           {/* Primary Action Buttons */}
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
-            <a
-              href="#saas-suite"
-              className="px-8 py-4 rounded-xl font-heading font-bold text-sm text-midnight-950 bg-cyber-gradient hover:shadow-xl hover:shadow-cyber-cyan/25 transition-all duration-300 flex items-center space-x-2.5 transform hover:-translate-y-0.5"
+            <button
+              onClick={onOpenContact}
+              className="px-8 py-4 rounded-xl font-heading font-bold text-sm text-white bg-corporate-blue hover:bg-corporate-accent transition-all duration-200 flex items-center space-x-2.5 shadow-xl shadow-corporate-blue/30 transform hover:-translate-y-0.5"
             >
-              <span>Explore SaaS Suite</span>
-              <ArrowRight className="w-4 h-4" />
-            </a>
+              <span>Schedule Enterprise Consultation</span>
+              <ChevronRight className="w-4 h-4" />
+            </button>
 
             <a
-              href="#enterprise-mis"
-              className="px-8 py-4 rounded-xl font-heading font-bold text-sm text-white bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyber-cyan/40 transition-all duration-300 flex items-center space-x-2.5 backdrop-blur-md shadow-lg"
+              href="#products"
+              className="px-8 py-4 rounded-xl font-heading font-bold text-sm text-slate-200 bg-navy-800/80 hover:bg-navy-700 border border-slate-700 hover:border-corporate-sky/40 transition-all duration-200 flex items-center space-x-2.5 shadow-lg"
             >
-              <Database className="w-4 h-4 text-cyber-cyan" />
-              <span>View Enterprise MIS Case Studies</span>
+              <Database className="w-4 h-4 text-corporate-sky" />
+              <span>Explore SaaS Solutions</span>
             </a>
           </div>
 
-          {/* Micro badges below buttons */}
+          {/* Key Value Micro Badges */}
           <div className="pt-6 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400 font-mono">
             <div className="flex items-center space-x-2">
-              <CheckCircle2 className="w-4 h-4 text-neon-emerald" />
-              <span>MSME Registered: UDYAM-PY-03-0026319</span>
+              <CheckCircle2 className="w-4 h-4 text-corporate-sky" />
+              <span>Audit-Ready Financial Data Pipelines</span>
             </div>
             <div className="flex items-center space-x-2">
-              <CheckCircle2 className="w-4 h-4 text-neon-emerald" />
-              <span>Datamatics Enterprise Rigor</span>
+              <CheckCircle2 className="w-4 h-4 text-corporate-sky" />
+              <span>Cloud POS & Multi-MRP Ledger Engine</span>
             </div>
             <div className="flex items-center space-x-2">
-              <CheckCircle2 className="w-4 h-4 text-neon-emerald" />
-              <span>n8n AIOS Workflows</span>
+              <CheckCircle2 className="w-4 h-4 text-corporate-sky" />
+              <span>Intelligent Workflow Automation</span>
             </div>
           </div>
         </div>
 
-        {/* Trust Metrics Bar (Grid of 4 Key Stats) */}
+        {/* Executive Metrics Bar (Grid of 4 Key Stats) */}
         <div className="mt-16 sm:mt-24 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-          <div className="glass-panel glass-panel-hover p-6 rounded-2xl border border-slate-800 text-center relative overflow-hidden group">
-            <div className="absolute top-0 right-0 w-16 h-16 bg-cyber-cyan/5 rounded-bl-full pointer-events-none"></div>
-            <p className="font-heading font-black text-3xl sm:text-4xl text-white group-hover:text-cyber-cyan transition-colors">
+          <div className="corporate-card corporate-card-hover p-6 rounded-2xl border border-navy-800 text-center relative overflow-hidden group">
+            <p className="font-heading font-black text-3xl sm:text-4xl text-white group-hover:text-corporate-sky transition-colors">
               10+ Years
             </p>
             <p className="text-xs font-semibold text-slate-400 mt-2 font-mono uppercase tracking-wider">
-              Industry & MIS Analytics Experience
+              Financial MIS & Engineering Leadership
             </p>
           </div>
 
-          <div className="glass-panel glass-panel-hover p-6 rounded-2xl border border-slate-800 text-center relative overflow-hidden group">
-            <div className="absolute top-0 right-0 w-16 h-16 bg-neon-emerald/5 rounded-bl-full pointer-events-none"></div>
-            <p className="font-heading font-black text-3xl sm:text-4xl text-neon-emerald">
-              98%+
+          <div className="corporate-card corporate-card-hover p-6 rounded-2xl border border-navy-800 text-center relative overflow-hidden group">
+            <p className="font-heading font-black text-3xl sm:text-4xl text-corporate-sky">
+              98.5%
             </p>
             <p className="text-xs font-semibold text-slate-400 mt-2 font-mono uppercase tracking-wider">
-              Billing QC & Recovery Accuracy
+              Audit & Billing QC Reconciliation
             </p>
           </div>
 
-          <div className="glass-panel glass-panel-hover p-6 rounded-2xl border border-slate-800 text-center relative overflow-hidden group">
-            <div className="absolute top-0 right-0 w-16 h-16 bg-cyber-blue/5 rounded-bl-full pointer-events-none"></div>
-            <p className="font-heading font-black text-3xl sm:text-4xl text-white group-hover:text-cyber-blue transition-colors">
+          <div className="corporate-card corporate-card-hover p-6 rounded-2xl border border-navy-800 text-center relative overflow-hidden group">
+            <p className="font-heading font-black text-3xl sm:text-4xl text-white group-hover:text-corporate-sky transition-colors">
               20+ Units
             </p>
             <p className="text-xs font-semibold text-slate-400 mt-2 font-mono uppercase tracking-wider">
-              Runit & Partners Brand Ecosystem
+              Enterprise & Business Solutions
             </p>
           </div>
 
-          <div className="glass-panel glass-panel-hover p-6 rounded-2xl border border-slate-800 text-center relative overflow-hidden group">
-            <div className="absolute top-0 right-0 w-16 h-16 bg-cyber-cyan/5 rounded-bl-full pointer-events-none"></div>
-            <p className="font-heading font-black text-3xl sm:text-4xl text-gradient-cyan">
-              100%
+          <div className="corporate-card corporate-card-hover p-6 rounded-2xl border border-navy-800 text-center relative overflow-hidden group">
+            <p className="font-heading font-black text-3xl sm:text-4xl text-white">
+              85%
             </p>
             <p className="text-xs font-semibold text-slate-400 mt-2 font-mono uppercase tracking-wider">
-              n8n AIOS Workflow Orchestration
+              Reduction in Manual Reporting Hours
             </p>
           </div>
         </div>

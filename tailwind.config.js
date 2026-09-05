@@ -8,23 +8,23 @@ export default {
   theme: {
     extend: {
       colors: {
-        midnight: {
-          950: '#06090E',
-          900: '#0B0F17',
-          850: '#0D111A',
-          800: '#131A26',
-          700: '#1E293B',
+        navy: {
+          950: '#030C19',
+          900: '#07162C',
+          850: '#0B192C',
+          800: '#1E2E45',
+          700: '#2A3F5F',
         },
-        cyber: {
-          cyan: '#00F2FE',
-          blue: '#4FACFE',
+        corporate: {
+          blue: '#0066CC',
+          lightBlue: '#0284C7',
+          sky: '#38BDF8',
+          accent: '#2563EB',
         },
-        sapphire: {
-          900: '#0A2540',
-          800: '#1B365D',
-        },
-        neon: {
-          emerald: '#00E676',
+        slateSurface: {
+          50: '#F8FAFC',
+          100: '#F1F5F9',
+          200: '#E2E8F0',
         }
       },
       fontFamily: {
@@ -32,12 +32,6 @@ export default {
         heading: ['Outfit', 'Plus Jakarta Sans', 'sans-serif'],
         mono: ['JetBrains Mono', 'Consolas', 'monospace']
       },
-      backgroundImage: {
-        'cyber-gradient': 'linear-gradient(135deg, #00F2FE 0%, #4FACFE 100%)',
-        'sapphire-gradient': 'linear-gradient(135deg, #0A2540 0%, #1B365D 100%)',
-        'emerald-gradient': 'linear-gradient(135deg, #00E676 0%, #00B0FF 100%)',
-        'glass-radial': 'radial-gradient(circle at 50% 0%, rgba(0, 242, 254, 0.15) 0%, rgba(11, 15, 23, 0) 70%)',
-      }
     },
   },
   plugins: [],

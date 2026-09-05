@@ -1,46 +1,41 @@
 import React from 'react';
-import { User, Award, GraduationCap, Linkedin, Github, Youtube, Globe, CheckCircle2, ArrowUpRight, ShieldCheck, Sparkles } from 'lucide-react';
+import { User, Award, GraduationCap, Linkedin, Github, Youtube, Globe, CheckCircle2, Building2 } from 'lucide-react';
 
 export const Founder: React.FC = () => {
   return (
-    <section id="founder" className="py-20 md:py-28 relative bg-midnight-950/60 border-t border-slate-800/80">
+    <section id="leadership" className="py-20 md:py-28 relative bg-navy-950/80 border-t border-navy-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center space-x-2 bg-purple-500/10 border border-purple-500/30 px-3.5 py-1.5 rounded-full text-xs font-mono text-purple-400">
+          <div className="inline-flex items-center space-x-2 bg-navy-800 border border-slate-700 px-3.5 py-1.5 rounded-full text-xs font-mono text-corporate-sky">
             <User className="w-3.5 h-3.5" />
-            <span>FOUNDER & LEADERSHIP ARCHITECTURE</span>
+            <span>FOUNDER & LEADERSHIP</span>
           </div>
 
           <h2 className="font-heading text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Pioneering <span className="text-gradient-cyan">Human-in-the-Loop Technology</span> <br className="hidden sm:inline" />
-            & AI Automation
+            Engineering Excellence & <span className="text-corporate-sky">Technology Leadership</span>
           </h2>
 
           <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-            Meet the visionary leadership bridging corporate enterprise rigor with agile AI workflow innovation.
+            Meet the leadership bridging corporate financial audit rigor with modern software engineering innovation.
           </p>
         </div>
 
         {/* Founder Card */}
-        <div className="glass-panel max-w-4xl mx-auto rounded-3xl border border-slate-700/80 p-8 sm:p-12 grid grid-cols-1 md:grid-cols-12 gap-8 shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 radial-glow-cyan pointer-events-none opacity-50"></div>
-
+        <div className="corporate-card max-w-4xl mx-auto rounded-3xl border border-navy-800 p-8 sm:p-12 grid grid-cols-1 md:grid-cols-12 gap-8 shadow-2xl relative overflow-hidden">
+          
           {/* Left Avatar / Badge Column (4 Cols) */}
           <div className="md:col-span-4 flex flex-col items-center text-center space-y-4">
             <div className="relative group">
-              <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-3xl bg-gradient-to-tr from-cyber-cyan via-cyber-blue to-purple-600 p-1 shadow-2xl shadow-cyber-cyan/20">
-                <div className="w-full h-full bg-midnight-900 rounded-[22px] overflow-hidden flex flex-col items-center justify-center p-4">
-                  <div className="w-20 h-20 rounded-full bg-cyber-cyan/10 border border-cyber-cyan/30 flex items-center justify-center text-cyber-cyan font-heading font-black text-3xl">
+              <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-3xl bg-corporate-blue p-1 shadow-2xl shadow-corporate-blue/20">
+                <div className="w-full h-full bg-navy-900 rounded-[22px] overflow-hidden flex flex-col items-center justify-center p-4">
+                  <div className="w-20 h-20 rounded-full bg-navy-800 border border-slate-700 flex items-center justify-center text-corporate-sky font-heading font-black text-3xl">
                     VA
                   </div>
                   <span className="text-xs font-heading font-bold text-white mt-2">Varun Akshay</span>
                   <span className="text-[10px] text-slate-400 font-mono">S Varunakshay</span>
                 </div>
-              </div>
-              <div className="absolute -bottom-2 -right-2 bg-neon-emerald text-midnight-950 p-2 rounded-xl shadow-lg border border-midnight-950" title="Datamatics Star Performer">
-                <Award className="w-5 h-5" />
               </div>
             </div>
 
@@ -48,11 +43,11 @@ export const Founder: React.FC = () => {
               <h3 className="font-heading font-extrabold text-xl text-white">
                 Varun Akshay
               </h3>
-              <p className="text-xs text-cyber-cyan font-mono font-semibold">
-                S Varunakshay (Former: Maruthupandiyan)
+              <p className="text-xs text-corporate-sky font-mono font-semibold">
+                S Varunakshay
               </p>
               <p className="text-xs text-slate-400 font-mono">
-                Founder, CEO & Lead Architect
+                Founder & Lead Architect
               </p>
               <p className="text-[11px] text-slate-400 font-mono font-bold">
                 RUNIT INFOTECH
@@ -65,7 +60,7 @@ export const Founder: React.FC = () => {
                 href="https://www.linkedin.com/in/varun-akshay-fsd/"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-cyber-cyan hover:border-cyber-cyan/40 transition-colors"
+                className="p-2.5 rounded-xl bg-navy-800 border border-slate-700 text-slate-300 hover:text-white hover:border-corporate-sky transition-colors"
                 title="LinkedIn Profile"
               >
                 <Linkedin className="w-4 h-4" />
@@ -75,7 +70,7 @@ export const Founder: React.FC = () => {
                 href="https://github.com/code-with-varun"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-slate-700 transition-colors"
+                className="p-2.5 rounded-xl bg-navy-800 border border-slate-700 text-slate-300 hover:text-white transition-colors"
                 title="GitHub Repositories"
               >
                 <Github className="w-4 h-4" />
@@ -85,7 +80,7 @@ export const Founder: React.FC = () => {
                 href="https://www.youtube.com/@Runit_Infotech"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-rose-500 hover:border-rose-500/40 transition-colors"
+                className="p-2.5 rounded-xl bg-navy-800 border border-slate-700 text-slate-300 hover:text-rose-500 transition-colors"
                 title="YouTube @Runit_Infotech"
               >
                 <Youtube className="w-4 h-4" />
@@ -95,7 +90,7 @@ export const Founder: React.FC = () => {
                 href="https://code-with-varun.github.io/me-1lybio/"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-neon-emerald hover:border-neon-emerald/40 transition-colors"
+                className="p-2.5 rounded-xl bg-navy-800 border border-slate-700 text-slate-300 hover:text-emerald-400 transition-colors"
                 title="Personal 1lybio Portfolio"
               >
                 <Globe className="w-4 h-4" />
@@ -109,22 +104,22 @@ export const Founder: React.FC = () => {
             
             <div className="space-y-3">
               <h4 className="font-heading font-bold text-lg text-white flex items-center space-x-2">
-                <Sparkles className="w-4 h-4 text-cyber-cyan" />
-                <span>Executive Bio & Background</span>
+                <Building2 className="w-4 h-4 text-corporate-sky" />
+                <span>Executive Profile</span>
               </h4>
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                A results-driven technologist with over a decade of hands-on expertise spanning enterprise MIS reporting, BFSI collections analytics, billing QC automation, full-stack MERN web development, and AI workflow orchestration (n8n & RAG architecture).
+                A results-driven technologist with over a decade of hands-on expertise spanning enterprise MIS reporting, BFSI collections analytics, billing QC automation, full-stack MERN web development, and process automation.
               </p>
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                Former CFO back-office operational specialist at Datamatics Global Services, Varun Akshay founded <span className="text-white font-bold">RUNIT INFOTECH</span> to empower enterprises and MSMEs with robust fintech SaaS applications and autonomous AI productivity agents.
+                As Founder and Lead Architect of <span className="text-white font-bold">RUNIT INFOTECH</span>, Varun Akshay leads software development for PowerBooks, FireBooks, 1lybio, and custom enterprise analytics solutions.
               </p>
             </div>
 
             {/* Academic Credentials & Honors */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               
-              <div className="bg-slate-900/90 border border-slate-800 p-4 rounded-2xl space-y-1">
-                <div className="flex items-center space-x-2 text-cyber-cyan font-bold text-xs">
+              <div className="bg-navy-900 border border-navy-800 p-4 rounded-2xl space-y-1">
+                <div className="flex items-center space-x-2 text-corporate-sky font-bold text-xs">
                   <GraduationCap className="w-4 h-4" />
                   <span>Academic Qualifications</span>
                 </div>
@@ -133,31 +128,31 @@ export const Founder: React.FC = () => {
                 <p className="text-[11px] text-slate-400 font-mono">UpGrad KnowledgeHut Full Stack Alumnus</p>
               </div>
 
-              <div className="bg-slate-900/90 border border-slate-800 p-4 rounded-2xl space-y-1">
-                <div className="flex items-center space-x-2 text-amber-400 font-bold text-xs">
+              <div className="bg-navy-900 border border-navy-800 p-4 rounded-2xl space-y-1">
+                <div className="flex items-center space-x-2 text-corporate-sky font-bold text-xs">
                   <Award className="w-4 h-4" />
-                  <span>Enterprise Honors</span>
+                  <span>Domain Expertise</span>
                 </div>
-                <p className="text-xs text-white font-semibold">Datamatics Star Performer</p>
-                <p className="text-[11px] text-slate-400 font-mono">BFSI Collections Billing QC Lead</p>
-                <p className="text-[11px] text-slate-400 font-mono">MSME Registration: UDYAM-PY-03-0026319</p>
+                <p className="text-xs text-white font-semibold">BFSI Collections & Billing QC</p>
+                <p className="text-[11px] text-slate-400 font-mono">10+ Years MIS Data Reconciliation</p>
+                <p className="text-[11px] text-slate-400 font-mono">Full-Stack Cloud Architecture</p>
               </div>
 
             </div>
 
             {/* Key Accomplishments Checklist */}
-            <div className="space-y-2 pt-2 border-t border-slate-800 text-xs font-mono text-slate-300">
+            <div className="space-y-2 pt-2 border-t border-navy-800 text-xs font-mono text-slate-300">
               <div className="flex items-center space-x-2">
-                <CheckCircle2 className="w-3.5 h-3.5 text-neon-emerald shrink-0" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-corporate-sky shrink-0" />
                 <span>10+ Years Enterprise MIS & Financial Data Reconciliation</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle2 className="w-3.5 h-3.5 text-neon-emerald shrink-0" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-corporate-sky shrink-0" />
                 <span>Creator of PowerBooks, FireBooks & 1lybio SaaS Ecosystem</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle2 className="w-3.5 h-3.5 text-neon-emerald shrink-0" />
-                <span>Architect of RUNIT Dual AI OS (@TED & @NOVA Workflows)</span>
+                <CheckCircle2 className="w-3.5 h-3.5 text-corporate-sky shrink-0" />
+                <span>Architect of Automated SQL Data Pipelines</span>
               </div>
             </div>
 
