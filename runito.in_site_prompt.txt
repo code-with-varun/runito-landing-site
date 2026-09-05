@@ -1,0 +1,157 @@
+================================================================================
+                     RUNITO.IN LANDING PAGE — MASTER AI PROMPT
+================================================================================
+Target Domain: https://runito.in/ (Master Brand: RUNITO / Runit Infotech)
+Purpose: Comprehensive Master Prompt to build a world-class, enterprise-grade,
+         high-converting React / Next.js / Vite landing page for RUNITO.
+Created for: Varun Akshay (S Varunakshay | Former Name: Maruthupandiyan)
+================================================================================
+
+--------------------------------------------------------------------------------
+PROMPT FOR AI BUILDER / AGENT (COPY & PASTE EVERYTHING BELOW THIS LINE)
+--------------------------------------------------------------------------------
+
+You are an elite, award-winning Principal Frontend Architect and Creative Director. Your task is to design and build a high-converting, ultra-premium, production-ready single-page web application landing page for **RUNITO** (Master Domain: `runito.in`), the flag-bearer digital portal of **RUNIT INFOTECH**.
+
+---
+
+### 1. BRAND IDENTITY & CORE COMPANY FACTS
+
+* **Brand Name**: RUNITO (`runito.in` — "Runit One")
+* **Legal Entity**: RUNIT INFOTECH (Government Registered MSME Micro Enterprise | Udyam Registration: `UDYAM-PY-03-0026319` | NIC 62011, 62020, 62099)
+* **Registered Address**: Flat 11, 1st Cross St, Kasthuribai Nagar, Nellithope, Puducherry 605005, India.
+* **Founder & Managing Director**: **Varun Akshay (S Varunakshay)**
+  * *Note*: Formerly known as Maruthupandiyan.
+  * *Background*: B.Sc Computer Science (RAAK Arts & Science College), UpGrad KnowledgeHut Full Stack Development Bootcamp Alumnus.
+  * *Enterprise Experience*: 10+ Years overall experience bridging Enterprise MIS Reporting at Datamatics Global Services (CFO Back Office), BFSI Collections & Billing QC Automation, Full Stack MERN Development, and AI Productivity Workflows (n8n & RAG Architecture).
+* **Brand Synergy & Inspirations**:
+  * **Datamatics Enterprise Rigor**: Corporate authority, BFSI MIS analytics, billing QC precision, financial ledger reliability, and institutional trust.
+  * **Lavish Dreamers Digital Energy**: Creative vibrancy, community media, video production (@concept3604), and dynamic visual storytelling (inspired by `lavishdreamers.com`).
+  * **1lybio SaaS Simplicity**: Fast, slick, single-link digital card and web utilities (inspired by `1lybio.in` / `code-with-varun.github.io/me-1lybio/`).
+
+---
+
+### 2. DESIGN SYSTEM & VISUAL AESTHETICS
+
+* **Theme & Palette**:
+  * *Primary Background*: Sleek Midnight Dark (`#0B0F17` / `#0D111A`) with subtle radial mesh gradient glow.
+  * *Primary Accent*: Electric Cyber Cyan (`#00F2FE` / `#4FACFE`) for technology & AI OS accents.
+  * *Secondary Accent*: Deep Sapphire Blue (`#1B365D` / `#0A2540`) representing enterprise BFSI trust & stability.
+  * *Highlight Accent*: Neon Emerald (`#00E676`) for status indicators, metrics, and growth cards.
+  * *Card Surface*: Translucent Glassmorphism (`rgba(15, 23, 42, 0.75)`) with 1px subtle borders (`rgba(255, 255, 255, 0.1)`).
+* **Typography**:
+  * *Headings*: Outfit / Plus Jakarta Sans (Bold, high contrast, clean tracking).
+  * *Body & Microcopy*: Inter / System UI (Crisp, highly readable at 14px-16px).
+* **Interactivity**:
+  * Hover-activated glass tilt, magnetic buttons, animated stat counters, dynamic tabs for product categories, and interactive ROI savings calculator.
+
+---
+
+### 3. LANDING PAGE ARCHITECTURE & SECTION BREAKDOWN
+
+#### SECTION 1: HEADER & NAVIGATION BAR (Sticky Glassmorphic)
+- **Logo**: RUNITO text with glowing cyan infinity-shield icon and "RUNIT INFOTECH" micro-subtitle.
+- **Nav Links**:
+  1. `SaaS Products` (PowerBooks, FireBooks, 1lybio)
+  2. `Enterprise MIS & Analytics` (BFSI Collections, Billing QC, Dashboards)
+  3. `AIOS & Automation` (n8n Workflows, RAG Agents, @TED)
+  4. `Founder & Leadership` (Varun Akshay Bio & Credentials)
+- **Badges / CTA**:
+  - Live Status Pill: "🟢 MSME Registered: UDYAM-PY-03-0026319"
+  - CTA Button: `Schedule Demo` / `Get Started` (Glowing cyan gradient pill with hover micro-shine).
+
+#### SECTION 2: HERO SECTION (High-Impact Value Proposition)
+- **Headline**: *"Empowering Enterprises & MSMEs with Next-Gen Fintech, MIS Analytics & AI Automation"*
+- **Subheadline**: *"From BFSI Collections & Billing QC Automation at Datamatics scale to AI-driven n8n workflows and SaaS solutions. RUNITO unifies enterprise precision with AI-first agility."*
+- **Primary CTAs**:
+  - `[Explore SaaS Suite]` (Primary Button)
+  - `[View Enterprise MIS Case Studies]` (Secondary Outline Button)
+- **Trust Metrics Bar (Grid of 4 Key Stats)**:
+  1. `10+ Years` — Industry & MIS Analytics Experience
+  2. `98%+ Accuracy` — Billing QC & Collections Reporting Precision
+  3. `20+ Brand Units` — Managed Ecosystem under Runit & Partners
+  4. `100% Automated` — n8n AIOS Workflow Execution
+
+#### SECTION 3: ENTERPRISE TRUST & HERITAGE (Datamatics & BFSI Lineage)
+- **Section Title**: *"Built on Enterprise Rigor & BFSI Billing QC Standards"*
+- **Core Narrative**: Highlighting 10+ years of operational excellence from Datamatics CFO back-office operations to enterprise MIS analytics.
+- **Key Capability Cards**:
+  - **BFSI Collections & Recovery Billing QC**: Automated recovery agency payouts, IDFC collection cost data, and call center vendor billing validation.
+  - **PowerBI & SQL Analytics**: Custom financial dashboards, daily/weekly MBR decks, and operational SLA tracking.
+  - **MSME Compliance & Registration**: Fully certified under Government of India MSME (UDYAM-PY-03-0026319) under NIC codes 62011, 62020, 62099.
+
+#### SECTION 4: THREE CORE BUSINESS PILLARS (Interactive Tabs / Grid)
+
+* **Pillar 1: Flagship Fintech & Web SaaS Suite**
+  - **PowerBooks**: Comprehensive financial accounting, invoicing, and expense tracking SaaS for MSMEs.
+  - **FireBooks**: Cloud bookkeeping and rapid ledger software for micro-enterprises.
+  - **1lybio (`1lybio.in`)**: Bio link generator & digital card utility for social profiles and creators.
+
+* **Pillar 2: Enterprise MIS, Analytics & Custom Software**
+  - **Custom MERN & PHP/Laravel Portals**: High-performance web applications, RESTful APIs, and operational back-office dashboards.
+  - **SQL & PowerBI Automation**: Eliminating manual spreadsheet friction with automated data pipelines.
+  - **Retail & Asset Management**: Solutions derived from Ispark inventory and stall management.
+
+* **Pillar 3: RUNIT AIOS & Automation Consulting**
+  - **n8n Automated Workflows**: Self-healing workflow automations connecting databases, APIs, and communication tools.
+  - **Dual AI OS Architecture**: Featuring `@TED` (Runit Business Chief of Staff AI) and `@NOVA` (Founder Personal Productivity OS).
+  - **RAG Knowledge Base Systems**: Vector search memory tables and automated document synthesis.
+
+#### SECTION 5: PRODUCT SHOWCASE CAROUSEL / INTERACTIVE CARDS
+- Interactive component cards featuring live previews, key specs, target audience, and direct action links for:
+  1. **PowerBooks SaaS** (`Accounting & Invoicing`)
+  2. **FireBooks SaaS** (`Cloud Ledger`)
+  3. **1lybio Utility** (`Digital Bio Card`)
+  4. **Ungal Matrimony** (`Community Tech`)
+  5. **Ispark Solutions** (`Retail & Stall MIS`)
+
+#### SECTION 6: INTERACTIVE AUTOMATION SAVINGS CALCULATOR
+- An interactive slider widget for potential clients:
+  - *Input 1*: Number of manual reporting hours spent per week (Slider 5 to 100 hrs).
+  - *Input 2*: Number of vendor bills / invoice line items processed monthly (Slider 50 to 5,000).
+  - *Dynamic Output Cards*:
+    - ⏱️ Hours Saved Monthly (Up to 85% reduction with n8n/SQL automation).
+    - 💰 Estimated Monthly Cost Savings (in INR / USD).
+    - 📊 Error Reduction Score (99.2% Accuracy Guarantee).
+
+#### SECTION 7: FOUNDER & LEADERSHIP PROFILE (Varun Akshay)
+- **Header**: *"Pioneering Human-in-the-Loop Technology & AI Automation"*
+- **Founder Profile Card**:
+  - **Name**: Varun Akshay (S Varunakshay | Former Name: Maruthupandiyan)
+  - **Role**: Founder, CEO & Lead Architect, RUNIT INFOTECH
+  - **Credentials**: B.Sc Computer Science (RAAK), UpGrad Full Stack Development Bootcamp, Datamatics Star Performer Awardee.
+  - **Bio Summary**: A results-driven technologist with over a decade of hands-on expertise in enterprise MIS, BFSI collections analytics, billing QC automation, full-stack web development, and AI workflow orchestration. Creator of the RUNIT AIOS ecosystem.
+  - **Social Links**: [LinkedIn](https://www.linkedin.com/in/varun-akshay-fsd/) | [GitHub](https://github.com/code-with-varun) | [YouTube @Runit_Infotech](https://www.youtube.com/@Runit_Infotech) | [Personal Portfolio](https://code-with-varun.github.io/me-1lybio/)
+
+#### SECTION 8: BRAND PARTNERSHIPS & COMMUNITY ECOSYSTEM
+- **Lavish Dreamers Synergy**: Highlighting the creative media production, community youth initiatives, and YouTube (@concept3604) collaboration.
+- **Runit Fintech Core Team**: Acknowledging the technology leadership team (Sudharshan A G - CTO, Madhan S - UI/UX Lead, Hariharan J - COO) who showcased Runit Fintech in Dec 2023.
+
+#### SECTION 9: FREQUENTLY ASKED QUESTIONS (FAQ Accordion)
+1. *What services does Runit Infotech provide?* (Fintech SaaS products, Enterprise MIS automation, custom web app development, and AIOS workflow consulting).
+2. *Is Runit Infotech a registered company?* (Yes, registered under Government of India MSME Udyam UDYAM-PY-03-0026319 in Puducherry).
+3. *How does RUNIT AIOS help businesses?* (It replaces repetitive manual reporting with automated n8n workflows and AI agent assistance).
+4. *How can I integrate PowerBooks or 1lybio for my business?* (Direct SaaS signup via runito.in or custom enterprise onboarding).
+
+#### SECTION 10: FOOTER & CONTACT
+- **Left Column**: RUNITO & RUNIT INFOTECH logo, MSME Udyam tag, address (Nellithope, Puducherry 605005).
+- **Middle Columns**: Quick Links (SaaS Products, MIS Services, AIOS Workflows, Legal & Privacy).
+- **Right Column**: Direct Contact Form / Email (`contact@runito.in` / `support@runito.in`) and social media links.
+- **Copyright Line**: `© 2024-2026 RUNIT INFOTECH (UDYAM-PY-03-0026319). All Rights Reserved. Master Domain: runito.in`.
+
+---
+
+### 4. TECHNICAL & FUNCTIONAL IMPLEMENTATION GUIDELINES
+
+1. **Framework & Stack**: React 18+ with Vite or Next.js 14+ (App Router).
+2. **Styling**: Vanilla CSS with custom properties or Tailwind CSS with sleek glassmorphism utility classes (`backdrop-blur-md`, custom gradients).
+3. **Icons**: `lucide-react` icons throughout.
+4. **State & Animations**: Smooth scroll behavior, interactive accordion states, dynamic tab switching, and custom ROI calculator math.
+5. **SEO Optimization**:
+   - Title: `RUNITO — Runit Infotech | Next-Gen Fintech SaaS, Enterprise MIS & AI Automation`
+   - Meta Description: `Official portal of Runit Infotech (UDYAM-PY-03-0026319). Building PowerBooks, FireBooks, 1lybio, Enterprise BFSI MIS Reporting, and n8n AIOS Workflows.`
+   - OpenGraph tags pointing to `https://runito.in/`.
+
+================================================================================
+END OF PROMPT
+================================================================================
