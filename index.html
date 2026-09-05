@@ -94,6 +94,19 @@
     ::-webkit-scrollbar-thumb:hover {
       background: #C8102E;
     }
+    /* Infinite Marquee Animation for Customers Slider */
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: 200%;
+      animation: marquee 25s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
   </style>
 </head>
 <body class="bg-white text-slate-900 antialiased selection:bg-brandRed selection:text-white">
@@ -108,9 +121,11 @@
       <div class="flex items-center space-x-5 text-[11px]">
         <a href="#about-mission" class="hover:text-white transition-colors">Mission</a>
         <span class="text-slate-700">|</span>
+        <a href="#customers" class="hover:text-white transition-colors">Clients</a>
+        <span class="text-slate-700">|</span>
         <a href="#industries" class="hover:text-white transition-colors">Industries</a>
         <span class="text-slate-700">|</span>
-        <a href="#testimonials" class="hover:text-white transition-colors">Client Testimonials</a>
+        <a href="#testimonials" class="hover:text-white transition-colors">Testimonials</a>
         <span class="text-slate-700">|</span>
         <a href="#insights" class="hover:text-white transition-colors">Research</a>
         <span class="text-slate-700">|</span>
@@ -188,93 +203,263 @@
     </div>
   </header>
 
-  <!-- HERO SECTION (Datamatics Positioning) -->
-  <section class="relative pt-16 pb-24 md:pt-24 md:pb-32 overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 border-b border-slate-200">
+  <!-- INTERACTIVE HERO SLIDER (Datamatics Concept: Multi-Slide Banner System) -->
+  <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Slide Container -->
+      <div id="hero-slider-container" class="relative min-h-[460px] sm:min-h-[400px] flex items-center">
         
-        <!-- Left Text Column (7 Cols) -->
-        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-          
-          <div class="inline-flex items-center space-x-2 bg-brandRed-surface border border-brandRed-border px-4 py-1.5 rounded-full text-xs font-mono text-brandRed font-bold shadow-sm">
-            <span class="w-2 h-2 rounded-full bg-brandRed animate-pulse"></span>
-            <span>RUNIT INFOTECH • Digital Operations & Data Automation</span>
+        <!-- HERO SLIDE 1 -->
+        <div id="hero-slide-1" class="hero-slide w-full transition-all duration-700 ease-in-out">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+              <div class="inline-flex items-center space-x-2 bg-brandRed-surface border border-brandRed-border px-4 py-1.5 rounded-full text-xs font-mono text-brandRed font-bold shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-brandRed animate-pulse"></span>
+                <span>RUNIT INFOTECH • Digital Operations & Data Automation</span>
+              </div>
+
+              <h1 class="font-heading text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-none">
+                Deep Technology, <br class="hidden sm:inline" />
+                <span class="text-gradient-crimson">Deep Domain Expertise</span>
+              </h1>
+
+              <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                Empowering global enterprises, retail supermarkets, and financial institutions with Cloud POS systems, micro ledgers, BFSI collections billing audit QC, and automated SQL data pipelines.
+              </p>
+
+              <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                <button
+                  onclick="openModal()"
+                  class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brandRed hover:bg-brandRed-dark text-white font-heading font-bold text-sm shadow-xl shadow-brandRed/25 transition-all transform hover:-translate-y-0.5 flex items-center justify-center space-x-2"
+                >
+                  <span>Schedule Enterprise Consultation</span>
+                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </button>
+                <a
+                  href="#solutions"
+                  class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-800 font-heading font-semibold text-sm transition-all text-center"
+                >
+                  Explore Capabilities
+                </a>
+              </div>
+            </div>
+
+            <div class="lg:col-span-5 relative">
+              <div class="white-card p-8 rounded-3xl border border-slate-200 shadow-xl relative space-y-6">
+                <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+                  <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-xl bg-brandRed-surface border border-brandRed-border flex items-center justify-center text-brandRed font-bold">
+                      <i data-lucide="shield-check" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                      <h3 class="font-heading font-bold text-slate-900 text-base">Audit Precision Engine</h3>
+                      <span class="text-xs text-slate-500 font-mono">BFSI & Enterprise QC</span>
+                    </div>
+                  </div>
+                  <span class="px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[11px] font-mono font-bold">ACTIVE</span>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 text-left">
+                  <div class="bg-slate-50 border border-slate-200 p-4 rounded-2xl">
+                    <span class="text-xs text-slate-500 font-mono uppercase block">SaaS Ecosystem</span>
+                    <span class="font-heading font-bold text-xl text-slate-900">PowerBooks</span>
+                    <span class="text-[11px] text-brandRed font-mono block mt-1 font-bold">Cloud POS & ERP</span>
+                  </div>
+
+                  <div class="bg-slate-50 border border-slate-200 p-4 rounded-2xl">
+                    <span class="text-xs text-slate-500 font-mono uppercase block">Micro Ledger</span>
+                    <span class="font-heading font-bold text-xl text-slate-900">FireBooks</span>
+                    <span class="text-[11px] text-emerald-600 font-mono block mt-1 font-bold">Instant Ledger</span>
+                  </div>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-200 p-4 rounded-2xl flex items-center justify-between">
+                  <div>
+                    <span class="text-xs text-slate-500 font-mono uppercase block">Bio Link Generator</span>
+                    <span class="font-heading font-bold text-base text-slate-900">1lybio.in</span>
+                  </div>
+                  <a href="https://1lybio.in/" target="_blank" rel="noreferrer" class="px-3 py-1.5 rounded-lg bg-brandRed-surface hover:bg-red-100 text-brandRed text-xs font-mono font-bold transition-colors">
+                    Visit Site ↗
+                  </a>
+                </div>
+              </div>
+            </div>
+
           </div>
-
-          <h1 class="font-heading text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-none">
-            Deep Technology, <br class="hidden sm:inline" />
-            <span class="text-gradient-crimson">Deep Domain Expertise</span>
-          </h1>
-
-          <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
-            Empowering global enterprises, retail supermarkets, and financial institutions with Cloud POS systems, micro ledgers, BFSI collections billing audit QC, and automated SQL data pipelines.
-          </p>
-
-          <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-            <button
-              onclick="openModal()"
-              class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brandRed hover:bg-brandRed-dark text-white font-heading font-bold text-sm shadow-xl shadow-brandRed/25 transition-all transform hover:-translate-y-0.5 flex items-center justify-center space-x-2"
-            >
-              <span>Schedule Enterprise Consultation</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </button>
-
-            <a
-              href="#solutions"
-              class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-800 font-heading font-semibold text-sm transition-all text-center"
-            >
-              Explore Capabilities
-            </a>
-          </div>
-
         </div>
 
-        <!-- Right Hero Visual Card (5 Cols) -->
-        <div class="lg:col-span-5 relative">
-          <div class="white-card p-8 rounded-3xl border border-slate-200 shadow-xl relative space-y-6">
-            <div class="flex items-center justify-between border-b border-slate-200 pb-4">
-              <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-xl bg-brandRed-surface border border-brandRed-border flex items-center justify-center text-brandRed font-bold">
-                  <i data-lucide="shield-check" class="w-5 h-5"></i>
+        <!-- HERO SLIDE 2 -->
+        <div id="hero-slide-2" class="hero-slide w-full hidden transition-all duration-700 ease-in-out">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+              <div class="inline-flex items-center space-x-2 bg-blue-50 border border-blue-200 px-4 py-1.5 rounded-full text-xs font-mono text-blue-700 font-bold shadow-sm">
+                <i data-lucide="database" class="w-3.5 h-3.5 text-blue-700"></i>
+                <span>DATA AUTOMATION & POWERBI EXECUTIVE MIS</span>
+              </div>
+
+              <h1 class="font-heading text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-none">
+                Where Automation Meets <br class="hidden sm:inline" />
+                <span class="text-blue-700">Enterprise Data Intelligence</span>
+              </h1>
+
+              <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                Transform legacy manual spreadsheets into automated SQL extraction pipelines and real-time PowerBI executive KPI dashboards that cut weekly reporting hours by 85%.
+              </p>
+
+              <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                <button
+                  onclick="openModal('Automated Data Pipelines')"
+                  class="w-full sm:w-auto px-8 py-4 rounded-xl bg-blue-700 hover:bg-blue-800 text-white font-heading font-bold text-sm shadow-xl shadow-blue-700/25 transition-all transform hover:-translate-y-0.5 flex items-center justify-center space-x-2"
+                >
+                  <span>Build Automated SQL Pipeline</span>
+                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </button>
+                <a
+                  href="#case-studies"
+                  class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-800 font-heading font-semibold text-sm transition-all text-center"
+                >
+                  Read ETL Case Study
+                </a>
+              </div>
+            </div>
+
+            <div class="lg:col-span-5 relative">
+              <div class="white-card p-8 rounded-3xl border border-slate-200 shadow-xl relative space-y-6">
+                <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+                  <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-700 font-bold">
+                      <i data-lucide="line-chart" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                      <h3 class="font-heading font-bold text-slate-900 text-base">SQL Data Pipeline</h3>
+                      <span class="text-xs text-slate-500 font-mono">Automated ETL & Alerts</span>
+                    </div>
+                  </div>
+                  <span class="px-2.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-[11px] font-mono font-bold">LIVE SYNC</span>
                 </div>
-                <div>
-                  <h3 class="font-heading font-bold text-slate-900 text-base">Audit Precision Engine</h3>
-                  <span class="text-xs text-slate-500 font-mono">BFSI & Enterprise QC</span>
+
+                <div class="space-y-3 font-mono text-xs">
+                  <div class="bg-slate-50 p-3.5 rounded-2xl border border-slate-200 flex justify-between items-center">
+                    <span class="text-slate-600">Spreadsheet Consolidation:</span>
+                    <span class="font-bold text-slate-900">0 Manual Hours</span>
+                  </div>
+                  <div class="bg-slate-50 p-3.5 rounded-2xl border border-slate-200 flex justify-between items-center">
+                    <span class="text-slate-600">Executive KPI Dashboard:</span>
+                    <span class="font-bold text-emerald-600">Real-Time PowerBI</span>
+                  </div>
+                  <div class="bg-slate-50 p-3.5 rounded-2xl border border-slate-200 flex justify-between items-center">
+                    <span class="text-slate-600">Messaging Digest:</span>
+                    <span class="font-bold text-blue-700">WhatsApp / Email Trigger</span>
+                  </div>
                 </div>
               </div>
-              <span class="px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[11px] font-mono font-bold">ACTIVE</span>
             </div>
 
-            <div class="grid grid-cols-2 gap-4 text-left">
-              <div class="bg-slate-50 border border-slate-200 p-4 rounded-2xl">
-                <span class="text-xs text-slate-500 font-mono uppercase block">SaaS Ecosystem</span>
-                <span class="font-heading font-bold text-xl text-slate-900">PowerBooks</span>
-                <span class="text-[11px] text-brandRed font-mono block mt-1 font-bold">Cloud POS & ERP</span>
+          </div>
+        </div>
+
+        <!-- HERO SLIDE 3 -->
+        <div id="hero-slide-3" class="hero-slide w-full hidden transition-all duration-700 ease-in-out">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+              <div class="inline-flex items-center space-x-2 bg-emerald-50 border border-emerald-200 px-4 py-1.5 rounded-full text-xs font-mono text-emerald-700 font-bold shadow-sm">
+                <i data-lucide="shopping-bag" class="w-3.5 h-3.5 text-emerald-700"></i>
+                <span>POWERBOOKS CLOUD POS & RETAIL INFRASTRUCTURE</span>
               </div>
 
-              <div class="bg-slate-50 border border-slate-200 p-4 rounded-2xl">
-                <span class="text-xs text-slate-500 font-mono uppercase block">Micro Ledger</span>
-                <span class="font-heading font-bold text-xl text-slate-900">FireBooks</span>
-                <span class="text-[11px] text-emerald-600 font-mono block mt-1 font-bold">Instant Ledger</span>
+              <h1 class="font-heading text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-none">
+                Resilient Cloud POS for <br class="hidden sm:inline" />
+                <span class="text-emerald-600">High-Volume Supermarkets</span>
+              </h1>
+
+              <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                Equip store cashiers with multi-MRP rate pricing, instant barcode scanning, and zero-downtime offline queue persistence built specifically for retail store growth.
+              </p>
+
+              <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                <button
+                  onclick="openModal('PowerBooks POS SaaS')"
+                  class="w-full sm:w-auto px-8 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-heading font-bold text-sm shadow-xl shadow-emerald-600/25 transition-all transform hover:-translate-y-0.5 flex items-center justify-center space-x-2"
+                >
+                  <span>Request PowerBooks POS Demo</span>
+                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </button>
+                <a
+                  href="#products"
+                  class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-800 font-heading font-semibold text-sm transition-all text-center"
+                >
+                  View SaaS Suite
+                </a>
               </div>
             </div>
 
-            <div class="bg-slate-50 border border-slate-200 p-4 rounded-2xl flex items-center justify-between">
-              <div>
-                <span class="text-xs text-slate-500 font-mono uppercase block">Bio Link Generator</span>
-                <span class="font-heading font-bold text-base text-slate-900">1lybio.in</span>
+            <div class="lg:col-span-5 relative">
+              <div class="white-card p-8 rounded-3xl border border-slate-200 shadow-xl relative space-y-6">
+                <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+                  <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700 font-bold">
+                      <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                      <h3 class="font-heading font-bold text-slate-900 text-base">PowerBooks POS</h3>
+                      <span class="text-xs text-slate-500 font-mono">Retail Store Supermarket ERP</span>
+                    </div>
+                  </div>
+                  <span class="px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[11px] font-mono font-bold">100% UPTIME</span>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 text-left font-mono text-xs">
+                  <div class="bg-slate-50 border border-slate-200 p-4 rounded-2xl">
+                    <span class="text-[10px] text-slate-500 uppercase block">Barcode Engine</span>
+                    <span class="font-heading font-bold text-base text-slate-900">Multi-MRP</span>
+                    <span class="text-[10px] text-emerald-600 block font-bold mt-1">Instant Scan</span>
+                  </div>
+
+                  <div class="bg-slate-50 border border-slate-200 p-4 rounded-2xl">
+                    <span class="text-[10px] text-slate-500 uppercase block">Queue Sync</span>
+                    <span class="font-heading font-bold text-base text-slate-900">Offline SQLite</span>
+                    <span class="text-[10px] text-brandRed block font-bold mt-1">Zero Interruption</span>
+                  </div>
+                </div>
               </div>
-              <a href="https://1lybio.in/" target="_blank" rel="noreferrer" class="px-3 py-1.5 rounded-lg bg-brandRed-surface hover:bg-red-100 text-brandRed text-xs font-mono font-bold transition-colors">
-                Visit Site ↗
-              </a>
             </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Slide Indicator Controls (Datamatics Hero Controls) -->
+      <div class="mt-12 flex items-center justify-between max-w-7xl mx-auto pt-6 border-t border-slate-200">
+        
+        <!-- Tab Dot Indicators -->
+        <div class="flex items-center space-x-3">
+          <button onclick="goToSlide(1)" id="hero-dot-1" class="h-2.5 w-10 rounded-full bg-brandRed transition-all duration-300"></button>
+          <button onclick="goToSlide(2)" id="hero-dot-2" class="h-2.5 w-3 rounded-full bg-slate-300 hover:bg-slate-400 transition-all duration-300"></button>
+          <button onclick="goToSlide(3)" id="hero-dot-3" class="h-2.5 w-3 rounded-full bg-slate-300 hover:bg-slate-400 transition-all duration-300"></button>
+        </div>
+
+        <!-- Slide Label / Control Buttons -->
+        <div class="flex items-center space-x-4 text-xs font-heading font-bold">
+          <span id="hero-slide-counter" class="font-mono text-slate-500">01 / 03</span>
+          <div class="flex items-center space-x-2">
+            <button onclick="prevSlide()" class="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-700 transition-colors">
+              <i data-lucide="chevron-left" class="w-4 h-4"></i>
+            </button>
+            <button onclick="nextSlide()" class="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-700 transition-colors">
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </button>
           </div>
         </div>
 
       </div>
 
       <!-- Executive Metrics Bar -->
-      <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 pt-12 border-t border-slate-200 text-center">
+      <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-slate-200 text-center">
         <div class="space-y-1">
           <p class="font-heading font-black text-3xl sm:text-4xl text-slate-900 font-mono">10+ Years</p>
           <p class="text-xs text-slate-500 font-mono uppercase tracking-wider font-semibold">Enterprise MIS & Audit Expertise</p>
@@ -296,7 +481,66 @@
     </div>
   </section>
 
-  <!-- NEW DATAMATICS SECTION: EXECUTIVE MISSION & DEEP IN TECHNOLOGY BANNER -->
+  <!-- CUSTOMERS & ENTERPRISE BADGES MARQUEE SLIDER (Datamatics Concept: Trusted by 300+ Enterprises) -->
+  <section id="customers" class="py-12 bg-white border-b border-slate-200 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6 text-center">
+      <span class="text-xs font-mono font-bold uppercase tracking-wider text-slate-500">TRUSTED BY ENTERPRISES, RETAIL STORES & MEDIA NETWORKS</span>
+    </div>
+
+    <!-- Marquee Banner Track -->
+    <div class="relative overflow-hidden w-full flex">
+      <div class="animate-marquee items-center justify-around space-x-8 text-xs font-heading font-bold text-slate-800 uppercase tracking-wider font-mono">
+        <div class="px-6 py-3 rounded-2xl bg-slate-50 border border-slate-200 flex items-center space-x-3 shrink-0">
+          <i data-lucide="landmark" class="w-4 h-4 text-brandRed"></i>
+          <span>BFSI Recovery Banking Agencies</span>
+        </div>
+        <div class="px-6 py-3 rounded-2xl bg-slate-50 border border-slate-200 flex items-center space-x-3 shrink-0">
+          <i data-lucide="shopping-cart" class="w-4 h-4 text-brandRed"></i>
+          <span>Retail Supermarket Chains</span>
+        </div>
+        <div class="px-6 py-3 rounded-2xl bg-slate-50 border border-slate-200 flex items-center space-x-3 shrink-0">
+          <i data-lucide="tv" class="w-4 h-4 text-brandRed"></i>
+          <span>Lavish Dreamers Media Network</span>
+        </div>
+        <div class="px-6 py-3 rounded-2xl bg-slate-50 border border-slate-200 flex items-center space-x-3 shrink-0">
+          <i data-lucide="file-spreadsheets" class="w-4 h-4 text-brandRed"></i>
+          <span>SQL Automated Data Clients</span>
+        </div>
+        <div class="px-6 py-3 rounded-2xl bg-slate-50 border border-slate-200 flex items-center space-x-3 shrink-0">
+          <i data-lucide="users" class="w-4 h-4 text-brandRed"></i>
+          <span>1lybio Digital Creators</span>
+        </div>
+        <div class="px-6 py-3 rounded-2xl bg-slate-50 border border-slate-200 flex items-center space-x-3 shrink-0">
+          <i data-lucide="briefcase" class="w-4 h-4 text-brandRed"></i>
+          <span>FireBooks Contractor Guilds</span>
+        </div>
+        <div class="px-6 py-3 rounded-2xl bg-slate-50 border border-slate-200 flex items-center space-x-3 shrink-0">
+          <i data-lucide="building-2" class="w-4 h-4 text-brandRed"></i>
+          <span>Puducherry Commercial Association</span>
+        </div>
+
+        <!-- Duplicated items for smooth infinite scrolling loop -->
+        <div class="px-6 py-3 rounded-2xl bg-slate-50 border border-slate-200 flex items-center space-x-3 shrink-0">
+          <i data-lucide="landmark" class="w-4 h-4 text-brandRed"></i>
+          <span>BFSI Recovery Banking Agencies</span>
+        </div>
+        <div class="px-6 py-3 rounded-2xl bg-slate-50 border border-slate-200 flex items-center space-x-3 shrink-0">
+          <i data-lucide="shopping-cart" class="w-4 h-4 text-brandRed"></i>
+          <span>Retail Supermarket Chains</span>
+        </div>
+        <div class="px-6 py-3 rounded-2xl bg-slate-50 border border-slate-200 flex items-center space-x-3 shrink-0">
+          <i data-lucide="tv" class="w-4 h-4 text-brandRed"></i>
+          <span>Lavish Dreamers Media Network</span>
+        </div>
+        <div class="px-6 py-3 rounded-2xl bg-slate-50 border border-slate-200 flex items-center space-x-3 shrink-0">
+          <i data-lucide="file-spreadsheets" class="w-4 h-4 text-brandRed"></i>
+          <span>SQL Automated Data Clients</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXECUTIVE MISSION & DEEP IN TECHNOLOGY BANNER -->
   <section id="about-mission" class="py-16 md:py-20 bg-slate-950 text-white relative overflow-hidden border-b border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="max-w-4xl mx-auto text-center space-y-6">
@@ -651,7 +895,7 @@
     </div>
   </section>
 
-  <!-- NEW DATAMATICS SECTION: CLIENT SATISFACTION & TESTIMONIALS ("HAPPY CLIENTS MAKE US PROUD") -->
+  <!-- CLIENT SATISFACTION & TESTIMONIALS ("HAPPY CLIENTS MAKE US PROUD") -->
   <section id="testimonials" class="py-20 md:py-28 bg-slate-50 border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -817,7 +1061,7 @@
     </div>
   </section>
 
-  <!-- NEW DATAMATICS SECTION: INDUSTRY RECOGNITION & TECHNOLOGY STACK GRID -->
+  <!-- INDUSTRY RECOGNITION & TECHNOLOGY STACK GRID -->
   <section class="py-16 bg-slate-50 border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -1116,14 +1360,14 @@
     </div>
   </section>
 
-  <!-- FOOTER (Datamatics Enterprise Sitemap Structure) -->
+  <!-- DETAILED DATAMATICS-STYLE MULTI-COLUMN MEGA FOOTER -->
   <footer class="bg-slate-950 text-slate-400 border-t border-slate-800 pt-16 pb-12 relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
       
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12">
+      <!-- Top Brand & Office Grid -->
+      <div class="pb-12 border-b border-slate-800 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
-        <!-- Col 1 (4 Cols) -->
-        <div class="md:col-span-4 space-y-4">
+        <div class="lg:col-span-5 space-y-4">
           <div class="flex items-center space-x-3">
             <div class="w-10 h-10 rounded-xl bg-brandRed text-white flex items-center justify-center font-heading font-black text-xl shadow-md">
               R
@@ -1134,74 +1378,115 @@
             </div>
           </div>
 
-          <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
-            Empowering Global Enterprises & Businesses with Digital Operations, BFSI Billing QC Analytics, and Data Automation.
+          <p class="text-xs text-slate-400 leading-relaxed max-w-md">
+            RUNIT INFOTECH (runito.in) is a Digital Technology, Operations, and Experiences company. Empowering Global Enterprises, Retail Chains, and Financial Institutions with Cloud POS Systems, BFSI Billing QC Analytics, and Automated SQL Data Pipelines.
           </p>
 
-          <div class="space-y-2 text-xs font-mono text-slate-400">
-            <div class="flex items-start space-x-2">
-              <i data-lucide="map-pin" class="w-4 h-4 text-brandRed-light shrink-0 mt-0.5"></i>
-              <span>Flat 11, 1st Cross St, Kasthuribai Nagar, Nellithope, Puducherry 605005, India.</span>
-            </div>
+          <div class="flex items-center space-x-3 pt-2">
+            <a href="https://www.linkedin.com/in/varun-akshay-fsd/" target="_blank" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-brandRed transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+            <a href="https://github.com/code-with-varun" target="_blank" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition-colors"><i data-lucide="github" class="w-4 h-4"></i></a>
+            <a href="https://www.youtube.com/@Runit_Infotech" target="_blank" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-brandRed-light transition-colors"><i data-lucide="youtube" class="w-4 h-4"></i></a>
+            <a href="https://code-with-varun.github.io/me-1lybio/" target="_blank" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-emerald-400 transition-colors"><i data-lucide="globe" class="w-4 h-4"></i></a>
           </div>
         </div>
 
-        <!-- Col 2 (3 Cols) -->
-        <div class="md:col-span-3 space-y-3 text-xs">
-          <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider font-mono">Solutions & SaaS</h4>
-          <ul class="space-y-2 text-slate-400">
-            <li><a href="#products" class="hover:text-white transition-colors">PowerBooks (Cloud POS & ERP)</a></li>
-            <li><a href="#products" class="hover:text-white transition-colors">FireBooks (Micro Ledger)</a></li>
-            <li><a href="https://1lybio.in/" target="_blank" class="hover:text-white transition-colors flex items-center space-x-1"><span>1lybio.in (Bio Link Generator)</span><i data-lucide="external-link" class="w-3 h-3 text-brandRed-light"></i></a></li>
-            <li><a href="https://lavishdreamers.com/" target="_blank" class="hover:text-white transition-colors flex items-center space-x-1"><span>lavishdreamers.com ↗</span></a></li>
-          </ul>
-        </div>
-
-        <!-- Col 3 (2 Cols) -->
-        <div class="md:col-span-2 space-y-3 text-xs">
-          <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider font-mono">Enterprise Services</h4>
-          <ul class="space-y-2 text-slate-400">
-            <li><a href="#solutions" class="hover:text-white transition-colors">BFSI Billing QC Audit</a></li>
-            <li><a href="#solutions" class="hover:text-white transition-colors">PowerBI & SQL Analytics</a></li>
-            <li><a href="#solutions" class="hover:text-white transition-colors">Process Automation</a></li>
-            <li><a href="#case-studies" class="hover:text-white transition-colors">Enterprise Case Studies</a></li>
-            <li><a href="#testimonials" class="hover:text-white transition-colors">Client Testimonials</a></li>
-            <li><a href="#insights" class="hover:text-white transition-colors">Research & Insights</a></li>
-            <li><a href="#leadership" class="hover:text-white transition-colors">Varun Akshay Leadership</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 4 (3 Cols) -->
-        <div class="md:col-span-3 space-y-3 text-xs">
-          <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider font-mono">Connect & Support</h4>
-          <div class="space-y-2 text-slate-400 font-mono">
-            <div class="flex items-center space-x-2">
-              <i data-lucide="mail" class="w-4 h-4 text-brandRed-light"></i>
-              <a href="mailto:contact@runito.in" class="hover:text-white">contact@runito.in</a>
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs font-mono">
+          
+          <div class="bg-slate-900/60 p-5 rounded-2xl border border-slate-800 space-y-2">
+            <div class="flex items-center space-x-2 text-brandRed-light font-bold">
+              <i data-lucide="building-2" class="w-4 h-4"></i>
+              <span>REGISTERED OFFICE & HEADQUARTERS</span>
             </div>
-            <div class="flex items-center space-x-2">
-              <i data-lucide="mail" class="w-4 h-4 text-brandRed-light"></i>
-              <a href="mailto:support@runito.in" class="hover:text-white">support@runito.in</a>
-            </div>
+            <p class="text-slate-300 leading-relaxed">Flat 11, 1st Cross St, Kasthuribai Nagar, Nellithope, Puducherry 605005, India.</p>
+            <p class="text-slate-400 text-[11px]">Primary Contact: contact@runito.in</p>
           </div>
 
-          <div class="pt-2 flex items-center space-x-3">
-            <a href="https://www.linkedin.com/in/varun-akshay-fsd/" target="_blank" class="p-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-brandRed"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
-            <a href="https://github.com/code-with-varun" target="_blank" class="p-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white"><i data-lucide="github" class="w-4 h-4"></i></a>
-            <a href="https://www.youtube.com/@Runit_Infotech" target="_blank" class="p-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-brandRed-light"><i data-lucide="youtube" class="w-4 h-4"></i></a>
-            <a href="https://code-with-varun.github.io/me-1lybio/" target="_blank" class="p-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-emerald-400"><i data-lucide="globe" class="w-4 h-4"></i></a>
+          <div class="bg-slate-900/60 p-5 rounded-2xl border border-slate-800 space-y-2">
+            <div class="flex items-center space-x-2 text-brandRed-light font-bold">
+              <i data-lucide="cpu" class="w-4 h-4"></i>
+              <span>TECHNOLOGY & INNOVATION LAB</span>
+            </div>
+            <p class="text-slate-300 leading-relaxed">Chennai & Puducherry Technology Development Centers.</p>
+            <p class="text-slate-400 text-[11px]">Support Email: support@runito.in</p>
           </div>
 
-          <button
-            onclick="openModal()"
-            class="mt-3 w-full py-2.5 bg-brandRed hover:bg-brandRed-dark text-white font-heading font-bold rounded-xl text-xs text-center shadow-lg"
-          >
-            Schedule Consultation
-          </button>
         </div>
 
       </div>
 
+      <!-- 5-Column Sitemap Grid (Datamatics Sitemap Architecture) -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 text-xs">
+        
+        <!-- Col 1: TECHNOLOGIES -->
+        <div class="space-y-3">
+          <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider font-mono text-brandRed-light">Technologies</h4>
+          <ul class="space-y-2 text-slate-400">
+            <li><a href="#about-mission" class="hover:text-white transition-colors">Digital Transformation</a></li>
+            <li><a href="#solutions" class="hover:text-white transition-colors">MERN Stack Engineering</a></li>
+            <li><a href="#solutions" class="hover:text-white transition-colors">Enterprise SQL Server</a></li>
+            <li><a href="#solutions" class="hover:text-white transition-colors">Cloud Infrastructure (AWS)</a></li>
+            <li><a href="#solutions" class="hover:text-white transition-colors">REST & GraphQL APIs</a></li>
+            <li><a href="#solutions" class="hover:text-white transition-colors">Automated SQL Pipelines</a></li>
+            <li><a href="#solutions" class="hover:text-white transition-colors">Digital Assurance & QC</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2: DIGITAL OPERATIONS -->
+        <div class="space-y-3">
+          <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider font-mono text-brandRed-light">Digital Operations</h4>
+          <ul class="space-y-2 text-slate-400">
+            <li><a href="#solutions" class="hover:text-white transition-colors">BFSI Recovery Billing QC</a></li>
+            <li><a href="#solutions" class="hover:text-white transition-colors">Agency Commission Audit</a></li>
+            <li><a href="#solutions" class="hover:text-white transition-colors">PowerBI Executive MIS</a></li>
+            <li><a href="#solutions" class="hover:text-white transition-colors">Procure-to-Pay (P2P) Audit</a></li>
+            <li><a href="#solutions" class="hover:text-white transition-colors">Order-to-Cash (O2C) Analytics</a></li>
+            <li><a href="#solutions" class="hover:text-white transition-colors">Record-to-Report (R2R)</a></li>
+            <li><a href="#solutions" class="hover:text-white transition-colors">SLA Compliance Tracking</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: PROPRIETARY SAAS -->
+        <div class="space-y-3">
+          <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider font-mono text-brandRed-light">Proprietary SaaS</h4>
+          <ul class="space-y-2 text-slate-400">
+            <li><a href="#products" class="hover:text-white transition-colors font-bold text-slate-200">PowerBooks (Cloud POS)</a></li>
+            <li><a href="#products" class="hover:text-white transition-colors font-bold text-slate-200">FireBooks (Micro Ledger)</a></li>
+            <li><a href="https://1lybio.in/" target="_blank" class="hover:text-white transition-colors flex items-center space-x-1"><span class="text-blue-400">1lybio.in Generator ↗</span></a></li>
+            <li><a href="https://lavishdreamers.com/" target="_blank" class="hover:text-white transition-colors flex items-center space-x-1"><span class="text-brandRed-light">lavishdreamers.com ↗</span></a></li>
+            <li><a href="https://www.youtube.com/@concept3604" target="_blank" class="hover:text-white transition-colors flex items-center space-x-1"><span>YouTube @concept3604 ↗</span></a></li>
+            <li><a href="https://www.youtube.com/@Runit_Infotech" target="_blank" class="hover:text-white transition-colors flex items-center space-x-1"><span>YouTube @Runit_Infotech ↗</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: INDUSTRIES WE SERVE -->
+        <div class="space-y-3">
+          <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider font-mono text-brandRed-light">Industries</h4>
+          <ul class="space-y-2 text-slate-400">
+            <li><a href="#industries" class="hover:text-white transition-colors">Banking & Financial Services</a></li>
+            <li><a href="#industries" class="hover:text-white transition-colors">Retail & Supermarket Chains</a></li>
+            <li><a href="#industries" class="hover:text-white transition-colors">Media & Publishing</a></li>
+            <li><a href="#industries" class="hover:text-white transition-colors">Logistics & Supply Chain</a></li>
+            <li><a href="#industries" class="hover:text-white transition-colors">Healthcare & SMBs</a></li>
+            <li><a href="#industries" class="hover:text-white transition-colors">Independent Contractors</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: INSIGHTS & CORPORATE -->
+        <div class="space-y-3">
+          <h4 class="font-heading font-bold text-sm text-white uppercase tracking-wider font-mono text-brandRed-light">Insights & Governance</h4>
+          <ul class="space-y-2 text-slate-400">
+            <li><a href="#case-studies" class="hover:text-white transition-colors">Enterprise Case Studies</a></li>
+            <li><a href="#testimonials" class="hover:text-white transition-colors">Client Testimonials</a></li>
+            <li><a href="#insights" class="hover:text-white transition-colors">Whitepapers & Research</a></li>
+            <li><a href="#leadership" class="hover:text-white transition-colors">Varun Akshay Leadership</a></li>
+            <li><a href="#faq" class="hover:text-white transition-colors">Frequently Asked Questions</a></li>
+            <li><a href="javascript:void(0)" onclick="alert('Datamatics-aligned E-Waste & Corporate Governance Policy strictly followed.')" class="hover:text-white transition-colors text-[11px] underline">E-Waste & Governance Policy</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Legal Bar -->
       <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 font-mono gap-4">
         <p>© 2024-2026 RUNIT INFOTECH. All Rights Reserved.</p>
         <p>Master Domain: <span class="text-brandRed-light font-bold">runito.in</span></p>
@@ -1324,6 +1609,45 @@
       const menu = document.getElementById('mobile-menu');
       menu.classList.toggle('hidden');
     }
+
+    // Hero Slider System
+    let currentSlide = 1;
+    const totalSlides = 3;
+
+    function updateSlideUI() {
+      for (let i = 1; i <= totalSlides; i++) {
+        const slide = document.getElementById(`hero-slide-${i}`);
+        const dot = document.getElementById(`hero-dot-${i}`);
+        if (i === currentSlide) {
+          slide.classList.remove('hidden');
+          dot.className = 'h-2.5 w-10 rounded-full bg-brandRed transition-all duration-300';
+        } else {
+          slide.classList.add('hidden');
+          dot.className = 'h-2.5 w-3 rounded-full bg-slate-300 hover:bg-slate-400 transition-all duration-300';
+        }
+      }
+      document.getElementById('hero-slide-counter').innerText = `0${currentSlide} / 0${totalSlides}`;
+    }
+
+    function goToSlide(slideNum) {
+      currentSlide = slideNum;
+      updateSlideUI();
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide % totalSlides) + 1;
+      updateSlideUI();
+    }
+
+    function prevSlide() {
+      currentSlide = currentSlide === 1 ? totalSlides : currentSlide - 1;
+      updateSlideUI();
+    }
+
+    // Auto rotate hero slider every 6 seconds
+    setInterval(() => {
+      nextSlide();
+    }, 6000);
 
     // Modal Control
     function openModal(defaultInterest) {
