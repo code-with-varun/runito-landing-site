@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark scroll-smooth">
+<html lang="en" class="light scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,20 +22,19 @@
       theme: {
         extend: {
           colors: {
-            graphite: {
-              950: '#0B0F17',
-              900: '#0F172A',
-              850: '#162032',
-              800: '#1E293B',
-              700: '#334155',
-              600: '#475569',
-            },
             brandRed: {
               DEFAULT: '#DC2626',
               dark: '#B91C1C',
               light: '#EF4444',
               accent: '#E11D48',
               hover: '#991B1B',
+            },
+            corporateGraphite: {
+              950: '#0F172A',
+              900: '#1E293B',
+              800: '#334155',
+              700: '#475569',
+              600: '#64748B',
             },
             slateSurface: {
               50: '#F8FAFC',
@@ -59,30 +58,28 @@
 
   <style>
     body {
-      background-color: #0F172A;
-      color: #F8FAFC;
+      background-color: #FFFFFF;
+      color: #0F172A;
       font-family: 'Inter', system-ui, sans-serif;
     }
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Outfit', sans-serif;
     }
-    .graphite-card {
-      background: rgba(15, 23, 42, 0.85);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+    .white-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
     }
-    .graphite-card-hover {
+    .white-card-hover {
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    .graphite-card-hover:hover {
-      background: rgba(30, 41, 59, 0.95);
+    .white-card-hover:hover {
       border-color: rgba(220, 38, 38, 0.4);
       transform: translateY(-3px);
-      box-shadow: 0 16px 32px -10px rgba(220, 38, 38, 0.2);
+      box-shadow: 0 16px 32px -10px rgba(220, 38, 38, 0.15);
     }
     .text-gradient-red {
-      background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+      background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -90,10 +87,10 @@
       width: 8px;
     }
     ::-webkit-scrollbar-track {
-      background: #0F172A;
+      background: #F1F5F9;
     }
     ::-webkit-scrollbar-thumb {
-      background: #1E293B;
+      background: #CBD5E1;
       border-radius: 4px;
     }
     ::-webkit-scrollbar-thumb:hover {
@@ -101,10 +98,10 @@
     }
   </style>
 </head>
-<body class="bg-graphite-900 text-slate-100 antialiased selection:bg-brandRed selection:text-white">
+<body class="bg-white text-slate-900 antialiased selection:bg-brandRed selection:text-white">
 
   <!-- HEADER -->
-  <header class="sticky top-0 z-40 bg-graphite-950/80 backdrop-blur-md border-b border-graphite-800">
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
       <!-- Brand Logo -->
@@ -116,27 +113,27 @@
           onerror="this.onerror=null; this.src='./runit-logo-mark.svg';"
         />
         <div class="flex flex-col">
-          <span class="font-heading font-black text-2xl tracking-tight text-white group-hover:text-brandRed-light transition-colors">
+          <span class="font-heading font-black text-2xl tracking-tight text-slate-900 group-hover:text-brandRed transition-colors">
             RUNITO
           </span>
-          <span class="text-[10px] text-brandRed-light font-mono block -mt-1 font-semibold">RUNIT INFOTECH</span>
+          <span class="text-[10px] text-brandRed font-mono block -mt-1 font-bold tracking-wider">RUNIT INFOTECH</span>
         </div>
       </a>
 
       <!-- Desktop Navigation Links -->
-      <nav class="hidden lg:flex items-center space-x-8 text-xs font-heading font-semibold uppercase tracking-wider text-slate-300">
-        <a href="#products" class="hover:text-brandRed-light transition-colors">Products & SaaS</a>
-        <a href="#enterprise-mis" class="hover:text-brandRed-light transition-colors">Enterprise MIS</a>
-        <a href="#automation" class="hover:text-brandRed-light transition-colors">Process Automation</a>
-        <a href="#leadership" class="hover:text-brandRed-light transition-colors">Leadership</a>
-        <a href="#calculator" class="hover:text-brandRed-light transition-colors">ROI Calculator</a>
+      <nav class="hidden lg:flex items-center space-x-8 text-xs font-heading font-bold uppercase tracking-wider text-slate-700">
+        <a href="#products" class="hover:text-brandRed transition-colors">Products & SaaS</a>
+        <a href="#enterprise-mis" class="hover:text-brandRed transition-colors">Enterprise MIS</a>
+        <a href="#automation" class="hover:text-brandRed transition-colors">Process Automation</a>
+        <a href="#leadership" class="hover:text-brandRed transition-colors">Leadership</a>
+        <a href="#calculator" class="hover:text-brandRed transition-colors">ROI Calculator</a>
       </nav>
 
       <!-- CTA Button -->
       <div class="flex items-center space-x-4">
         <button
           onclick="openModal()"
-          class="hidden sm:inline-flex px-5 py-2.5 rounded-xl bg-brandRed hover:bg-brandRed-dark text-white font-heading font-bold text-xs shadow-lg shadow-brandRed/25 transition-all transform hover:-translate-y-0.5 items-center space-x-2"
+          class="hidden sm:inline-flex px-5 py-2.5 rounded-xl bg-brandRed hover:bg-brandRed-dark text-white font-heading font-bold text-xs shadow-md shadow-brandRed/20 transition-all transform hover:-translate-y-0.5 items-center space-x-2"
         >
           <span>Schedule Consultation</span>
           <i data-lucide="arrow-right" class="w-4 h-4"></i>
@@ -145,7 +142,7 @@
         <!-- Mobile Menu Toggle -->
         <button
           onclick="toggleMobileMenu()"
-          class="lg:hidden p-2 rounded-xl bg-graphite-800 border border-graphite-700 text-slate-300 hover:text-white"
+          class="lg:hidden p-2 rounded-xl bg-slate-100 border border-slate-200 text-slate-700 hover:text-slate-900"
         >
           <i data-lucide="menu" class="w-6 h-6"></i>
         </button>
@@ -154,15 +151,15 @@
     </div>
 
     <!-- Mobile Dropdown -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-graphite-950 border-b border-graphite-800 px-4 pt-3 pb-6 space-y-3 text-xs font-heading font-semibold">
-      <a href="#products" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-brandRed-light">Products & SaaS</a>
-      <a href="#enterprise-mis" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-brandRed-light">Enterprise MIS</a>
-      <a href="#automation" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-brandRed-light">Process Automation</a>
-      <a href="#leadership" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-brandRed-light">Leadership</a>
-      <a href="#calculator" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-brandRed-light">ROI Calculator</a>
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-3 text-xs font-heading font-bold">
+      <a href="#products" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 hover:text-brandRed">Products & SaaS</a>
+      <a href="#enterprise-mis" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 hover:text-brandRed">Enterprise MIS</a>
+      <a href="#automation" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 hover:text-brandRed">Process Automation</a>
+      <a href="#leadership" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 hover:text-brandRed">Leadership</a>
+      <a href="#calculator" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 hover:text-brandRed">ROI Calculator</a>
       <button
         onclick="toggleMobileMenu(); openModal();"
-        class="w-full py-3 rounded-xl bg-brandRed text-white font-bold text-center block shadow-lg"
+        class="w-full py-3 rounded-xl bg-brandRed text-white font-bold text-center block shadow-md"
       >
         Schedule Consultation
       </button>
@@ -170,31 +167,31 @@
   </header>
 
   <!-- HERO SECTION -->
-  <section class="relative pt-16 pb-24 md:pt-24 md:pb-32 overflow-hidden bg-gradient-to-b from-graphite-950 via-graphite-900 to-graphite-950">
+  <section class="relative pt-16 pb-24 md:pt-24 md:pb-32 overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
         <!-- Left Text Column (7 Cols) -->
         <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
           
-          <div class="inline-flex items-center space-x-2 bg-graphite-900 border border-graphite-700 px-4 py-1.5 rounded-full text-xs font-mono text-brandRed-light shadow-sm">
+          <div class="inline-flex items-center space-x-2 bg-white border border-slate-200 px-4 py-1.5 rounded-full text-xs font-mono text-brandRed font-semibold shadow-sm">
             <img src="./runit-logo-mark.svg" alt="Runit Mark" class="w-4 h-4 object-contain" />
             <span>RUNIT INFOTECH (runito.in) • Master Portal</span>
           </div>
 
-          <h1 class="font-heading text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-none">
+          <h1 class="font-heading text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-none">
             Enterprise Software, <br class="hidden sm:inline" />
             <span class="text-gradient-red">Fintech SaaS</span> & Data Automation
           </h1>
 
-          <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+          <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
             Architecting robust Cloud POS systems, micro ledgers, BFSI collections billing audit QC, and automated SQL data pipelines for high-growth enterprises and retail businesses.
           </p>
 
           <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
             <button
               onclick="openModal()"
-              class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brandRed hover:bg-brandRed-dark text-white font-heading font-bold text-sm shadow-xl shadow-brandRed/30 transition-all transform hover:-translate-y-0.5 flex items-center justify-center space-x-2"
+              class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brandRed hover:bg-brandRed-dark text-white font-heading font-bold text-sm shadow-xl shadow-brandRed/25 transition-all transform hover:-translate-y-0.5 flex items-center justify-center space-x-2"
             >
               <span>Schedule Consultation</span>
               <i data-lucide="arrow-right" class="w-4 h-4"></i>
@@ -202,7 +199,7 @@
 
             <a
               href="#products"
-              class="w-full sm:w-auto px-8 py-4 rounded-xl bg-graphite-800 hover:bg-graphite-700 border border-graphite-700 text-white font-heading font-semibold text-sm transition-all text-center"
+              class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-800 font-heading font-semibold text-sm transition-all text-center"
             >
               Explore Products
             </a>
@@ -212,40 +209,40 @@
 
         <!-- Right Hero Visual Card (5 Cols) -->
         <div class="lg:col-span-5 relative">
-          <div class="graphite-card p-8 rounded-3xl border border-graphite-700 shadow-2xl relative space-y-6">
-            <div class="flex items-center justify-between border-b border-graphite-800 pb-4">
+          <div class="white-card p-8 rounded-3xl border border-slate-200 shadow-xl relative space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-200 pb-4">
               <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-xl bg-brandRed/20 border border-brandRed/40 flex items-center justify-center text-brandRed-light font-bold">
+                <div class="w-10 h-10 rounded-xl bg-red-50 border border-red-200 flex items-center justify-center text-brandRed font-bold">
                   <i data-lucide="shield-check" class="w-5 h-5"></i>
                 </div>
                 <div>
-                  <h3 class="font-heading font-bold text-white text-base">Audit Precision Engine</h3>
-                  <span class="text-xs text-slate-400 font-mono">BFSI & Enterprise QC</span>
+                  <h3 class="font-heading font-bold text-slate-900 text-base">Audit Precision Engine</h3>
+                  <span class="text-xs text-slate-500 font-mono">BFSI & Enterprise QC</span>
                 </div>
               </div>
-              <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[11px] font-mono font-bold">ACTIVE</span>
+              <span class="px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[11px] font-mono font-bold">ACTIVE</span>
             </div>
 
             <div class="grid grid-cols-2 gap-4 text-left">
-              <div class="bg-graphite-900 border border-graphite-800 p-4 rounded-2xl">
-                <span class="text-xs text-slate-400 font-mono uppercase block">SaaS Ecosystem</span>
-                <span class="font-heading font-bold text-xl text-white">PowerBooks</span>
-                <span class="text-[11px] text-brandRed-light font-mono block mt-1">Cloud POS & ERP</span>
+              <div class="bg-slate-50 border border-slate-200 p-4 rounded-2xl">
+                <span class="text-xs text-slate-500 font-mono uppercase block">SaaS Ecosystem</span>
+                <span class="font-heading font-bold text-xl text-slate-900">PowerBooks</span>
+                <span class="text-[11px] text-brandRed font-mono block mt-1 font-semibold">Cloud POS & ERP</span>
               </div>
 
-              <div class="bg-graphite-900 border border-graphite-800 p-4 rounded-2xl">
-                <span class="text-xs text-slate-400 font-mono uppercase block">Micro Ledger</span>
-                <span class="font-heading font-bold text-xl text-white">FireBooks</span>
-                <span class="text-[11px] text-emerald-400 font-mono block mt-1">Instant Ledger</span>
+              <div class="bg-slate-50 border border-slate-200 p-4 rounded-2xl">
+                <span class="text-xs text-slate-500 font-mono uppercase block">Micro Ledger</span>
+                <span class="font-heading font-bold text-xl text-slate-900">FireBooks</span>
+                <span class="text-[11px] text-emerald-600 font-mono block mt-1 font-semibold">Instant Ledger</span>
               </div>
             </div>
 
-            <div class="bg-graphite-900 border border-graphite-800 p-4 rounded-2xl flex items-center justify-between">
+            <div class="bg-slate-50 border border-slate-200 p-4 rounded-2xl flex items-center justify-between">
               <div>
-                <span class="text-xs text-slate-400 font-mono uppercase block">Bio Link Generator</span>
-                <span class="font-heading font-bold text-base text-white">1lybio.in</span>
+                <span class="text-xs text-slate-500 font-mono uppercase block">Bio Link Generator</span>
+                <span class="font-heading font-bold text-base text-slate-900">1lybio.in</span>
               </div>
-              <a href="https://1lybio.in/" target="_blank" rel="noreferrer" class="px-3 py-1.5 rounded-lg bg-brandRed/20 hover:bg-brandRed/30 text-brandRed-light text-xs font-mono font-bold transition-colors">
+              <a href="https://1lybio.in/" target="_blank" rel="noreferrer" class="px-3 py-1.5 rounded-lg bg-red-50 hover:bg-red-100 text-brandRed text-xs font-mono font-bold transition-colors">
                 Visit Site ↗
               </a>
             </div>
@@ -255,22 +252,22 @@
       </div>
 
       <!-- Executive Metrics Bar -->
-      <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 pt-12 border-t border-graphite-800 text-center">
+      <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 pt-12 border-t border-slate-200 text-center">
         <div class="space-y-1">
-          <p class="font-heading font-black text-3xl sm:text-4xl text-white font-mono">10+ Years</p>
-          <p class="text-xs text-slate-400 font-mono uppercase tracking-wider">Enterprise Data & Audit Expertise</p>
+          <p class="font-heading font-black text-3xl sm:text-4xl text-slate-900 font-mono">10+ Years</p>
+          <p class="text-xs text-slate-500 font-mono uppercase tracking-wider font-semibold">Enterprise Data & Audit Expertise</p>
         </div>
         <div class="space-y-1">
-          <p class="font-heading font-black text-3xl sm:text-4xl text-brandRed-light font-mono">98.5%</p>
-          <p class="text-xs text-slate-400 font-mono uppercase tracking-wider">Reconciliation Precision</p>
+          <p class="font-heading font-black text-3xl sm:text-4xl text-brandRed font-mono">98.5%</p>
+          <p class="text-xs text-slate-500 font-mono uppercase tracking-wider font-semibold">Reconciliation Precision</p>
         </div>
         <div class="space-y-1">
-          <p class="font-heading font-black text-3xl sm:text-4xl text-white font-mono">3+ SaaS</p>
-          <p class="text-xs text-slate-400 font-mono uppercase tracking-wider">Cloud Platforms Built</p>
+          <p class="font-heading font-black text-3xl sm:text-4xl text-slate-900 font-mono">3+ SaaS</p>
+          <p class="text-xs text-slate-500 font-mono uppercase tracking-wider font-semibold">Cloud Platforms Built</p>
         </div>
         <div class="space-y-1">
-          <p class="font-heading font-black text-3xl sm:text-4xl text-emerald-400 font-mono">85%</p>
-          <p class="text-xs text-slate-400 font-mono uppercase tracking-wider">Reduction in Manual Effort</p>
+          <p class="font-heading font-black text-3xl sm:text-4xl text-emerald-600 font-mono">85%</p>
+          <p class="text-xs text-slate-500 font-mono uppercase tracking-wider font-semibold">Reduction in Manual Effort</p>
         </div>
       </div>
 
@@ -278,52 +275,52 @@
   </section>
 
   <!-- HERITAGE SECTION -->
-  <section class="py-20 bg-graphite-950 border-t border-graphite-800">
+  <section class="py-20 bg-slate-50 border-t border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-        <div class="inline-flex items-center space-x-2 bg-graphite-900 border border-graphite-700 px-3.5 py-1.5 rounded-full text-xs font-mono text-brandRed-light">
+        <div class="inline-flex items-center space-x-2 bg-white border border-slate-200 px-3.5 py-1.5 rounded-full text-xs font-mono text-brandRed font-semibold">
           <i data-lucide="award" class="w-3.5 h-3.5 text-brandRed"></i>
           <span>ENTERPRISE STANDARDS</span>
         </div>
 
-        <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-          Built for <span class="text-brandRed-light">Enterprise Scale</span> & Audit Reliability
+        <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+          Built for <span class="text-gradient-red">Enterprise Scale</span> & Audit Reliability
         </h2>
 
-        <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
           Engineered to institutional specifications, combining deep domain knowledge in BFSI collections billing audit QC with modern, reactive web architectures.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
-        <div class="graphite-card graphite-card-hover p-8 rounded-3xl border border-graphite-800 space-y-4">
-          <div class="w-12 h-12 rounded-2xl bg-brandRed/20 border border-brandRed/40 flex items-center justify-center text-brandRed-light">
+        <div class="white-card white-card-hover p-8 rounded-3xl space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-red-50 border border-red-200 flex items-center justify-center text-brandRed">
             <i data-lucide="database" class="w-6 h-6"></i>
           </div>
-          <h3 class="font-heading font-bold text-xl text-white">Institutional Data Rigor</h3>
-          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          <h3 class="font-heading font-bold text-xl text-slate-900">Institutional Data Rigor</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
             Battle-tested financial data reconciliation models handling millions of records across multi-tier database pipelines with zero data-loss tolerance.
           </p>
         </div>
 
-        <div class="graphite-card graphite-card-hover p-8 rounded-3xl border border-graphite-800 space-y-4">
-          <div class="w-12 h-12 rounded-2xl bg-brandRed/20 border border-brandRed/40 flex items-center justify-center text-brandRed-light">
+        <div class="white-card white-card-hover p-8 rounded-3xl space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-red-50 border border-red-200 flex items-center justify-center text-brandRed">
             <i data-lucide="layers" class="w-6 h-6"></i>
           </div>
-          <h3 class="font-heading font-bold text-xl text-white">Proprietary SaaS Ecosystem</h3>
-          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          <h3 class="font-heading font-bold text-xl text-slate-900">Proprietary SaaS Ecosystem</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
             In-house developed cloud solutions including PowerBooks (Cloud POS ERP), FireBooks (Micro Ledger), and 1lybio (Digital Card Utility).
           </p>
         </div>
 
-        <div class="graphite-card graphite-card-hover p-8 rounded-3xl border border-graphite-800 space-y-4">
-          <div class="w-12 h-12 rounded-2xl bg-brandRed/20 border border-brandRed/40 flex items-center justify-center text-brandRed-light">
+        <div class="white-card white-card-hover p-8 rounded-3xl space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-red-50 border border-red-200 flex items-center justify-center text-brandRed">
             <i data-lucide="cpu" class="w-6 h-6"></i>
           </div>
-          <h3 class="font-heading font-bold text-xl text-white">Process Automation</h3>
-          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          <h3 class="font-heading font-bold text-xl text-slate-900">Process Automation</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
             Custom SQL data pipelines and automated messaging workflows that replace manual Excel reporting with live PowerBI operational intelligence.
           </p>
         </div>
@@ -334,20 +331,20 @@
   </section>
 
   <!-- PRODUCT PILLARS SECTION -->
-  <section id="products" class="py-20 md:py-28 relative border-t border-graphite-800 bg-graphite-900">
+  <section id="products" class="py-20 md:py-28 relative bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-        <div class="inline-flex items-center space-x-2 bg-graphite-950 border border-graphite-700 px-3.5 py-1.5 rounded-full text-xs font-mono text-brandRed-light">
+        <div class="inline-flex items-center space-x-2 bg-slate-100 border border-slate-200 px-3.5 py-1.5 rounded-full text-xs font-mono text-brandRed font-semibold">
           <i data-lucide="layout-grid" class="w-3.5 h-3.5 text-brandRed"></i>
           <span>CORE ARCHITECTURAL PILLARS</span>
         </div>
 
-        <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-          Three Pillars of <span class="text-brandRed-light">Digital Capability</span>
+        <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+          Three Pillars of <span class="text-gradient-red">Digital Capability</span>
         </h2>
 
-        <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
           Select a domain pillar below to examine RUNITO’s software ecosystem, technical specifications, and enterprise service offerings.
         </p>
       </div>
@@ -357,7 +354,7 @@
         <button
           onclick="switchTab('saas')"
           id="tab-btn-saas"
-          class="tab-btn px-6 py-3 rounded-2xl text-xs sm:text-sm font-heading font-bold transition-all bg-brandRed text-white shadow-lg"
+          class="tab-btn px-6 py-3 rounded-2xl text-xs sm:text-sm font-heading font-bold transition-all bg-brandRed text-white shadow-md"
         >
           1. Fintech SaaS & Web Apps
         </button>
@@ -365,7 +362,7 @@
         <button
           onclick="switchTab('mis')"
           id="tab-btn-mis"
-          class="tab-btn px-6 py-3 rounded-2xl text-xs sm:text-sm font-heading font-bold transition-all bg-graphite-800 text-slate-300 hover:text-white border border-graphite-700"
+          class="tab-btn px-6 py-3 rounded-2xl text-xs sm:text-sm font-heading font-bold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200"
         >
           2. Enterprise MIS & Analytics
         </button>
@@ -373,7 +370,7 @@
         <button
           onclick="switchTab('automation')"
           id="tab-btn-automation"
-          class="tab-btn px-6 py-3 rounded-2xl text-xs sm:text-sm font-heading font-bold transition-all bg-graphite-800 text-slate-300 hover:text-white border border-graphite-700"
+          class="tab-btn px-6 py-3 rounded-2xl text-xs sm:text-sm font-heading font-bold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200"
         >
           3. Process Automation & Pipelines
         </button>
@@ -383,53 +380,53 @@
       <div id="tab-content-saas" class="tab-content space-y-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           
-          <div class="graphite-card p-8 rounded-3xl border border-graphite-800 space-y-6 flex flex-col justify-between">
+          <div class="white-card p-8 rounded-3xl space-y-6 flex flex-col justify-between">
             <div class="space-y-4">
               <div class="flex items-center justify-between">
-                <span class="px-3 py-1 rounded-full bg-brandRed/20 text-brandRed-light font-mono text-[10px] font-bold">FLAGSHIP POS</span>
-                <span class="text-xs text-slate-400 font-mono">v2.4 Active</span>
+                <span class="px-3 py-1 rounded-full bg-red-50 text-brandRed font-mono text-[10px] font-bold border border-red-200">FLAGSHIP POS</span>
+                <span class="text-xs text-slate-500 font-mono font-semibold">v2.4 Active</span>
               </div>
-              <h3 class="font-heading font-extrabold text-2xl text-white">PowerBooks</h3>
-              <p class="text-xs text-brandRed-light font-mono">Cloud POS & Supermarket ERP</p>
-              <p class="text-xs text-slate-300 leading-relaxed">
+              <h3 class="font-heading font-extrabold text-2xl text-slate-900">PowerBooks</h3>
+              <p class="text-xs text-brandRed font-mono font-bold">Cloud POS & Supermarket ERP</p>
+              <p class="text-xs text-slate-600 leading-relaxed">
                 Full-featured cloud point-of-sale platform built for retail stores and supermarkets with multi-MRP rate pricing, barcode scanning, offline queue sync, and GST billing.
               </p>
             </div>
-            <button onclick="openModal('PowerBooks POS SaaS')" class="w-full py-3 rounded-xl bg-graphite-800 hover:bg-brandRed text-white text-xs font-bold font-heading transition-colors border border-graphite-700">
+            <button onclick="openModal('PowerBooks POS SaaS')" class="w-full py-3 rounded-xl bg-slate-100 hover:bg-brandRed hover:text-white text-slate-800 text-xs font-bold font-heading transition-colors border border-slate-200">
               Request Demo
             </button>
           </div>
 
-          <div class="graphite-card p-8 rounded-3xl border border-graphite-800 space-y-6 flex flex-col justify-between">
+          <div class="white-card p-8 rounded-3xl space-y-6 flex flex-col justify-between">
             <div class="space-y-4">
               <div class="flex items-center justify-between">
-                <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 font-mono text-[10px] font-bold">MICRO LEDGER</span>
-                <span class="text-xs text-slate-400 font-mono font-semibold">Active</span>
+                <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 font-mono text-[10px] font-bold border border-emerald-200">MICRO LEDGER</span>
+                <span class="text-xs text-slate-500 font-mono font-semibold">Active</span>
               </div>
-              <h3 class="font-heading font-extrabold text-2xl text-white">FireBooks</h3>
-              <p class="text-xs text-emerald-400 font-mono">Micro Cloud Accounting</p>
-              <p class="text-xs text-slate-300 leading-relaxed">
+              <h3 class="font-heading font-extrabold text-2xl text-slate-900">FireBooks</h3>
+              <p class="text-xs text-emerald-700 font-mono font-bold">Micro Cloud Accounting</p>
+              <p class="text-xs text-slate-600 leading-relaxed">
                 Lightweight cloud ledger for small businesses, contractors, and freelancers offering simplified income/expense logging, payment receipts, and automated PDF export.
               </p>
             </div>
-            <button onclick="openModal('FireBooks Micro Ledger')" class="w-full py-3 rounded-xl bg-graphite-800 hover:bg-brandRed text-white text-xs font-bold font-heading transition-colors border border-graphite-700">
+            <button onclick="openModal('FireBooks Micro Ledger')" class="w-full py-3 rounded-xl bg-slate-100 hover:bg-brandRed hover:text-white text-slate-800 text-xs font-bold font-heading transition-colors border border-slate-200">
               Learn More
             </button>
           </div>
 
-          <div class="graphite-card p-8 rounded-3xl border border-graphite-800 space-y-6 flex flex-col justify-between">
+          <div class="white-card p-8 rounded-3xl space-y-6 flex flex-col justify-between">
             <div class="space-y-4">
               <div class="flex items-center justify-between">
-                <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-400 font-mono text-[10px] font-bold">BIO LINK UTILITY</span>
-                <a href="https://1lybio.in/" target="_blank" class="text-xs text-blue-400 hover:underline font-mono">1lybio.in ↗</a>
+                <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 font-mono text-[10px] font-bold border border-blue-200">BIO LINK UTILITY</span>
+                <a href="https://1lybio.in/" target="_blank" class="text-xs text-blue-600 hover:underline font-mono font-semibold">1lybio.in ↗</a>
               </div>
-              <h3 class="font-heading font-extrabold text-2xl text-white">1lybio</h3>
-              <p class="text-xs text-blue-400 font-mono">Digital Bio-Link Generator</p>
-              <p class="text-xs text-slate-300 leading-relaxed">
+              <h3 class="font-heading font-extrabold text-2xl text-slate-900">1lybio</h3>
+              <p class="text-xs text-blue-600 font-mono font-bold">Digital Bio-Link Generator</p>
+              <p class="text-xs text-slate-600 leading-relaxed">
                 Instant digital profile & link hub creator empowering creators, professionals, and brands to aggregate social channels, portfolios, and contact cards into a single link.
               </p>
             </div>
-            <a href="https://1lybio.in/" target="_blank" class="w-full py-3 rounded-xl bg-graphite-800 hover:bg-brandRed text-white text-xs font-bold font-heading transition-colors border border-graphite-700 text-center block">
+            <a href="https://1lybio.in/" target="_blank" class="w-full py-3 rounded-xl bg-slate-100 hover:bg-brandRed hover:text-white text-slate-800 text-xs font-bold font-heading transition-colors border border-slate-200 text-center block">
               Launch 1lybio.in
             </a>
           </div>
@@ -441,26 +438,26 @@
       <div id="tab-content-mis" class="tab-content hidden space-y-8">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           
-          <div class="graphite-card p-8 rounded-3xl border border-graphite-800 space-y-4">
+          <div class="white-card p-8 rounded-3xl space-y-4">
             <div class="flex items-center space-x-3">
-              <div class="w-10 h-10 rounded-xl bg-brandRed/20 text-brandRed-light flex items-center justify-center font-bold">
+              <div class="w-10 h-10 rounded-xl bg-red-50 text-brandRed flex items-center justify-center font-bold border border-red-200">
                 <i data-lucide="file-check-2" class="w-5 h-5"></i>
               </div>
-              <h3 class="font-heading font-bold text-2xl text-white">BFSI Collections Billing QC Audit</h3>
+              <h3 class="font-heading font-bold text-2xl text-slate-900">BFSI Collections Billing QC Audit</h3>
             </div>
-            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
               Specialized quality control audit and billing reconciliation models engineered for Banking, Financial Services, and Collections recovery operations, ensuring 98.5% billing audit accuracy.
             </p>
           </div>
 
-          <div class="graphite-card p-8 rounded-3xl border border-graphite-800 space-y-4">
+          <div class="white-card p-8 rounded-3xl space-y-4">
             <div class="flex items-center space-x-3">
-              <div class="w-10 h-10 rounded-xl bg-brandRed/20 text-brandRed-light flex items-center justify-center font-bold">
+              <div class="w-10 h-10 rounded-xl bg-red-50 text-brandRed flex items-center justify-center font-bold border border-red-200">
                 <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
               </div>
-              <h3 class="font-heading font-bold text-2xl text-white">PowerBI & SQL Analytics Dashboards</h3>
+              <h3 class="font-heading font-bold text-2xl text-slate-900">PowerBI & SQL Analytics Dashboards</h3>
             </div>
-            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
               Custom interactive PowerBI & SQL data dashboards that transform fragmented transactional data into real-time executive KPI visualizations and operational decision boards.
             </p>
           </div>
@@ -470,22 +467,22 @@
 
       <!-- Tab 3: Automation -->
       <div id="tab-content-automation" class="tab-content hidden space-y-8">
-        <div class="graphite-card p-8 rounded-3xl border border-graphite-800 space-y-6">
-          <h3 class="font-heading font-bold text-2xl text-white">Automated SQL Data Pipelines</h3>
-          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+        <div class="white-card p-8 rounded-3xl space-y-6">
+          <h3 class="font-heading font-bold text-2xl text-slate-900">Automated SQL Data Pipelines</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
             Eliminating manual spreadsheet consolidation through automated SQL extraction, ETL validation, scheduled triggers, and automated messaging alerts (WhatsApp / Email digests).
           </p>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-mono text-slate-300">
-            <div class="bg-graphite-900 p-4 rounded-xl border border-graphite-800">
-              <span class="text-brandRed-light font-bold block mb-1">✓ Automated ETL</span>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-mono text-slate-700">
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+              <span class="text-brandRed font-bold block mb-1">✓ Automated ETL</span>
               Direct database to report sync
             </div>
-            <div class="bg-graphite-900 p-4 rounded-xl border border-graphite-800">
-              <span class="text-brandRed-light font-bold block mb-1">✓ 85% Hours Saved</span>
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+              <span class="text-brandRed font-bold block mb-1">✓ 85% Hours Saved</span>
               Zero spreadsheet grinding
             </div>
-            <div class="bg-graphite-900 p-4 rounded-xl border border-graphite-800">
-              <span class="text-brandRed-light font-bold block mb-1">✓ Audit Verified</span>
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+              <span class="text-brandRed font-bold block mb-1">✓ Audit Verified</span>
               Precision error validation
             </div>
           </div>
@@ -496,35 +493,35 @@
   </section>
 
   <!-- ROI CALCULATOR SECTION -->
-  <section id="calculator" class="py-20 md:py-28 relative border-t border-graphite-800 bg-graphite-950/60">
+  <section id="calculator" class="py-20 md:py-28 relative bg-slate-50 border-t border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-        <div class="inline-flex items-center space-x-2 bg-graphite-900 border border-graphite-700 px-3.5 py-1.5 rounded-full text-xs font-mono text-brandRed-light">
+        <div class="inline-flex items-center space-x-2 bg-white border border-slate-200 px-3.5 py-1.5 rounded-full text-xs font-mono text-brandRed font-semibold">
           <i data-lucide="calculator" class="w-3.5 h-3.5 text-brandRed"></i>
           <span>BUSINESS AUTOMATION ROI CALCULATOR</span>
         </div>
 
-        <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-          Calculate Your <span class="text-brandRed-light">Operational Time & Cost Savings</span>
+        <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+          Calculate Your <span class="text-gradient-red">Operational Time & Cost Savings</span>
         </h2>
 
-        <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
           Estimate how much operational time and financial expense your business saves by eliminating manual spreadsheet reporting with automated SQL data pipelines.
         </p>
       </div>
 
       <!-- Calculator Box -->
-      <div class="graphite-card max-w-5xl mx-auto rounded-3xl border border-graphite-800 p-6 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 shadow-2xl">
+      <div class="white-card max-w-5xl mx-auto rounded-3xl p-6 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 shadow-xl">
         
         <!-- Controls Column (7 Cols) -->
         <div class="lg:col-span-7 space-y-8">
           
-          <div class="flex items-center justify-between border-b border-graphite-800 pb-4">
-            <h3 class="font-heading font-bold text-xl text-white">Operational Parameters</h3>
+          <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+            <h3 class="font-heading font-bold text-xl text-slate-900">Operational Parameters</h3>
             
             <!-- Currency Toggle -->
-            <div class="flex items-center bg-graphite-900 border border-graphite-700 rounded-xl p-1 text-xs font-mono">
+            <div class="flex items-center bg-slate-100 border border-slate-200 rounded-xl p-1 text-xs font-mono">
               <button
                 id="curr-inr"
                 onclick="setCurrency('INR')"
@@ -535,7 +532,7 @@
               <button
                 id="curr-usd"
                 onclick="setCurrency('USD')"
-                class="px-3 py-1 rounded-lg font-bold text-slate-400 hover:text-white transition-colors"
+                class="px-3 py-1 rounded-lg font-bold text-slate-600 hover:text-slate-900 transition-colors"
               >
                 $ USD
               </button>
@@ -545,11 +542,11 @@
           <!-- Slider 1 -->
           <div class="space-y-3">
             <div class="flex justify-between items-center text-xs sm:text-sm font-semibold">
-              <label class="text-slate-300 flex items-center space-x-2">
-                <i data-lucide="clock" class="w-4 h-4 text-brandRed-light"></i>
+              <label class="text-slate-700 flex items-center space-x-2">
+                <i data-lucide="clock" class="w-4 h-4 text-brandRed"></i>
                 <span>Manual Reporting Hours Spent / Week</span>
               </label>
-              <span id="weekly-hours-val" class="font-heading font-black text-xl text-brandRed-light font-mono bg-graphite-900 border border-graphite-700 px-3 py-1 rounded-xl">
+              <span id="weekly-hours-val" class="font-heading font-black text-xl text-brandRed font-mono bg-red-50 border border-red-200 px-3 py-1 rounded-xl">
                 25 Hours / wk
               </span>
             </div>
@@ -562,9 +559,9 @@
               step="5"
               value="25"
               oninput="calculateROI()"
-              class="w-full h-2 bg-graphite-800 rounded-lg appearance-none cursor-pointer accent-red-600"
+              class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-red-600"
             />
-            <div class="flex justify-between text-[10px] text-slate-400 font-mono">
+            <div class="flex justify-between text-[10px] text-slate-500 font-mono">
               <span>5 hrs (Small Team)</span>
               <span>50 hrs (Enterprise Unit)</span>
               <span>100 hrs (Global Operations)</span>
@@ -574,11 +571,11 @@
           <!-- Slider 2 -->
           <div class="space-y-3">
             <div class="flex justify-between items-center text-xs sm:text-sm font-semibold">
-              <label class="text-slate-300 flex items-center space-x-2">
-                <i data-lucide="trending-up" class="w-4 h-4 text-emerald-400"></i>
+              <label class="text-slate-700 flex items-center space-x-2">
+                <i data-lucide="trending-up" class="w-4 h-4 text-emerald-600"></i>
                 <span>Monthly Vendor Invoices / Line Items</span>
               </label>
-              <span id="monthly-invoices-val" class="font-heading font-black text-xl text-emerald-400 font-mono bg-graphite-900 border border-graphite-700 px-3 py-1 rounded-xl">
+              <span id="monthly-invoices-val" class="font-heading font-black text-xl text-emerald-700 font-mono bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-xl">
                 500 Bills / mo
               </span>
             </div>
@@ -591,27 +588,27 @@
               step="50"
               value="500"
               oninput="calculateROI()"
-              class="w-full h-2 bg-graphite-800 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+              class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-emerald-600"
             />
-            <div class="flex justify-between text-[10px] text-slate-400 font-mono">
+            <div class="flex justify-between text-[10px] text-slate-500 font-mono">
               <span>50 Bills</span>
               <span>2,500 Bills</span>
               <span>5,000+ Bills</span>
             </div>
           </div>
 
-          <div class="bg-graphite-900 border border-graphite-800 p-4 rounded-2xl text-xs text-slate-400 space-y-1">
-            <p class="font-semibold text-slate-300 font-mono">⚙️ Enterprise Calculation Benchmark:</p>
+          <div class="bg-slate-50 border border-slate-200 p-4 rounded-2xl text-xs text-slate-600 space-y-1">
+            <p class="font-semibold text-slate-800 font-mono">⚙️ Enterprise Calculation Benchmark:</p>
             <p>Based on financial billing audit benchmarks (achieving 85% reduction in manual spreadsheet compilation hours).</p>
           </div>
 
         </div>
 
-        <!-- Output Column (5 Cols) -->
-        <div class="lg:col-span-5 bg-graphite-900 border border-graphite-800 p-6 sm:p-8 rounded-2xl flex flex-col justify-between space-y-6">
+        <!-- Output Column (5 Cols - Dark Contrast Container for Output Impact) -->
+        <div class="lg:col-span-5 bg-slate-900 text-white p-6 sm:p-8 rounded-2xl flex flex-col justify-between space-y-6 shadow-xl">
           
           <div class="space-y-6">
-            <h4 class="font-heading font-bold text-lg text-white border-b border-graphite-800 pb-3">Estimated ROI & Output</h4>
+            <h4 class="font-heading font-bold text-lg text-white border-b border-slate-800 pb-3">Estimated ROI & Output</h4>
 
             <div class="space-y-1">
               <p class="text-xs text-slate-400 font-mono uppercase">⏱️ Hours Saved Monthly</p>
@@ -656,57 +653,57 @@
   </section>
 
   <!-- FOUNDER & LEADERSHIP SECTION -->
-  <section id="leadership" class="py-20 md:py-28 relative bg-graphite-950/80 border-t border-graphite-800">
+  <section id="leadership" class="py-20 md:py-28 relative bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-        <div class="inline-flex items-center space-x-2 bg-graphite-900 border border-graphite-700 px-3.5 py-1.5 rounded-full text-xs font-mono text-brandRed-light">
+        <div class="inline-flex items-center space-x-2 bg-slate-100 border border-slate-200 px-3.5 py-1.5 rounded-full text-xs font-mono text-brandRed font-semibold">
           <i data-lucide="user" class="w-3.5 h-3.5 text-brandRed"></i>
           <span>FOUNDER & LEADERSHIP</span>
         </div>
 
-        <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-          Engineering Excellence & <span class="text-brandRed-light">Technology Leadership</span>
+        <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+          Engineering Excellence & <span class="text-gradient-red">Technology Leadership</span>
         </h2>
 
-        <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
           Meet the leadership bridging corporate financial audit rigor with modern software engineering innovation.
         </p>
       </div>
 
       <!-- Founder Card -->
-      <div class="graphite-card max-w-4xl mx-auto rounded-3xl border border-graphite-800 p-8 sm:p-12 grid grid-cols-1 md:grid-cols-12 gap-8 shadow-2xl">
+      <div class="white-card max-w-4xl mx-auto rounded-3xl p-8 sm:p-12 grid grid-cols-1 md:grid-cols-12 gap-8 shadow-xl">
         
         <!-- Avatar Column (4 Cols) -->
         <div class="md:col-span-4 flex flex-col items-center text-center space-y-4">
-          <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-3xl bg-brandRed p-1 shadow-2xl shadow-brandRed/20">
-            <div class="w-full h-full bg-graphite-900 rounded-[22px] overflow-hidden flex flex-col items-center justify-center p-4">
-              <div class="w-20 h-20 rounded-full bg-graphite-800 border border-brandRed/40 flex items-center justify-center text-brandRed-light font-heading font-black text-3xl">
+          <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-3xl bg-brandRed p-1 shadow-xl shadow-brandRed/20">
+            <div class="w-full h-full bg-white rounded-[22px] overflow-hidden flex flex-col items-center justify-center p-4">
+              <div class="w-20 h-20 rounded-full bg-red-50 border border-red-200 flex items-center justify-center text-brandRed font-heading font-black text-3xl">
                 VA
               </div>
-              <span class="text-xs font-heading font-bold text-white mt-2">Varun Akshay</span>
-              <span class="text-[10px] text-slate-400 font-mono">S Varunakshay</span>
+              <span class="text-xs font-heading font-bold text-slate-900 mt-2">Varun Akshay</span>
+              <span class="text-[10px] text-slate-500 font-mono">S Varunakshay</span>
             </div>
           </div>
 
           <div class="space-y-1">
-            <h3 class="font-heading font-extrabold text-xl text-white">Varun Akshay</h3>
-            <p class="text-xs text-brandRed-light font-mono font-semibold">S Varunakshay</p>
-            <p class="text-xs text-slate-400 font-mono">Founder & Lead Architect</p>
-            <p class="text-[11px] text-slate-400 font-mono font-bold">RUNIT INFOTECH</p>
+            <h3 class="font-heading font-extrabold text-xl text-slate-900">Varun Akshay</h3>
+            <p class="text-xs text-brandRed font-mono font-bold">S Varunakshay</p>
+            <p class="text-xs text-slate-600 font-mono">Founder & Lead Architect</p>
+            <p class="text-[11px] text-slate-500 font-mono font-bold">RUNIT INFOTECH</p>
           </div>
 
           <div class="pt-2 flex flex-wrap justify-center gap-2">
-            <a href="https://www.linkedin.com/in/varun-akshay-fsd/" target="_blank" class="p-2.5 rounded-xl bg-graphite-900 border border-graphite-700 text-slate-300 hover:text-white hover:border-brandRed transition-colors">
+            <a href="https://www.linkedin.com/in/varun-akshay-fsd/" target="_blank" class="p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-700 hover:text-brandRed hover:border-brandRed transition-colors">
               <i data-lucide="linkedin" class="w-4 h-4"></i>
             </a>
-            <a href="https://github.com/code-with-varun" target="_blank" class="p-2.5 rounded-xl bg-graphite-900 border border-graphite-700 text-slate-300 hover:text-white transition-colors">
+            <a href="https://github.com/code-with-varun" target="_blank" class="p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-700 hover:text-slate-900 transition-colors">
               <i data-lucide="github" class="w-4 h-4"></i>
             </a>
-            <a href="https://www.youtube.com/@Runit_Infotech" target="_blank" class="p-2.5 rounded-xl bg-graphite-900 border border-graphite-700 text-slate-300 hover:text-brandRed-light transition-colors">
+            <a href="https://www.youtube.com/@Runit_Infotech" target="_blank" class="p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-700 hover:text-brandRed transition-colors">
               <i data-lucide="youtube" class="w-4 h-4"></i>
             </a>
-            <a href="https://code-with-varun.github.io/me-1lybio/" target="_blank" class="p-2.5 rounded-xl bg-graphite-900 border border-graphite-700 text-slate-300 hover:text-emerald-400 transition-colors">
+            <a href="https://code-with-varun.github.io/me-1lybio/" target="_blank" class="p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-700 hover:text-emerald-600 transition-colors">
               <i data-lucide="globe" class="w-4 h-4"></i>
             </a>
           </div>
@@ -715,37 +712,37 @@
         <!-- Bio Column (8 Cols) -->
         <div class="md:col-span-8 space-y-6">
           <div class="space-y-3">
-            <h4 class="font-heading font-bold text-lg text-white flex items-center space-x-2">
-              <i data-lucide="building-2" class="w-4 h-4 text-brandRed-light"></i>
+            <h4 class="font-heading font-bold text-lg text-slate-900 flex items-center space-x-2">
+              <i data-lucide="building-2" class="w-4 h-4 text-brandRed"></i>
               <span>Executive Profile</span>
             </h4>
-            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
               A results-driven technologist with over a decade of hands-on expertise spanning enterprise MIS reporting, BFSI collections analytics, billing QC automation, full-stack MERN web development, and process automation.
             </p>
-            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              As Founder and Lead Architect of <span class="text-white font-bold">RUNIT INFOTECH</span>, Varun Akshay leads software development for PowerBooks, FireBooks, 1lybio, and custom enterprise analytics solutions.
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              As Founder and Lead Architect of <span class="text-slate-900 font-bold">RUNIT INFOTECH</span>, Varun Akshay leads software development for PowerBooks, FireBooks, 1lybio, and custom enterprise analytics solutions.
             </p>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div class="bg-graphite-900 border border-graphite-800 p-4 rounded-2xl space-y-1">
-              <div class="flex items-center space-x-2 text-brandRed-light font-bold text-xs">
+            <div class="bg-slate-50 border border-slate-200 p-4 rounded-2xl space-y-1">
+              <div class="flex items-center space-x-2 text-brandRed font-bold text-xs">
                 <i data-lucide="graduation-cap" class="w-4 h-4 text-brandRed"></i>
                 <span>Qualifications</span>
               </div>
-              <p class="text-xs text-white font-semibold">B.Sc Computer Science</p>
-              <p class="text-[11px] text-slate-400 font-mono">RAAK Arts & Science College</p>
-              <p class="text-[11px] text-slate-400 font-mono">UpGrad KnowledgeHut FSD Alumnus</p>
+              <p class="text-xs text-slate-900 font-semibold">B.Sc Computer Science</p>
+              <p class="text-[11px] text-slate-500 font-mono">RAAK Arts & Science College</p>
+              <p class="text-[11px] text-slate-500 font-mono">UpGrad KnowledgeHut FSD Alumnus</p>
             </div>
 
-            <div class="bg-graphite-900 border border-graphite-800 p-4 rounded-2xl space-y-1">
-              <div class="flex items-center space-x-2 text-brandRed-light font-bold text-xs">
+            <div class="bg-slate-50 border border-slate-200 p-4 rounded-2xl space-y-1">
+              <div class="flex items-center space-x-2 text-brandRed font-bold text-xs">
                 <i data-lucide="award" class="w-4 h-4 text-brandRed"></i>
                 <span>Domain Expertise</span>
               </div>
-              <p class="text-xs text-white font-semibold">BFSI Collections & Billing QC</p>
-              <p class="text-[11px] text-slate-400 font-mono">10+ Years MIS Data Audit</p>
-              <p class="text-[11px] text-slate-400 font-mono">Full-Stack Cloud Architecture</p>
+              <p class="text-xs text-slate-900 font-semibold">BFSI Collections & Billing QC</p>
+              <p class="text-[11px] text-slate-500 font-mono">10+ Years MIS Data Audit</p>
+              <p class="text-[11px] text-slate-500 font-mono">Full-Stack Cloud Architecture</p>
             </div>
           </div>
 
@@ -757,48 +754,48 @@
   </section>
 
   <!-- FAQ SECTION -->
-  <section id="faq" class="py-20 md:py-28 relative border-t border-graphite-800 bg-graphite-900">
+  <section id="faq" class="py-20 md:py-28 relative bg-slate-50 border-t border-slate-200">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center space-y-4 mb-16">
-        <div class="inline-flex items-center space-x-2 bg-graphite-950 border border-graphite-700 px-3.5 py-1.5 rounded-full text-xs font-mono text-brandRed-light">
+        <div class="inline-flex items-center space-x-2 bg-white border border-slate-200 px-3.5 py-1.5 rounded-full text-xs font-mono text-brandRed font-semibold">
           <i data-lucide="help-circle" class="w-3.5 h-3.5 text-brandRed"></i>
           <span>FREQUENTLY ASKED QUESTIONS</span>
         </div>
 
-        <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-          Frequently Asked <span class="text-brandRed-light">Questions</span>
+        <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+          Frequently Asked <span class="text-gradient-red">Questions</span>
         </h2>
       </div>
 
       <div class="space-y-4">
         
-        <div class="graphite-card rounded-2xl border border-graphite-800 overflow-hidden">
-          <button onclick="toggleFaq(1)" class="w-full p-6 text-left font-heading font-bold text-base sm:text-lg text-white flex items-center justify-between space-x-4 hover:text-brandRed-light transition-colors">
+        <div class="white-card rounded-2xl overflow-hidden">
+          <button onclick="toggleFaq(1)" class="w-full p-6 text-left font-heading font-bold text-base sm:text-lg text-slate-900 flex items-center justify-between space-x-4 hover:text-brandRed transition-colors">
             <span>What core products and services does Runit Infotech provide?</span>
-            <i id="faq-icon-1" data-lucide="chevron-down" class="w-5 h-5 text-slate-400 shrink-0"></i>
+            <i id="faq-icon-1" data-lucide="chevron-down" class="w-5 h-5 text-slate-500 shrink-0"></i>
           </button>
-          <div id="faq-ans-1" class="hidden px-6 pb-6 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-graphite-800 pt-4">
+          <div id="faq-ans-1" class="hidden px-6 pb-6 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200 pt-4">
             Runit Infotech (`runito.in`) operates across three core pillars: 1) Flagship Fintech & Web SaaS products including PowerBooks (Cloud POS & Retail ERP), FireBooks (Micro Cloud Ledger), and 1lybio (Digital Bio-Link Generator); 2) Enterprise MIS & Data Analytics featuring BFSI Collections & Recovery Billing QC and PowerBI/SQL dashboards; 3) Intelligent Process Automation specializing in automated SQL data pipelines and workflow integrations.
           </div>
         </div>
 
-        <div class="graphite-card rounded-2xl border border-graphite-800 overflow-hidden">
-          <button onclick="toggleFaq(2)" class="w-full p-6 text-left font-heading font-bold text-base sm:text-lg text-white flex items-center justify-between space-x-4 hover:text-brandRed-light transition-colors">
+        <div class="white-card rounded-2xl overflow-hidden">
+          <button onclick="toggleFaq(2)" class="w-full p-6 text-left font-heading font-bold text-base sm:text-lg text-slate-900 flex items-center justify-between space-x-4 hover:text-brandRed transition-colors">
             <span>How does process automation reduce operational costs for businesses?</span>
-            <i id="faq-icon-2" data-lucide="chevron-down" class="w-5 h-5 text-slate-400 shrink-0"></i>
+            <i id="faq-icon-2" data-lucide="chevron-down" class="w-5 h-5 text-slate-500 shrink-0"></i>
           </button>
-          <div id="faq-ans-2" class="hidden px-6 pb-6 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-graphite-800 pt-4">
+          <div id="faq-ans-2" class="hidden px-6 pb-6 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200 pt-4">
             By connecting databases, billing systems, and messaging channels automatically through custom SQL workflows and automated pipelines, businesses eliminate manual data entry, spreadsheet consolidation, and billing reconciliation — achieving up to an 85% reduction in manual operational hours with 98.5% reconciliation precision.
           </div>
         </div>
 
-        <div class="graphite-card rounded-2xl border border-graphite-800 overflow-hidden">
-          <button onclick="toggleFaq(3)" class="w-full p-6 text-left font-heading font-bold text-base sm:text-lg text-white flex items-center justify-between space-x-4 hover:text-brandRed-light transition-colors">
+        <div class="white-card rounded-2xl overflow-hidden">
+          <button onclick="toggleFaq(3)" class="w-full p-6 text-left font-heading font-bold text-base sm:text-lg text-slate-900 flex items-center justify-between space-x-4 hover:text-brandRed transition-colors">
             <span>How can I deploy PowerBooks, FireBooks, or 1lybio for my business?</span>
-            <i id="faq-icon-3" data-lucide="chevron-down" class="w-5 h-5 text-slate-400 shrink-0"></i>
+            <i id="faq-icon-3" data-lucide="chevron-down" class="w-5 h-5 text-slate-500 shrink-0"></i>
           </button>
-          <div id="faq-ans-3" class="hidden px-6 pb-6 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-graphite-800 pt-4">
+          <div id="faq-ans-3" class="hidden px-6 pb-6 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200 pt-4">
             You can schedule an enterprise consultation or signup directly via runito.in. PowerBooks offers immediate cloud POS setup for retail supermarkets with multi-MRP rate pricing, while 1lybio allows instant digital bio-link creation at 1lybio.in.
           </div>
         </div>
@@ -808,8 +805,8 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-graphite-950 border-t border-graphite-800 pt-16 pb-12 relative overflow-hidden">
+  <!-- FOOTER (Datamatics Corporate Dark Grounding Footer) -->
+  <footer class="bg-slate-950 text-slate-400 border-t border-slate-800 pt-16 pb-12 relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
       
       <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12">
@@ -820,7 +817,7 @@
             <img src="./runit-logo-dark.svg" alt="RUNITO Logo" class="h-10 w-auto object-contain" onerror="this.onerror=null; this.src='./runit-logo-mark.svg';" />
             <div class="flex flex-col">
               <span class="font-heading font-black text-2xl tracking-tight text-white">RUNITO</span>
-              <span class="text-[10px] text-brandRed-light font-mono block">RUNIT INFOTECH</span>
+              <span class="text-[10px] text-brandRed-light font-mono block font-bold tracking-wider">RUNIT INFOTECH</span>
             </div>
           </div>
 
@@ -872,10 +869,10 @@
           </div>
 
           <div class="pt-2 flex items-center space-x-3">
-            <a href="https://www.linkedin.com/in/varun-akshay-fsd/" target="_blank" class="p-2 rounded-xl bg-graphite-900 border border-graphite-700 text-slate-300 hover:text-white hover:border-brandRed"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
-            <a href="https://github.com/code-with-varun" target="_blank" class="p-2 rounded-xl bg-graphite-900 border border-graphite-700 text-slate-300 hover:text-white"><i data-lucide="github" class="w-4 h-4"></i></a>
-            <a href="https://www.youtube.com/@Runit_Infotech" target="_blank" class="p-2 rounded-xl bg-graphite-900 border border-graphite-700 text-slate-300 hover:text-brandRed-light"><i data-lucide="youtube" class="w-4 h-4"></i></a>
-            <a href="https://code-with-varun.github.io/me-1lybio/" target="_blank" class="p-2 rounded-xl bg-graphite-900 border border-graphite-700 text-slate-300 hover:text-emerald-400"><i data-lucide="globe" class="w-4 h-4"></i></a>
+            <a href="https://www.linkedin.com/in/varun-akshay-fsd/" target="_blank" class="p-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-brandRed"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+            <a href="https://github.com/code-with-varun" target="_blank" class="p-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white"><i data-lucide="github" class="w-4 h-4"></i></a>
+            <a href="https://www.youtube.com/@Runit_Infotech" target="_blank" class="p-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-brandRed-light"><i data-lucide="youtube" class="w-4 h-4"></i></a>
+            <a href="https://code-with-varun.github.io/me-1lybio/" target="_blank" class="p-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-emerald-400"><i data-lucide="globe" class="w-4 h-4"></i></a>
           </div>
 
           <button
@@ -888,7 +885,7 @@
 
       </div>
 
-      <div class="pt-8 border-t border-graphite-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 font-mono gap-4">
+      <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 font-mono gap-4">
         <p>© 2024-2026 RUNIT INFOTECH. All Rights Reserved.</p>
         <p>Master Domain: <span class="text-brandRed-light font-bold">runito.in</span></p>
       </div>
@@ -897,25 +894,25 @@
   </footer>
 
   <!-- CONSULTATION MODAL -->
-  <div id="consultation-modal" class="fixed inset-0 z-50 bg-graphite-950/85 backdrop-blur-md hidden items-center justify-center p-4">
-    <div class="graphite-card max-w-xl w-full rounded-3xl border border-graphite-700 p-6 sm:p-8 relative shadow-2xl">
+  <div id="consultation-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="white-card max-w-xl w-full rounded-3xl p-6 sm:p-8 relative shadow-2xl">
       
       <button
         onclick="closeModal()"
-        class="absolute top-6 right-6 p-2 rounded-xl bg-graphite-900 border border-graphite-700 text-slate-300 hover:text-white hover:border-brandRed transition-colors"
+        class="absolute top-6 right-6 p-2 rounded-xl bg-slate-100 border border-slate-200 text-slate-600 hover:text-slate-900 hover:border-brandRed transition-colors"
       >
         <i data-lucide="x" class="w-5 h-5"></i>
       </button>
 
       <div class="space-y-2 mb-6">
-        <div class="inline-flex items-center space-x-2 bg-graphite-900 border border-graphite-700 px-3 py-1 rounded-full text-xs font-mono text-brandRed-light">
+        <div class="inline-flex items-center space-x-2 bg-slate-100 border border-slate-200 px-3 py-1 rounded-full text-xs font-mono text-brandRed font-semibold">
           <i data-lucide="building-2" class="w-3.5 h-3.5 text-brandRed"></i>
           <span>RUNIT INFOTECH (runito.in)</span>
         </div>
-        <h3 class="font-heading font-extrabold text-2xl sm:text-3xl text-white">
+        <h3 class="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900">
           Schedule Enterprise Consultation
         </h3>
-        <p class="text-xs text-slate-400">
+        <p class="text-xs text-slate-600">
           Connect directly with Varun Akshay and the RUNITO engineering team.
         </p>
       </div>
@@ -923,51 +920,51 @@
       <form onsubmit="handleFormSubmit(event)" class="space-y-4 text-xs">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label class="block text-slate-300 font-semibold mb-1">Your Full Name *</label>
+            <label class="block text-slate-700 font-semibold mb-1">Your Full Name *</label>
             <input
               type="text"
               required
               placeholder="Varun Kumar"
-              class="w-full bg-graphite-900 border border-graphite-700 rounded-xl px-3 py-2.5 text-white outline-none focus:border-brandRed"
+              class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2.5 text-slate-900 outline-none focus:border-brandRed focus:bg-white"
             />
           </div>
 
           <div>
-            <label class="block text-slate-300 font-semibold mb-1">Work Email Address *</label>
+            <label class="block text-slate-700 font-semibold mb-1">Work Email Address *</label>
             <input
               type="email"
               required
               placeholder="name@company.com"
-              class="w-full bg-graphite-900 border border-graphite-700 rounded-xl px-3 py-2.5 text-white outline-none focus:border-brandRed"
+              class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2.5 text-slate-900 outline-none focus:border-brandRed focus:bg-white"
             />
           </div>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label class="block text-slate-300 font-semibold mb-1">Phone / WhatsApp Number</label>
+            <label class="block text-slate-700 font-semibold mb-1">Phone / WhatsApp Number</label>
             <input
               type="text"
               placeholder="+91 9876543210"
-              class="w-full bg-graphite-900 border border-graphite-700 rounded-xl px-3 py-2.5 text-white outline-none focus:border-brandRed font-mono"
+              class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2.5 text-slate-900 outline-none focus:border-brandRed focus:bg-white font-mono"
             />
           </div>
 
           <div>
-            <label class="block text-slate-300 font-semibold mb-1">Company / Organization</label>
+            <label class="block text-slate-700 font-semibold mb-1">Company / Organization</label>
             <input
               type="text"
               placeholder="Enter Organization Name"
-              class="w-full bg-graphite-900 border border-graphite-700 rounded-xl px-3 py-2.5 text-white outline-none focus:border-brandRed"
+              class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2.5 text-slate-900 outline-none focus:border-brandRed focus:bg-white"
             />
           </div>
         </div>
 
         <div>
-          <label class="block text-slate-300 font-semibold mb-1">Product or Service Interest</label>
+          <label class="block text-slate-700 font-semibold mb-1">Product or Service Interest</label>
           <select
             id="modal-interest-select"
-            class="w-full bg-graphite-900 border border-graphite-700 rounded-xl px-3 py-2.5 text-white outline-none focus:border-brandRed font-semibold"
+            class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2.5 text-slate-900 outline-none focus:border-brandRed focus:bg-white font-semibold"
           >
             <option value="PowerBooks POS SaaS">PowerBooks (Cloud POS & Retail ERP)</option>
             <option value="FireBooks Micro Ledger">FireBooks (Micro Cloud Ledger)</option>
@@ -979,11 +976,11 @@
         </div>
 
         <div>
-          <label class="block text-slate-300 font-semibold mb-1">Project Details / Message</label>
+          <label class="block text-slate-700 font-semibold mb-1">Project Details / Message</label>
           <textarea
             rows="3"
             placeholder="Tell us about your requirements..."
-            class="w-full bg-graphite-900 border border-graphite-700 rounded-xl p-3 text-white outline-none focus:border-brandRed"
+            class="w-full bg-slate-50 border border-slate-300 rounded-xl p-3 text-slate-900 outline-none focus:border-brandRed focus:bg-white"
           ></textarea>
         </div>
 
@@ -1037,8 +1034,8 @@
     function switchTab(tabKey) {
       document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
       document.querySelectorAll('.tab-btn').forEach(el => {
-        el.classList.remove('bg-brandRed', 'text-white', 'shadow-lg');
-        el.classList.add('bg-graphite-800', 'text-slate-300', 'border', 'border-graphite-700');
+        el.classList.remove('bg-brandRed', 'text-white', 'shadow-md');
+        el.classList.add('bg-slate-100', 'text-slate-700', 'border', 'border-slate-200');
       });
 
       const activeContent = document.getElementById(`tab-content-${tabKey}`);
@@ -1046,8 +1043,8 @@
 
       const activeBtn = document.getElementById(`tab-btn-${tabKey}`);
       if (activeBtn) {
-        activeBtn.classList.remove('bg-graphite-800', 'text-slate-300', 'border', 'border-graphite-700');
-        activeBtn.classList.add('bg-brandRed', 'text-white', 'shadow-lg');
+        activeBtn.classList.remove('bg-slate-100', 'text-slate-700', 'border', 'border-slate-200');
+        activeBtn.classList.add('bg-brandRed', 'text-white', 'shadow-md');
       }
     }
 
@@ -1061,10 +1058,10 @@
 
       if (curr === 'INR') {
         inrBtn.className = 'px-3 py-1 rounded-lg font-bold bg-brandRed text-white transition-colors';
-        usdBtn.className = 'px-3 py-1 rounded-lg font-bold text-slate-400 hover:text-white transition-colors';
+        usdBtn.className = 'px-3 py-1 rounded-lg font-bold text-slate-600 hover:text-slate-900 transition-colors';
       } else {
         usdBtn.className = 'px-3 py-1 rounded-lg font-bold bg-brandRed text-white transition-colors';
-        inrBtn.className = 'px-3 py-1 rounded-lg font-bold text-slate-400 hover:text-white transition-colors';
+        inrBtn.className = 'px-3 py-1 rounded-lg font-bold text-slate-600 hover:text-slate-900 transition-colors';
       }
       calculateROI();
     }
@@ -1097,7 +1094,6 @@
     // FAQ Accordion Logic
     function toggleFaq(index) {
       const ans = document.getElementById(`faq-ans-${index}`);
-      const icon = document.getElementById(`faq-icon-${index}`);
       const isHidden = ans.classList.contains('hidden');
 
       // Close all answers
