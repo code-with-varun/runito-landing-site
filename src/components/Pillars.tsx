@@ -10,13 +10,13 @@ export const Pillars: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center space-x-2 bg-navy-800 border border-slate-700 px-3.5 py-1.5 rounded-full text-xs font-mono text-corporate-sky">
+          <div className="inline-flex items-center space-x-2 bg-graphite-800 border border-slate-700 px-3.5 py-1.5 rounded-full text-xs font-mono text-brandRed-light">
             <Layers className="w-3.5 h-3.5" />
             <span>CORE BUSINESS PILLARS</span>
           </div>
 
           <h2 className="font-heading text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            The Three Pillars of <span className="text-corporate-sky">RUNITO Platform</span>
+            The Three Pillars of <span className="text-brandRed-light">RUNITO Platform</span>
           </h2>
 
           <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
@@ -24,14 +24,14 @@ export const Pillars: React.FC = () => {
           </p>
         </div>
 
-        {/* Tab Selector Buttons */}
+        {/* Tab Selector Buttons - Datamatics Red Active State */}
         <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
           <button
             onClick={() => setActiveTab('saas')}
             className={`px-6 py-3.5 rounded-2xl font-heading font-bold text-xs sm:text-sm flex items-center space-x-2.5 transition-all duration-200 ${
               activeTab === 'saas'
-                ? 'bg-corporate-blue text-white shadow-lg shadow-corporate-blue/20 scale-105'
-                : 'bg-navy-800 text-slate-300 hover:text-white border border-navy-700'
+                ? 'bg-brandRed text-white shadow-lg shadow-brandRed/25 scale-105'
+                : 'bg-graphite-800 text-slate-300 hover:text-white border border-graphite-700'
             }`}
           >
             <ShoppingCart className="w-4 h-4" />
@@ -42,8 +42,8 @@ export const Pillars: React.FC = () => {
             onClick={() => setActiveTab('mis')}
             className={`px-6 py-3.5 rounded-2xl font-heading font-bold text-xs sm:text-sm flex items-center space-x-2.5 transition-all duration-200 ${
               activeTab === 'mis'
-                ? 'bg-corporate-blue text-white shadow-lg shadow-corporate-blue/20 scale-105'
-                : 'bg-navy-800 text-slate-300 hover:text-white border border-navy-700'
+                ? 'bg-brandRed text-white shadow-lg shadow-brandRed/25 scale-105'
+                : 'bg-graphite-800 text-slate-300 hover:text-white border border-graphite-700'
             }`}
           >
             <Database className="w-4 h-4" />
@@ -54,8 +54,8 @@ export const Pillars: React.FC = () => {
             onClick={() => setActiveTab('automation')}
             className={`px-6 py-3.5 rounded-2xl font-heading font-bold text-xs sm:text-sm flex items-center space-x-2.5 transition-all duration-200 ${
               activeTab === 'automation'
-                ? 'bg-corporate-blue text-white shadow-lg shadow-corporate-blue/20 scale-105'
-                : 'bg-navy-800 text-slate-300 hover:text-white border border-navy-700'
+                ? 'bg-brandRed text-white shadow-lg shadow-brandRed/25 scale-105'
+                : 'bg-graphite-800 text-slate-300 hover:text-white border border-graphite-700'
             }`}
           >
             <Workflow className="w-4 h-4" />
@@ -69,15 +69,15 @@ export const Pillars: React.FC = () => {
         {activeTab === 'saas' && (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-in fade-in duration-300">
             {/* PowerBooks Card */}
-            <div className="corporate-card p-8 rounded-3xl border border-navy-800 flex flex-col justify-between space-y-6 group hover:border-corporate-sky/40 transition-colors">
+            <div className="graphite-card p-8 rounded-3xl border border-graphite-800 flex flex-col justify-between space-y-6 group hover:border-brandRed/40 transition-colors">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-[10px] font-mono font-bold text-corporate-sky bg-navy-800 border border-slate-700 px-2.5 py-1 rounded-full uppercase">
+                  <span className="text-[10px] font-mono font-bold text-brandRed-light bg-graphite-800 border border-slate-700 px-2.5 py-1 rounded-full uppercase">
                     RETAIL ERP
                   </span>
                   <span className="text-xs text-slate-400 font-mono">v3.0 Platform</span>
                 </div>
-                <h3 className="font-heading font-bold text-2xl text-white mb-2 group-hover:text-corporate-sky transition-colors">
+                <h3 className="font-heading font-bold text-2xl text-white mb-2 group-hover:text-brandRed-light transition-colors">
                   PowerBooks
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
@@ -85,22 +85,22 @@ export const Pillars: React.FC = () => {
                 </p>
                 <div className="space-y-2 text-xs font-mono text-slate-400">
                   <div className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-corporate-sky" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-brandRed-light" />
                     <span>Barcode Scan Latency &lt;50ms</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-corporate-sky" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-brandRed-light" />
                     <span>Multi-MRP Rate Selector Engine</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-corporate-sky" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-brandRed-light" />
                     <span>Offline PWA Auto-Sync</span>
                   </div>
                 </div>
               </div>
               <a
                 href="#showcase"
-                className="inline-flex items-center space-x-2 text-xs font-bold text-corporate-sky hover:underline pt-4 border-t border-navy-800"
+                className="inline-flex items-center space-x-2 text-xs font-bold text-brandRed-light hover:underline pt-4 border-t border-graphite-800"
               >
                 <span>Explore PowerBooks Details</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -108,15 +108,15 @@ export const Pillars: React.FC = () => {
             </div>
 
             {/* FireBooks Card */}
-            <div className="corporate-card p-8 rounded-3xl border border-navy-800 flex flex-col justify-between space-y-6 group hover:border-corporate-sky/40 transition-colors">
+            <div className="graphite-card p-8 rounded-3xl border border-graphite-800 flex flex-col justify-between space-y-6 group hover:border-brandRed/40 transition-colors">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-[10px] font-mono font-bold text-corporate-sky bg-navy-800 border border-slate-700 px-2.5 py-1 rounded-full uppercase">
+                  <span className="text-[10px] font-mono font-bold text-brandRed-light bg-graphite-800 border border-slate-700 px-2.5 py-1 rounded-full uppercase">
                     MICRO LEDGER
                   </span>
                   <span className="text-xs text-slate-400 font-mono">Cloud ERP</span>
                 </div>
-                <h3 className="font-heading font-bold text-2xl text-white mb-2 group-hover:text-corporate-sky transition-colors">
+                <h3 className="font-heading font-bold text-2xl text-white mb-2 group-hover:text-brandRed-light transition-colors">
                   FireBooks
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
@@ -124,22 +124,22 @@ export const Pillars: React.FC = () => {
                 </p>
                 <div className="space-y-2 text-xs font-mono text-slate-400">
                   <div className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-corporate-sky" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-brandRed-light" />
                     <span>Single-Touch Day Close & Cash Book</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-corporate-sky" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-brandRed-light" />
                     <span>Instant WhatsApp Invoice PDF</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-corporate-sky" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-brandRed-light" />
                     <span>Zero Training Touch Interface</span>
                   </div>
                 </div>
               </div>
               <a
                 href="#showcase"
-                className="inline-flex items-center space-x-2 text-xs font-bold text-corporate-sky hover:underline pt-4 border-t border-navy-800"
+                className="inline-flex items-center space-x-2 text-xs font-bold text-brandRed-light hover:underline pt-4 border-t border-graphite-800"
               >
                 <span>Explore FireBooks Details</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -147,15 +147,15 @@ export const Pillars: React.FC = () => {
             </div>
 
             {/* 1lybio Card */}
-            <div className="corporate-card p-8 rounded-3xl border border-navy-800 flex flex-col justify-between space-y-6 group hover:border-corporate-sky/40 transition-colors">
+            <div className="graphite-card p-8 rounded-3xl border border-graphite-800 flex flex-col justify-between space-y-6 group hover:border-brandRed/40 transition-colors">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-[10px] font-mono font-bold text-corporate-sky bg-navy-800 border border-slate-700 px-2.5 py-1 rounded-full uppercase">
+                  <span className="text-[10px] font-mono font-bold text-brandRed-light bg-graphite-800 border border-slate-700 px-2.5 py-1 rounded-full uppercase">
                     DIGITAL UTILITY
                   </span>
                   <span className="text-xs text-slate-400 font-mono">1lybio.in</span>
                 </div>
-                <h3 className="font-heading font-bold text-2xl text-white mb-2 group-hover:text-corporate-sky transition-colors">
+                <h3 className="font-heading font-bold text-2xl text-white mb-2 group-hover:text-brandRed-light transition-colors">
                   1lybio (`1lybio.in`)
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
@@ -163,15 +163,15 @@ export const Pillars: React.FC = () => {
                 </p>
                 <div className="space-y-2 text-xs font-mono text-slate-400">
                   <div className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-corporate-sky" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-brandRed-light" />
                     <span>Custom Subdomain & QR Code Cards</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-corporate-sky" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-brandRed-light" />
                     <span>Social Links & Portfolio Aggregator</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-corporate-sky" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-brandRed-light" />
                     <span>Ultra-Fast Edge CDN Load</span>
                   </div>
                 </div>
@@ -180,7 +180,7 @@ export const Pillars: React.FC = () => {
                 href="https://1lybio.in/"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center space-x-2 text-xs font-bold text-corporate-sky hover:underline pt-4 border-t border-navy-800"
+                className="inline-flex items-center space-x-2 text-xs font-bold text-brandRed-light hover:underline pt-4 border-t border-graphite-800"
               >
                 <span>Visit 1lybio.in</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -193,9 +193,9 @@ export const Pillars: React.FC = () => {
         {activeTab === 'mis' && (
           <div id="enterprise-mis" className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-in fade-in duration-300">
             {/* Custom Portals */}
-            <div className="corporate-card p-8 rounded-3xl border border-navy-800 flex flex-col justify-between space-y-6">
+            <div className="graphite-card p-8 rounded-3xl border border-graphite-800 flex flex-col justify-between space-y-6">
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-navy-800 text-corporate-sky flex items-center justify-center mb-4 border border-slate-700">
+                <div className="w-12 h-12 rounded-2xl bg-graphite-800 text-brandRed-light flex items-center justify-center mb-4 border border-slate-700">
                   <Code className="w-6 h-6" />
                 </div>
                 <h3 className="font-heading font-bold text-xl text-white mb-2">
@@ -212,9 +212,9 @@ export const Pillars: React.FC = () => {
             </div>
 
             {/* SQL & PowerBI Automation */}
-            <div className="corporate-card p-8 rounded-3xl border border-navy-800 flex flex-col justify-between space-y-6">
+            <div className="graphite-card p-8 rounded-3xl border border-graphite-800 flex flex-col justify-between space-y-6">
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-navy-800 text-corporate-sky flex items-center justify-center mb-4 border border-slate-700">
+                <div className="w-12 h-12 rounded-2xl bg-graphite-800 text-brandRed-light flex items-center justify-center mb-4 border border-slate-700">
                   <Database className="w-6 h-6" />
                 </div>
                 <h3 className="font-heading font-bold text-xl text-white mb-2">
@@ -231,9 +231,9 @@ export const Pillars: React.FC = () => {
             </div>
 
             {/* Retail & Asset Solutions */}
-            <div className="corporate-card p-8 rounded-3xl border border-navy-800 flex flex-col justify-between space-y-6">
+            <div className="graphite-card p-8 rounded-3xl border border-graphite-800 flex flex-col justify-between space-y-6">
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-navy-800 text-corporate-sky flex items-center justify-center mb-4 border border-slate-700">
+                <div className="w-12 h-12 rounded-2xl bg-graphite-800 text-brandRed-light flex items-center justify-center mb-4 border border-slate-700">
                   <ShoppingCart className="w-6 h-6" />
                 </div>
                 <h3 className="font-heading font-bold text-xl text-white mb-2">
@@ -255,9 +255,9 @@ export const Pillars: React.FC = () => {
         {activeTab === 'automation' && (
           <div id="automation" className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-in fade-in duration-300">
             {/* n8n Workflows */}
-            <div className="corporate-card p-8 rounded-3xl border border-navy-800 flex flex-col justify-between space-y-6">
+            <div className="graphite-card p-8 rounded-3xl border border-graphite-800 flex flex-col justify-between space-y-6">
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-navy-800 text-corporate-sky flex items-center justify-center mb-4 border border-slate-700">
+                <div className="w-12 h-12 rounded-2xl bg-graphite-800 text-brandRed-light flex items-center justify-center mb-4 border border-slate-700">
                   <Workflow className="w-6 h-6" />
                 </div>
                 <h3 className="font-heading font-bold text-xl text-white mb-2">
@@ -274,9 +274,9 @@ export const Pillars: React.FC = () => {
             </div>
 
             {/* API Integration */}
-            <div className="corporate-card p-8 rounded-3xl border border-navy-800 flex flex-col justify-between space-y-6">
+            <div className="graphite-card p-8 rounded-3xl border border-graphite-800 flex flex-col justify-between space-y-6">
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-navy-800 text-corporate-sky flex items-center justify-center mb-4 border border-slate-700">
+                <div className="w-12 h-12 rounded-2xl bg-graphite-800 text-brandRed-light flex items-center justify-center mb-4 border border-slate-700">
                   <Cpu className="w-6 h-6" />
                 </div>
                 <h3 className="font-heading font-bold text-xl text-white mb-2">
@@ -293,9 +293,9 @@ export const Pillars: React.FC = () => {
             </div>
 
             {/* Document Search & Synthesis */}
-            <div className="corporate-card p-8 rounded-3xl border border-navy-800 flex flex-col justify-between space-y-6">
+            <div className="graphite-card p-8 rounded-3xl border border-graphite-800 flex flex-col justify-between space-y-6">
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-navy-800 text-corporate-sky flex items-center justify-center mb-4 border border-slate-700">
+                <div className="w-12 h-12 rounded-2xl bg-graphite-800 text-brandRed-light flex items-center justify-center mb-4 border border-slate-700">
                   <FileText className="w-6 h-6" />
                 </div>
                 <h3 className="font-heading font-bold text-xl text-white mb-2">

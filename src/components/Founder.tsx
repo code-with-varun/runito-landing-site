@@ -3,18 +3,18 @@ import { User, Award, GraduationCap, Linkedin, Github, Youtube, Globe, CheckCirc
 
 export const Founder: React.FC = () => {
   return (
-    <section id="leadership" className="py-20 md:py-28 relative bg-navy-950/80 border-t border-navy-800">
+    <section id="leadership" className="py-20 md:py-28 relative bg-graphite-950/80 border-t border-graphite-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center space-x-2 bg-navy-800 border border-slate-700 px-3.5 py-1.5 rounded-full text-xs font-mono text-corporate-sky">
-            <User className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center space-x-2 bg-graphite-900 border border-graphite-700 px-3.5 py-1.5 rounded-full text-xs font-mono text-brandRed-light">
+            <User className="w-3.5 h-3.5 text-brandRed" />
             <span>FOUNDER & LEADERSHIP</span>
           </div>
 
           <h2 className="font-heading text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Engineering Excellence & <span className="text-corporate-sky">Technology Leadership</span>
+            Engineering Excellence & <span className="text-brandRed-light">Technology Leadership</span>
           </h2>
 
           <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
@@ -23,14 +23,14 @@ export const Founder: React.FC = () => {
         </div>
 
         {/* Founder Card */}
-        <div className="corporate-card max-w-4xl mx-auto rounded-3xl border border-navy-800 p-8 sm:p-12 grid grid-cols-1 md:grid-cols-12 gap-8 shadow-2xl relative overflow-hidden">
+        <div className="graphite-card max-w-4xl mx-auto rounded-3xl border border-graphite-800 p-8 sm:p-12 grid grid-cols-1 md:grid-cols-12 gap-8 shadow-2xl relative overflow-hidden">
           
           {/* Left Avatar / Badge Column (4 Cols) */}
           <div className="md:col-span-4 flex flex-col items-center text-center space-y-4">
             <div className="relative group">
-              <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-3xl bg-corporate-blue p-1 shadow-2xl shadow-corporate-blue/20">
-                <div className="w-full h-full bg-navy-900 rounded-[22px] overflow-hidden flex flex-col items-center justify-center p-4">
-                  <div className="w-20 h-20 rounded-full bg-navy-800 border border-slate-700 flex items-center justify-center text-corporate-sky font-heading font-black text-3xl">
+              <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-3xl bg-brandRed p-1 shadow-2xl shadow-brandRed/20">
+                <div className="w-full h-full bg-graphite-900 rounded-[22px] overflow-hidden flex flex-col items-center justify-center p-4">
+                  <div className="w-20 h-20 rounded-full bg-graphite-800 border border-brandRed/40 flex items-center justify-center text-brandRed-light font-heading font-black text-3xl">
                     VA
                   </div>
                   <span className="text-xs font-heading font-bold text-white mt-2">Varun Akshay</span>
@@ -43,7 +43,7 @@ export const Founder: React.FC = () => {
               <h3 className="font-heading font-extrabold text-xl text-white">
                 Varun Akshay
               </h3>
-              <p className="text-xs text-corporate-sky font-mono font-semibold">
+              <p className="text-xs text-brandRed-light font-mono font-semibold">
                 S Varunakshay
               </p>
               <p className="text-xs text-slate-400 font-mono">
@@ -60,7 +60,7 @@ export const Founder: React.FC = () => {
                 href="https://www.linkedin.com/in/varun-akshay-fsd/"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2.5 rounded-xl bg-navy-800 border border-slate-700 text-slate-300 hover:text-white hover:border-corporate-sky transition-colors"
+                className="p-2.5 rounded-xl bg-graphite-900 border border-graphite-700 text-slate-300 hover:text-white hover:border-brandRed transition-colors"
                 title="LinkedIn Profile"
               >
                 <Linkedin className="w-4 h-4" />
@@ -70,7 +70,7 @@ export const Founder: React.FC = () => {
                 href="https://github.com/code-with-varun"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2.5 rounded-xl bg-navy-800 border border-slate-700 text-slate-300 hover:text-white transition-colors"
+                className="p-2.5 rounded-xl bg-graphite-900 border border-graphite-700 text-slate-300 hover:text-white transition-colors"
                 title="GitHub Repositories"
               >
                 <Github className="w-4 h-4" />
@@ -80,7 +80,7 @@ export const Founder: React.FC = () => {
                 href="https://www.youtube.com/@Runit_Infotech"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2.5 rounded-xl bg-navy-800 border border-slate-700 text-slate-300 hover:text-rose-500 transition-colors"
+                className="p-2.5 rounded-xl bg-graphite-900 border border-graphite-700 text-slate-300 hover:text-brandRed-light transition-colors"
                 title="YouTube @Runit_Infotech"
               >
                 <Youtube className="w-4 h-4" />
@@ -90,7 +90,7 @@ export const Founder: React.FC = () => {
                 href="https://code-with-varun.github.io/me-1lybio/"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2.5 rounded-xl bg-navy-800 border border-slate-700 text-slate-300 hover:text-emerald-400 transition-colors"
+                className="p-2.5 rounded-xl bg-graphite-900 border border-graphite-700 text-slate-300 hover:text-emerald-400 transition-colors"
                 title="Personal 1lybio Portfolio"
               >
                 <Globe className="w-4 h-4" />
@@ -104,7 +104,7 @@ export const Founder: React.FC = () => {
             
             <div className="space-y-3">
               <h4 className="font-heading font-bold text-lg text-white flex items-center space-x-2">
-                <Building2 className="w-4 h-4 text-corporate-sky" />
+                <Building2 className="w-4 h-4 text-brandRed-light" />
                 <span>Executive Profile</span>
               </h4>
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
@@ -118,9 +118,9 @@ export const Founder: React.FC = () => {
             {/* Academic Credentials & Honors */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               
-              <div className="bg-navy-900 border border-navy-800 p-4 rounded-2xl space-y-1">
-                <div className="flex items-center space-x-2 text-corporate-sky font-bold text-xs">
-                  <GraduationCap className="w-4 h-4" />
+              <div className="bg-graphite-900 border border-graphite-800 p-4 rounded-2xl space-y-1">
+                <div className="flex items-center space-x-2 text-brandRed-light font-bold text-xs">
+                  <GraduationCap className="w-4 h-4 text-brandRed" />
                   <span>Academic Qualifications</span>
                 </div>
                 <p className="text-xs text-white font-semibold">B.Sc Computer Science</p>
@@ -128,9 +128,9 @@ export const Founder: React.FC = () => {
                 <p className="text-[11px] text-slate-400 font-mono">UpGrad KnowledgeHut Full Stack Alumnus</p>
               </div>
 
-              <div className="bg-navy-900 border border-navy-800 p-4 rounded-2xl space-y-1">
-                <div className="flex items-center space-x-2 text-corporate-sky font-bold text-xs">
-                  <Award className="w-4 h-4" />
+              <div className="bg-graphite-900 border border-graphite-800 p-4 rounded-2xl space-y-1">
+                <div className="flex items-center space-x-2 text-brandRed-light font-bold text-xs">
+                  <Award className="w-4 h-4 text-brandRed" />
                   <span>Domain Expertise</span>
                 </div>
                 <p className="text-xs text-white font-semibold">BFSI Collections & Billing QC</p>
@@ -141,17 +141,17 @@ export const Founder: React.FC = () => {
             </div>
 
             {/* Key Accomplishments Checklist */}
-            <div className="space-y-2 pt-2 border-t border-navy-800 text-xs font-mono text-slate-300">
+            <div className="space-y-2 pt-2 border-t border-graphite-800 text-xs font-mono text-slate-300">
               <div className="flex items-center space-x-2">
-                <CheckCircle2 className="w-3.5 h-3.5 text-corporate-sky shrink-0" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-brandRed-light shrink-0" />
                 <span>10+ Years Enterprise MIS & Financial Data Reconciliation</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle2 className="w-3.5 h-3.5 text-corporate-sky shrink-0" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-brandRed-light shrink-0" />
                 <span>Creator of PowerBooks, FireBooks & 1lybio SaaS Ecosystem</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle2 className="w-3.5 h-3.5 text-corporate-sky shrink-0" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-brandRed-light shrink-0" />
                 <span>Architect of Automated SQL Data Pipelines</span>
               </div>
             </div>
@@ -164,3 +164,4 @@ export const Founder: React.FC = () => {
     </section>
   );
 };
+

@@ -28,19 +28,19 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-navy-950/85 backdrop-blur-md flex items-center justify-center p-4">
-      <div className="corporate-card max-w-xl w-full rounded-3xl border border-slate-700 p-6 sm:p-8 relative shadow-2xl animate-in zoom-in-95 duration-200">
+    <div className="fixed inset-0 z-50 bg-graphite-950/85 backdrop-blur-md flex items-center justify-center p-4">
+      <div className="graphite-card max-w-xl w-full rounded-3xl border border-graphite-700 p-6 sm:p-8 relative shadow-2xl animate-in zoom-in-95 duration-200">
         
         <button
           onClick={onClose}
-          className="absolute top-6 right-6 p-2 rounded-xl bg-navy-800 border border-slate-700 text-slate-300 hover:text-white"
+          className="absolute top-6 right-6 p-2 rounded-xl bg-graphite-900 border border-graphite-700 text-slate-300 hover:text-white hover:border-brandRed transition-colors"
         >
           <X className="w-5 h-5" />
         </button>
 
         <div className="space-y-2 mb-6">
-          <div className="inline-flex items-center space-x-2 bg-navy-800 border border-slate-700 px-3 py-1 rounded-full text-xs font-mono text-corporate-sky">
-            <Building2 className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center space-x-2 bg-graphite-900 border border-graphite-700 px-3 py-1 rounded-full text-xs font-mono text-brandRed-light">
+            <Building2 className="w-3.5 h-3.5 text-brandRed" />
             <span>RUNIT INFOTECH (runito.in)</span>
           </div>
           <h3 className="font-heading font-extrabold text-2xl sm:text-3xl text-white">
@@ -71,7 +71,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Varun Kumar"
-                    className="w-full bg-navy-900 border border-slate-700 rounded-xl pl-9 pr-3 py-2.5 text-white outline-none focus:border-corporate-blue"
+                    className="w-full bg-graphite-900 border border-graphite-700 rounded-xl pl-9 pr-3 py-2.5 text-white outline-none focus:border-brandRed"
                     required
                   />
                 </div>
@@ -86,7 +86,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="name@company.com"
-                    className="w-full bg-navy-900 border border-slate-700 rounded-xl pl-9 pr-3 py-2.5 text-white outline-none focus:border-corporate-blue"
+                    className="w-full bg-graphite-900 border border-graphite-700 rounded-xl pl-9 pr-3 py-2.5 text-white outline-none focus:border-brandRed"
                     required
                   />
                 </div>
@@ -103,7 +103,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     placeholder="+91 9876543210"
-                    className="w-full bg-navy-900 border border-slate-700 rounded-xl pl-9 pr-3 py-2.5 text-white outline-none focus:border-corporate-blue font-mono"
+                    className="w-full bg-graphite-900 border border-graphite-700 rounded-xl pl-9 pr-3 py-2.5 text-white outline-none focus:border-brandRed font-mono"
                   />
                 </div>
               </div>
@@ -117,7 +117,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
                     value={company}
                     onChange={(e) => setCompany(e.target.value)}
                     placeholder="Enter Organization Name"
-                    className="w-full bg-navy-900 border border-slate-700 rounded-xl pl-9 pr-3 py-2.5 text-white outline-none focus:border-corporate-blue"
+                    className="w-full bg-graphite-900 border border-graphite-700 rounded-xl pl-9 pr-3 py-2.5 text-white outline-none focus:border-brandRed"
                   />
                 </div>
               </div>
@@ -128,7 +128,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
               <select
                 value={interest}
                 onChange={(e) => setInterest(e.target.value)}
-                className="w-full bg-navy-900 border border-slate-700 rounded-xl px-3 py-2.5 text-white outline-none focus:border-corporate-blue font-semibold"
+                className="w-full bg-graphite-900 border border-graphite-700 rounded-xl px-3 py-2.5 text-white outline-none focus:border-brandRed font-semibold"
               >
                 <option value="PowerBooks POS SaaS">PowerBooks (Cloud POS & Retail ERP)</option>
                 <option value="FireBooks Micro Ledger">FireBooks (Micro Cloud Ledger)</option>
@@ -146,13 +146,13 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
                 onChange={(e) => setMessage(e.target.value)}
                 rows={3}
                 placeholder="Tell us about your requirements..."
-                className="w-full bg-navy-900 border border-slate-700 rounded-xl p-3 text-white outline-none focus:border-corporate-blue"
+                className="w-full bg-graphite-900 border border-graphite-700 rounded-xl p-3 text-white outline-none focus:border-brandRed"
               ></textarea>
             </div>
 
             <button
               type="submit"
-              className="w-full py-3.5 bg-corporate-blue hover:bg-corporate-accent text-white font-heading font-bold rounded-xl text-sm flex items-center justify-center space-x-2 shadow-lg"
+              className="w-full py-3.5 bg-brandRed hover:bg-brandRed-dark text-white font-heading font-bold rounded-xl text-sm flex items-center justify-center space-x-2 shadow-lg transition-all"
             >
               <Send className="w-4 h-4" />
               <span>Submit Consultation Request</span>
@@ -164,3 +164,4 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
     </div>
   );
 };
+

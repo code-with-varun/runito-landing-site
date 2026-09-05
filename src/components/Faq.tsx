@@ -24,17 +24,17 @@ export const Faq: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 md:py-28 relative border-t border-navy-800">
+    <section className="py-20 md:py-28 relative border-t border-graphite-800 bg-graphite-950/60">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="text-center space-y-4 mb-16">
-          <div className="inline-flex items-center space-x-2 bg-navy-800 border border-slate-700 px-3.5 py-1.5 rounded-full text-xs font-mono text-corporate-sky">
-            <HelpCircle className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center space-x-2 bg-graphite-900 border border-graphite-700 px-3.5 py-1.5 rounded-full text-xs font-mono text-brandRed-light">
+            <HelpCircle className="w-3.5 h-3.5 text-brandRed" />
             <span>FREQUENTLY ASKED QUESTIONS</span>
           </div>
 
           <h2 className="font-heading text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Frequently Asked <span className="text-corporate-sky">Questions</span>
+            Frequently Asked <span className="text-brandRed-light">Questions</span>
           </h2>
         </div>
 
@@ -44,22 +44,22 @@ export const Faq: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="corporate-card rounded-2xl border border-navy-800 overflow-hidden transition-colors"
+                className="graphite-card rounded-2xl border border-graphite-800 overflow-hidden transition-colors"
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : idx)}
-                  className="w-full p-6 text-left font-heading font-bold text-base sm:text-lg text-white flex items-center justify-between space-x-4 hover:text-corporate-sky transition-colors"
+                  className="w-full p-6 text-left font-heading font-bold text-base sm:text-lg text-white flex items-center justify-between space-x-4 hover:text-brandRed-light transition-colors"
                 >
                   <span>{faq.question}</span>
                   {isOpen ? (
-                    <ChevronUp className="w-5 h-5 text-corporate-sky shrink-0" />
+                    <ChevronUp className="w-5 h-5 text-brandRed-light shrink-0" />
                   ) : (
                     <ChevronDown className="w-5 h-5 text-slate-400 shrink-0" />
                   )}
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-navy-800 pt-4 font-normal animate-in fade-in duration-200">
+                  <div className="px-6 pb-6 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-graphite-800 pt-4 font-normal animate-in fade-in duration-200">
                     {faq.answer}
                   </div>
                 )}
@@ -72,3 +72,4 @@ export const Faq: React.FC = () => {
     </section>
   );
 };
+

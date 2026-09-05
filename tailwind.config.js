@@ -8,23 +8,26 @@ export default {
   theme: {
     extend: {
       colors: {
-        navy: {
-          950: '#030C19',
-          900: '#07162C',
-          850: '#0B192C',
-          800: '#1E2E45',
-          700: '#2A3F5F',
+        graphite: {
+          950: '#0B0F17',
+          900: '#0F172A',
+          850: '#162032',
+          800: '#1E293B',
+          700: '#334155',
+          600: '#475569',
         },
-        corporate: {
-          blue: '#0066CC',
-          lightBlue: '#0284C7',
-          sky: '#38BDF8',
-          accent: '#2563EB',
+        brandRed: {
+          DEFAULT: '#DC2626',
+          dark: '#B91C1C',
+          light: '#EF4444',
+          accent: '#E11D48',
+          hover: '#991B1B',
         },
         slateSurface: {
           50: '#F8FAFC',
           100: '#F1F5F9',
           200: '#E2E8F0',
+          300: '#CBD5E1',
         }
       },
       fontFamily: {
