@@ -6,6 +6,9 @@
   <title>RUNIT | Enterprise Software, Fintech SaaS & Data Automation Solutions</title>
   <meta name="description" content="Official enterprise portal for RUNIT (Runit Infotech) at runito.in. Deep Technology • Deep Domain Expertise. Architecting Cloud POS, micro ledgers, BFSI collections billing audit QC, and automated SQL data pipelines." />
 
+  <!-- Favicon / App Icon -->
+  <link rel="icon" type="image/png" href="assets/Runit logo pack/app-icon-red.png" />
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -109,9 +112,9 @@
     }
   </style>
 </head>
-<body class="bg-white text-slate-900 antialiased selection:bg-brandRed selection:text-white">
+<body id="page-top" class="bg-white text-slate-900 antialiased selection:bg-brandRed selection:text-white">
 
-  <!-- DATAMATICS TOP ANNOUNCEMENT & UTILITY BAR -->
+  <!-- TOP ANNOUNCEMENT & UTILITY BAR -->
   <div class="bg-slate-950 text-slate-300 text-[11px] font-mono py-2 px-4 border-b border-slate-800">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
       <div class="flex items-center space-x-2">
@@ -127,8 +130,6 @@
         <span class="text-slate-700">|</span>
         <a href="#testimonials" class="hover:text-white transition-colors">Client Testimonials</a>
         <span class="text-slate-700">|</span>
-        <a href="#insights" class="hover:text-white transition-colors">Research</a>
-        <span class="text-slate-700">|</span>
         <a href="mailto:contact@runito.in" class="hover:text-brandRed-light font-bold">contact@runito.in</a>
       </div>
     </div>
@@ -138,20 +139,12 @@
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
-      <!-- Text-Only Brand Mark -->
+      <!-- Brand Logo Asset -->
       <a href="#" class="flex items-center space-x-3 group">
-        <div class="w-10 h-10 rounded-xl bg-brandRed text-white flex items-center justify-center font-heading font-black text-xl shadow-md shadow-brandRed/20 group-hover:scale-105 transition-transform">
-          R
-        </div>
-        <div class="flex flex-col">
-          <span class="font-heading font-black text-2xl tracking-tight text-slate-900 group-hover:text-brandRed transition-colors leading-none">
-            RUNIT
-          </span>
-          <span class="text-[10px] text-brandRed font-mono block font-bold tracking-wider mt-0.5">RUNIT INFOTECH</span>
-        </div>
+        <img src="assets/Runit logo pack/horizontal-lockup.png" alt="RUNITO - RUNIT INFOTECH" class="h-10 w-auto object-contain group-hover:scale-105 transition-transform" />
       </a>
 
-      <!-- Desktop Navigation Menu (Datamatics Sitemap Structure) -->
+      <!-- Desktop Navigation Menu -->
       <nav class="hidden lg:flex items-center space-x-6 text-xs font-heading font-bold uppercase tracking-wider text-slate-700">
         <a href="#solutions" class="hover:text-brandRed transition-colors">Solutions</a>
         <a href="#industries" class="hover:text-brandRed transition-colors">Industries</a>
@@ -210,8 +203,99 @@
       <!-- Slide Container -->
       <div id="hero-slider-container" class="relative min-h-[460px] sm:min-h-[400px] flex items-center">
         
-        <!-- HERO SLIDE 1: Deep Technology & Enterprise Audit -->
+        <!-- HERO SLIDE 1: Runito (Runit One) - One-Stop Solution for AI-First Experience -->
         <div id="hero-slide-1" class="hero-slide w-full transition-all duration-700 ease-in-out">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+              <div class="inline-flex items-center space-x-2 bg-brandRed-surface border border-brandRed-border px-4 py-1.5 rounded-full text-xs font-mono text-brandRed font-bold shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-brandRed animate-pulse"></span>
+                <span>RUNITO (RUNIT ONE) • AI-FIRST PLATFORM & WORKFLOWS</span>
+              </div>
+
+              <h1 class="font-heading text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-none">
+                Runito (Runit One) <br class="hidden sm:inline" />
+                <span class="text-gradient-crimson">One-Stop Solution for AI-First Experience</span>
+              </h1>
+
+              <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                Consolidating enterprise retail POS management, automated database pipelines, intelligent workflow triggers, and financial audit tools into one unified cloud ecosystem.
+              </p>
+
+              <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                <button
+                  onclick="openModal('Runito AI-First Platform')"
+                  class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brandRed hover:bg-brandRed-dark text-white font-heading font-bold text-sm shadow-xl shadow-brandRed/25 transition-all transform hover:-translate-y-0.5 flex items-center justify-center space-x-2"
+                >
+                  <span>Schedule AI-First Consultation</span>
+                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </button>
+                <a
+                  href="#products"
+                  class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-800 font-heading font-semibold text-sm transition-all text-center"
+                >
+                  Discover SaaS Suite
+                </a>
+              </div>
+            </div>
+
+            <!-- Slide 1 Visual Card -->
+            <div class="lg:col-span-5 relative">
+              <div class="white-card p-8 rounded-3xl border border-slate-200 shadow-xl relative space-y-6">
+                <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+                  <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-xl bg-brandRed-surface border border-brandRed-border flex items-center justify-center text-brandRed font-bold">
+                      <i data-lucide="cpu" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                      <h3 class="font-heading font-bold text-slate-900 text-base">Runito AI Engine</h3>
+                      <span class="text-xs text-slate-500 font-mono">Runit One Control Hub</span>
+                    </div>
+                  </div>
+                  <span class="px-2.5 py-1 rounded-full bg-brandRed-surface border border-brandRed-border text-brandRed text-[11px] font-mono font-bold">AI-FIRST PLATFORM</span>
+                </div>
+
+                <div class="space-y-3 font-mono text-xs">
+                  <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-2xl flex items-center justify-between">
+                    <span class="text-slate-600 flex items-center space-x-2">
+                      <i data-lucide="zap" class="w-4 h-4 text-brandRed"></i>
+                      <span>Workflow Triggers:</span>
+                    </span>
+                    <span class="font-bold text-slate-900">n8n & SQL Automation</span>
+                  </div>
+
+                  <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-2xl flex items-center justify-between">
+                    <span class="text-slate-600 flex items-center space-x-2">
+                      <i data-lucide="shopping-cart" class="w-4 h-4 text-brandRed"></i>
+                      <span>Retail Supermarket:</span>
+                    </span>
+                    <span class="font-bold text-brandRed">PowerBooks Cloud POS</span>
+                  </div>
+
+                  <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-2xl flex items-center justify-between">
+                    <span class="text-slate-600 flex items-center space-x-2">
+                      <i data-lucide="link-2" class="w-4 h-4 text-brandRed"></i>
+                      <span>Digital Identity:</span>
+                    </span>
+                    <span class="font-bold text-slate-900">1lybio.in Hub</span>
+                  </div>
+                </div>
+
+                <div class="bg-brandRed-surface border border-brandRed-border p-4 rounded-2xl flex items-center justify-between">
+                  <div>
+                    <span class="text-[10px] text-brandRed font-mono uppercase block font-bold">One-Stop Solution</span>
+                    <span class="font-heading font-extrabold text-base text-slate-900">AI-First Operational Precision</span>
+                  </div>
+                  <i data-lucide="sparkles" class="w-6 h-6 text-brandRed"></i>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- HERO SLIDE 2: Deep Technology & Enterprise Audit -->
+        <div id="hero-slide-2" class="hero-slide w-full hidden transition-all duration-700 ease-in-out">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
@@ -304,8 +388,8 @@
           </div>
         </div>
 
-        <!-- HERO SLIDE 2: Automated Data Pipelines & SQL Executive MIS -->
-        <div id="hero-slide-2" class="hero-slide w-full hidden transition-all duration-700 ease-in-out">
+        <!-- HERO SLIDE 3: Automated Data Pipelines & SQL Executive MIS -->
+        <div id="hero-slide-3" class="hero-slide w-full hidden transition-all duration-700 ease-in-out">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
@@ -315,12 +399,12 @@
               </div>
 
               <h1 class="font-heading text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-none">
-                Where Automation Meets <br class="hidden sm:inline" />
-                <span class="text-gradient-crimson">Enterprise Data Intelligence</span>
+                Automated Data Pipelines & <br class="hidden sm:inline" />
+                <span class="text-gradient-crimson">Executive MIS Dashboards</span>
               </h1>
 
               <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
-                Transform legacy manual spreadsheets into automated SQL extraction pipelines and real-time PowerBI executive KPI dashboards that cut weekly reporting hours by 85%.
+                Migrate manual spreadsheet tasks into automated SQL data extraction pipelines and real-time PowerBI executive dashboards that reduce weekly reporting effort by 85%.
               </p>
 
               <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
@@ -396,8 +480,8 @@
           </div>
         </div>
 
-        <!-- HERO SLIDE 3: PowerBooks Cloud POS Infrastructure -->
-        <div id="hero-slide-3" class="hero-slide w-full hidden transition-all duration-700 ease-in-out">
+        <!-- HERO SLIDE 4: PowerBooks Cloud POS Infrastructure -->
+        <div id="hero-slide-4" class="hero-slide w-full hidden transition-all duration-700 ease-in-out">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
@@ -477,7 +561,7 @@
 
       </div>
 
-      <!-- Slide Indicator Controls (Datamatics Hero Controls) -->
+      <!-- Slide Indicator Controls -->
       <div class="mt-12 flex items-center justify-between max-w-7xl mx-auto pt-6 border-t border-slate-200">
         
         <!-- Tab Dot Indicators -->
@@ -485,11 +569,12 @@
           <button onclick="goToSlide(1)" id="hero-dot-1" class="h-2.5 w-10 rounded-full bg-brandRed transition-all duration-300"></button>
           <button onclick="goToSlide(2)" id="hero-dot-2" class="h-2.5 w-3 rounded-full bg-slate-300 hover:bg-slate-400 transition-all duration-300"></button>
           <button onclick="goToSlide(3)" id="hero-dot-3" class="h-2.5 w-3 rounded-full bg-slate-300 hover:bg-slate-400 transition-all duration-300"></button>
+          <button onclick="goToSlide(4)" id="hero-dot-4" class="h-2.5 w-3 rounded-full bg-slate-300 hover:bg-slate-400 transition-all duration-300"></button>
         </div>
 
         <!-- Slide Label / Control Buttons -->
         <div class="flex items-center space-x-4 text-xs font-heading font-bold">
-          <span id="hero-slide-counter" class="font-mono text-slate-500">01 / 03</span>
+          <span id="hero-slide-counter" class="font-mono text-slate-500">01 / 04</span>
           <div class="flex items-center space-x-2">
             <button onclick="prevSlide()" class="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-700 transition-colors">
               <i data-lucide="chevron-left" class="w-4 h-4"></i>
@@ -594,11 +679,11 @@
         </div>
 
         <h2 class="font-heading text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-snug">
-          Enabling Organizations to Go <span class="text-brandRed-light">Deep in Technology</span> to Drive Agility, Audit Precision & Exceptional Performance
+          Building Reliable Software Infrastructure & <span class="text-brandRed-light">Data Systems</span> for Growing Businesses
         </h2>
 
         <p class="text-sm sm:text-base text-slate-300 font-normal leading-relaxed">
-          RUNIT INFOTECH is a Digital Technology, Operations, and Cloud Software company. We partner with financial institutions, retail store chains, media firms, and growing SMBs to replace manual operational bottlenecks with high-precision automated systems.
+          RUNIT INFOTECH delivers retail point-of-sale software, financial reconciliation systems, and custom database pipelines that streamline operations and eliminate manual reporting errors.
         </p>
 
         <div class="pt-4 grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
@@ -630,73 +715,7 @@
     </div>
   </section>
 
-  <!-- INDUSTRIES WE SERVE GRID (Datamatics Concept 2) -->
-  <section id="industries" class="py-20 md:py-28 bg-slate-50 border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-        <div class="inline-flex items-center space-x-2 bg-white border border-slate-200 px-3.5 py-1.5 rounded-full text-xs font-mono text-brandRed font-semibold">
-          <i data-lucide="building" class="w-3.5 h-3.5 text-brandRed"></i>
-          <span>INDUSTRIES WE SERVE</span>
-        </div>
-
-        <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
-          Target Domain <span class="text-gradient-crimson">Industry Verticals</span>
-        </h2>
-
-        <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
-          Tailored digital solutions engineered for high-compliance financial institutions, retail supply chains, and digital media organizations.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        
-        <div class="white-card white-card-hover p-6 rounded-3xl space-y-4">
-          <div class="w-12 h-12 rounded-2xl bg-brandRed-surface border border-brandRed-border flex items-center justify-center text-brandRed">
-            <i data-lucide="landmark" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-heading font-bold text-xl text-slate-900">BFSI & Recovery</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            Billing QC audit, agency commission reconciliation, recovery payout validation, and SLA tracking for banking & financial services.
-          </p>
-        </div>
-
-        <div class="white-card white-card-hover p-6 rounded-3xl space-y-4">
-          <div class="w-12 h-12 rounded-2xl bg-brandRed-surface border border-brandRed-border flex items-center justify-center text-brandRed">
-            <i data-lucide="shopping-cart" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-heading font-bold text-xl text-slate-900">Retail & Supermarket</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            PowerBooks Cloud POS, multi-MRP rate pricing, barcode scanning, local offline queue sync, and GST compliance billing.
-          </p>
-        </div>
-
-        <div class="white-card white-card-hover p-6 rounded-3xl space-y-4">
-          <div class="w-12 h-12 rounded-2xl bg-brandRed-surface border border-brandRed-border flex items-center justify-center text-brandRed">
-            <i data-lucide="tv" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-heading font-bold text-xl text-slate-900">Media & Publishing</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            Lavish Dreamers (`lavishdreamers.com`) video production, digital youth media initiatives, and YouTube `@concept3604` community storytelling.
-          </p>
-        </div>
-
-        <div class="white-card white-card-hover p-6 rounded-3xl space-y-4">
-          <div class="w-12 h-12 rounded-2xl bg-brandRed-surface border border-brandRed-border flex items-center justify-center text-brandRed">
-            <i data-lucide="briefcase" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-heading font-bold text-xl text-slate-900">SMBs & Freelancers</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            FireBooks micro accounting ledger for contractors, and 1lybio (`1lybio.in`) digital card link hub generators for creators.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SOLUTIONS & DIGITAL OPERATIONS GRID (Datamatics Concept 1) -->
+  <!-- SOLUTIONS & DIGITAL OPERATIONS GRID -->
   <section id="solutions" class="py-20 md:py-28 bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -766,6 +785,72 @@
           <button onclick="openModal('PowerBI & SQL Analytics')" class="w-full py-3 rounded-xl bg-slate-100 hover:bg-brandRed hover:text-white text-slate-800 text-xs font-bold font-heading transition-colors border border-slate-200">
             View Analytics Architecture
           </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INDUSTRIES WE SERVE GRID -->
+  <section id="industries" class="py-20 md:py-28 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <div class="inline-flex items-center space-x-2 bg-white border border-slate-200 px-3.5 py-1.5 rounded-full text-xs font-mono text-brandRed font-semibold">
+          <i data-lucide="building" class="w-3.5 h-3.5 text-brandRed"></i>
+          <span>INDUSTRIES WE SERVE</span>
+        </div>
+
+        <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+          Target Domain <span class="text-gradient-crimson">Industry Verticals</span>
+        </h2>
+
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+          Tailored digital solutions engineered for high-compliance financial institutions, retail supply chains, and digital media organizations.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="white-card white-card-hover p-6 rounded-3xl space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-brandRed-surface border border-brandRed-border flex items-center justify-center text-brandRed">
+            <i data-lucide="landmark" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-slate-900">BFSI & Recovery</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Billing QC audit, agency commission reconciliation, recovery payout validation, and SLA tracking for banking & financial services.
+          </p>
+        </div>
+
+        <div class="white-card white-card-hover p-6 rounded-3xl space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-brandRed-surface border border-brandRed-border flex items-center justify-center text-brandRed">
+            <i data-lucide="shopping-cart" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-slate-900">Retail & Supermarket</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            PowerBooks Cloud POS, multi-MRP rate pricing, barcode scanning, local offline queue sync, and GST compliance billing.
+          </p>
+        </div>
+
+        <div class="white-card white-card-hover p-6 rounded-3xl space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-brandRed-surface border border-brandRed-border flex items-center justify-center text-brandRed">
+            <i data-lucide="tv" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-slate-900">Media & Publishing</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Lavish Dreamers (`lavishdreamers.com`) video production, digital youth media initiatives, and YouTube `@concept3604` community storytelling.
+          </p>
+        </div>
+
+        <div class="white-card white-card-hover p-6 rounded-3xl space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-brandRed-surface border border-brandRed-border flex items-center justify-center text-brandRed">
+            <i data-lucide="briefcase" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-slate-900">SMBs & Freelancers</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            FireBooks micro accounting ledger for contractors, and 1lybio (`1lybio.in`) digital card link hub generators for creators.
+          </p>
         </div>
 
       </div>
@@ -1047,11 +1132,11 @@
       <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
         <div class="inline-flex items-center space-x-2 bg-slate-100 border border-slate-200 px-3.5 py-1.5 rounded-full text-xs font-mono text-brandRed font-semibold">
           <i data-lucide="book-open" class="w-3.5 h-3.5 text-brandRed"></i>
-          <span>INSIGHTS & RESEARCH REPORTS</span>
+          <span>TECHNICAL DOCUMENTATION & NOTES</span>
         </div>
 
         <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
-          Thought Leadership & <span class="text-gradient-crimson">Domain Research</span>
+          System Architecture & <span class="text-gradient-crimson">Case Notes</span>
         </h2>
 
         <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
@@ -1157,15 +1242,15 @@
       <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
         <div class="inline-flex items-center space-x-2 bg-slate-100 border border-slate-200 px-3.5 py-1.5 rounded-full text-xs font-mono text-brandRed font-semibold">
           <i data-lucide="video" class="w-3.5 h-3.5 text-brandRed"></i>
-          <span>MEDIA & COMMUNITY ECOSYSTEM</span>
+          <span>MEDIA & COMMUNITY PROJECTS</span>
         </div>
 
         <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
-          Lavish Dreamers <span class="text-gradient-crimson">Media & Community Synergy</span>
+          Lavish Dreamers <span class="text-gradient-crimson">Media Collaborations</span>
         </h2>
 
         <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
-          Bridging technical software engineering precision with creative video production, youth media initiatives, and community storytelling at <a href="https://lavishdreamers.com/" target="_blank" class="text-brandRed font-bold hover:underline">lavishdreamers.com</a>.
+          Supporting digital video production, creative media projects, and community storytelling at <a href="https://lavishdreamers.com/" target="_blank" class="text-brandRed font-bold hover:underline">lavishdreamers.com</a>.
         </p>
       </div>
 
@@ -1412,25 +1497,31 @@
       <div class="pb-12 border-b border-slate-800 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
         <div class="lg:col-span-5 space-y-4">
-          <div class="flex items-center space-x-3">
-            <div class="w-10 h-10 rounded-xl bg-brandRed text-white flex items-center justify-center font-heading font-black text-xl shadow-md">
-              R
-            </div>
-            <div class="flex flex-col">
-              <span class="font-heading font-black text-2xl tracking-tight text-white leading-none">RUNIT</span>
-              <span class="text-[10px] text-brandRed-light font-mono block font-bold tracking-wider mt-0.5">RUNIT INFOTECH</span>
-            </div>
-          </div>
+          <a href="#" class="inline-block mb-2">
+            <img src="assets/Runit logo pack/horizontal-lockup-light.png" alt="RUNIT INFOTECH" class="h-10 w-auto object-contain" />
+          </a>
 
           <p class="text-xs text-slate-400 leading-relaxed max-w-md">
             RUNIT INFOTECH (runito.in) is a Digital Technology, Operations, and Experiences company. Empowering Global Enterprises, Retail Chains, and Financial Institutions with Cloud POS Systems, BFSI Billing QC Analytics, and Automated SQL Data Pipelines.
           </p>
 
-          <div class="flex items-center space-x-3 pt-2">
-            <a href="https://www.linkedin.com/in/varun-akshay-fsd/" target="_blank" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-brandRed transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
-            <a href="https://github.com/code-with-varun" target="_blank" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition-colors"><i data-lucide="github" class="w-4 h-4"></i></a>
-            <a href="https://www.youtube.com/@Runit_Infotech" target="_blank" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-brandRed-light transition-colors"><i data-lucide="youtube" class="w-4 h-4"></i></a>
-            <a href="https://code-with-varun.github.io/me-1lybio/" target="_blank" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-brandRed-light transition-colors"><i data-lucide="globe" class="w-4 h-4"></i></a>
+          <div class="flex flex-wrap items-center gap-2.5 pt-2">
+            <a href="https://www.linkedin.com/in/varun-akshay-fsd/" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-100 hover:text-white hover:border-brandRed transition-all flex items-center space-x-2 font-mono text-xs font-semibold shadow-sm">
+              <i data-lucide="linkedin" class="w-4 h-4 text-brandRed"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/code-with-varun" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-100 hover:text-white hover:border-brandRed transition-all flex items-center space-x-2 font-mono text-xs font-semibold shadow-sm">
+              <i data-lucide="github" class="w-4 h-4 text-slate-200"></i>
+              <span>GitHub</span>
+            </a>
+            <a href="https://www.youtube.com/@Runit_Infotech" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-100 hover:text-white hover:border-brandRed transition-all flex items-center space-x-2 font-mono text-xs font-semibold shadow-sm">
+              <i data-lucide="youtube" class="w-4 h-4 text-brandRed"></i>
+              <span>YouTube</span>
+            </a>
+            <a href="https://code-with-varun.github.io/me-1lybio/" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-100 hover:text-white hover:border-brandRed transition-all flex items-center space-x-2 font-mono text-xs font-semibold shadow-sm">
+              <i data-lucide="globe" class="w-4 h-4 text-cyberCyan"></i>
+              <span>Portfolio</span>
+            </a>
           </div>
         </div>
 
@@ -1524,7 +1615,7 @@
             <li><a href="#insights" class="hover:text-white transition-colors">Whitepapers & Research</a></li>
             <li><a href="#leadership" class="hover:text-white transition-colors">Varun Akshay Leadership</a></li>
             <li><a href="#faq" class="hover:text-white transition-colors">Frequently Asked Questions</a></li>
-            <li><a href="javascript:void(0)" onclick="alert('Datamatics-aligned E-Waste & Corporate Governance Policy strictly followed.')" class="hover:text-white transition-colors text-[11px] underline">E-Waste & Governance Policy</a></li>
+            <li><a href="javascript:void(0)" onclick="alert('Corporate Governance & Environmental Sustainability Policy strictly followed.')" class="hover:text-white transition-colors text-[11px] underline">E-Waste & Governance Policy</a></li>
           </ul>
         </div>
 
@@ -1656,7 +1747,7 @@
 
     // Hero Slider System
     let currentSlide = 1;
-    const totalSlides = 3;
+    const totalSlides = 4;
 
     function updateSlideUI() {
       for (let i = 1; i <= totalSlides; i++) {
@@ -1728,6 +1819,58 @@
         ans.classList.remove('hidden');
       }
     }
+
+    // DOM INITIALIZATION
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize Lucide icons
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+
+      // Scroll To Top Button Logic
+      const scrollToTopBtn = document.getElementById('scroll-to-top-btn');
+      if (scrollToTopBtn) {
+        function checkScrollPosition() {
+          const scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+          if (scrollPos > 100) {
+            scrollToTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-6');
+            scrollToTopBtn.classList.add('opacity-100', 'translate-y-0');
+          } else {
+            scrollToTopBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-6');
+            scrollToTopBtn.classList.remove('opacity-100', 'translate-y-0');
+          }
+        }
+
+        window.addEventListener('scroll', checkScrollPosition, { passive: true });
+        document.addEventListener('scroll', checkScrollPosition, { passive: true });
+        checkScrollPosition();
+
+        scrollToTopBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          scrollToTop();
+        });
+      }
+    });
+
+    function scrollToTop(e) {
+      if (e && e.preventDefault) e.preventDefault();
+      const topEl = document.getElementById('page-top') || document.body;
+      if (topEl && topEl.scrollIntoView) {
+        topEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      try {
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+      } catch (err) {
+        window.scrollTo(0, 0);
+      }
+    }
   </script>
+
+  <!-- SCROLL TO TOP BUTTON (Fixed Bottom Right, High Contrast with Inline SVG Arrow) -->
+  <a id="scroll-to-top-btn" href="#page-top" onclick="scrollToTop(event)" aria-label="Scroll to top" class="fixed bottom-8 right-8 z-40 p-3.5 rounded-full bg-brandRed text-white shadow-2xl shadow-brandRed/50 hover:bg-brandRed-dark hover:scale-110 active:scale-95 transition-all duration-300 opacity-0 pointer-events-none transform translate-y-6 border-2 border-white flex items-center justify-center group cursor-pointer text-decoration-none">
+    <svg class="w-6 h-6 transform group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"></path>
+    </svg>
+  </a>
 </body>
 </html>
