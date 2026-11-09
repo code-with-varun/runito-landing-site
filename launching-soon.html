@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-[#07090E] text-slate-100 antialiased selection:bg-[#C8102E] selection:text-white">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RUNITO | Official Inauguration Ceremony</title>
+  <meta name="description" content="Official Inaugural Launch of Runit Infotech (RUNITO). MSME Registered: UDYAM-PY-03-0026319." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/Runit logo pack/app-icon-red.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandRed: {
+              DEFAULT: '#C8102E',
+              dark: '#7D081B',
+              deep: '#500410',
+              vibrant: '#E31B23'
+            },
+            royalGold: {
+              100: '#FFFBEB',
+              200: '#FDE68A',
+              300: '#FCD34D',
+              400: '#F59E0B',
+              500: '#D97706',
+              border: '#EAB308'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Cinzel', 'serif'],
+            heading: ['Outfit', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Canvas Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+  <style>
+    body {
+      background: radial-gradient(circle at 50% 18%, #160B12 0%, #0A0C13 55%, #040508 100%);
+      overflow: hidden;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    /* Architectural Stage Lighting */
+    .stage-light-left {
+      background: radial-gradient(ellipse at 15% 0%, rgba(200, 16, 46, 0.22) 0%, rgba(200, 16, 46, 0.03) 50%, transparent 80%);
+    }
+    .stage-light-right {
+      background: radial-gradient(ellipse at 85% 0%, rgba(217, 119, 6, 0.18) 0%, rgba(217, 119, 6, 0.02) 50%, transparent 80%);
+    }
+
+    /* Silk Satin Ribbon Texture */
+    .satin-cloth {
+      background: linear-gradient(180deg, 
+        #F02A44 0%, 
+        #C8102E 25%, 
+        #9B0C22 55%, 
+        #6B0516 85%, 
+        #48020D 100%
+      );
+      box-shadow: 
+        0 14px 45px rgba(200, 16, 46, 0.5), 
+        0 2px 8px rgba(0, 0, 0, 0.6),
+        inset 0 3px 5px rgba(255, 255, 255, 0.45), 
+        inset 0 -3px 8px rgba(0, 0, 0, 0.7);
+      position: relative;
+    }
+
+    .gold-hem-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #996515, #D4AF37, #FFF2A8, #D4AF37, #AA7C11, #FFF2A8, #996515);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .gold-hem-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #996515, #D4AF37, #FFF2A8, #D4AF37, #AA7C11, #FFF2A8, #996515);
+      box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Ribbon Cloth Sheen Animation */
+    @keyframes sheenPass {
+      0% { transform: translateX(-200%) skewX(-20deg); }
+      100% { transform: translateX(300%) skewX(-20deg); }
+    }
+    .sheen-glow {
+      animation: sheenPass 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+
+    /* Golden Medallion Glow */
+    .gold-medallion {
+      background: linear-gradient(135deg, #FDE68A 0%, #D97706 50%, #78350F 100%);
+      box-shadow: 0 10px 30px rgba(217, 119, 6, 0.45), 0 0 20px rgba(200, 16, 46, 0.3);
+    }
+
+    /* Camera Flash Flare */
+    @keyframes flashFlare {
+      0% { opacity: 0; transform: scale(0.5); }
+      40% { opacity: 1; transform: scale(1.3); }
+      100% { opacity: 0; transform: scale(2.0); }
+    }
+    .paparazzi-flash {
+      animation: flashFlare 0.35s ease-out forwards;
+    }
+
+    /* Ribbon Fall Physics Animation */
+    .ribbon-drop-left {
+      transform: rotate(-32deg) translate(-20px, 120px) scaleX(0.75) !important;
+      opacity: 0 !important;
+      transition: all 1.2s cubic-bezier(0.25, 1, 0.5, 1) !important;
+    }
+    .ribbon-drop-right {
+      transform: rotate(32deg) translate(20px, 120px) scaleX(0.75) !important;
+      opacity: 0 !important;
+      transition: all 1.2s cubic-bezier(0.25, 1, 0.5, 1) !important;
+    }
+  </style>
+</head>
+<body class="h-screen w-screen flex flex-col justify-between items-center text-center px-6 py-6 relative">
+
+  <!-- Ambient Stage Lights -->
+  <div class="stage-light-left absolute inset-0 pointer-events-none"></div>
+  <div class="stage-light-right absolute inset-0 pointer-events-none"></div>
+  
+  <!-- Subtle Stanchions in Background -->
+  <div class="absolute inset-0 flex items-center justify-between px-4 sm:px-16 pointer-events-none opacity-20">
+    <div class="w-4 sm:w-6 h-64 bg-gradient-to-b from-yellow-300 via-amber-600 to-amber-950 rounded-t-full shadow-2xl"></div>
+    <div class="w-4 sm:w-6 h-64 bg-gradient-to-b from-yellow-300 via-amber-600 to-amber-950 rounded-t-full shadow-2xl"></div>
+  </div>
+
+  <!-- Camera Flash Layer -->
+  <div id="flash-layer" class="fixed inset-0 pointer-events-none z-50"></div>
+
+  <!-- HEADER -->
+  <header class="w-full max-w-5xl flex items-center justify-between z-20">
+    <div class="flex items-center space-x-3">
+      <img src="assets/Runit logo pack/horizontal-lockup-light.png" alt="RUNIT (Runit Infotech)" class="h-8 sm:h-10 object-contain drop-shadow-[0_2px_12px_rgba(200,16,46,0.6)]" />
+    </div>
+
+    <div class="flex items-center space-x-2 text-[11px] font-mono text-slate-400 bg-slate-900/80 border border-slate-800 px-3 py-1.5 rounded-full">
+      <span class="h-2 w-2 rounded-full bg-emerald-500 animate-ping"></span>
+      <span class="text-slate-300">MSME: UDYAM-PY-03-0026319</span>
+    </div>
+  </header>
+
+  <!-- MAIN CEREMONIAL STAGE -->
+  <main class="w-full max-w-4xl flex-1 flex flex-col justify-center items-center relative z-20 my-auto">
+    
+    <!-- Title & Dignified Copy -->
+    <div class="mb-10 space-y-3">
+      <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-mono uppercase tracking-widest shadow-sm">
+        <i data-lucide="award" class="w-4 h-4 text-amber-400"></i>
+        <span>Official Inaugural Ceremony</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl md:text-6xl font-serif font-extrabold tracking-tight text-white uppercase drop-shadow-lg leading-tight">
+        The Inauguration of RUNITO
+      </h1>
+
+      <p class="text-sm sm:text-base text-slate-300 font-sans max-w-lg mx-auto font-light leading-relaxed">
+        We cordially invite you to inaugurate the enterprise platform. Click the ceremonial golden shears below to cut the ribbon.
+      </p>
+    </div>
+
+    <!-- CEREMONIAL SATIN RIBBON -->
+    <div id="ribbon-stage" class="w-full relative py-12 flex items-center justify-center">
+      
+      <!-- Left Ribbon Half -->
+      <div id="ribbon-left" class="satin-cloth h-16 sm:h-20 w-1/2 rounded-l-lg transition-all duration-700 ease-out origin-left flex items-center justify-end pr-8 shadow-2xl overflow-hidden">
+        <div class="gold-hem-top"></div>
+        <div class="gold-hem-bottom"></div>
+        <div class="sheen-glow absolute inset-0 w-32 bg-gradient-to-r from-transparent via-white/35 to-transparent pointer-events-none"></div>
+        <span class="text-[11px] sm:text-xs font-serif tracking-[0.2em] text-amber-200 uppercase font-bold hidden md:inline-block drop-shadow">
+          RUNIT INFOTECH • ESTD 2026
+        </span>
+      </div>
+
+      <!-- Center Golden Shears & Seal -->
+      <div id="ribbon-center" class="absolute z-30 flex flex-col items-center justify-center transition-all duration-500">
+        
+        <button id="inaugurate-btn" onclick="executeRibbonCutting()" aria-label="Inaugurate Platform" class="group relative flex flex-col items-center justify-center focus:outline-none cursor-pointer">
+          
+          <!-- Outer Pulsing Glow -->
+          <div class="absolute -inset-5 rounded-full bg-gradient-to-r from-amber-500/30 via-[#C8102E]/40 to-amber-500/30 blur-xl group-hover:scale-125 transition-all duration-500 animate-pulse"></div>
+
+          <!-- Golden Medallion Ring -->
+          <div class="relative h-24 w-24 sm:h-28 sm:w-28 rounded-full gold-medallion p-[3px] shadow-[0_12px_40px_rgba(217,119,6,0.6)] transform group-hover:scale-110 active:scale-95 transition-all duration-300">
+            <div class="h-full w-full rounded-full bg-[#120914] flex flex-col items-center justify-center border-2 border-amber-200/60 relative overflow-hidden">
+              
+              <!-- Golden Ceremonial Shears Icon -->
+              <div class="text-amber-300 group-hover:text-yellow-100 transition-colors transform group-hover:scale-105">
+                <svg class="w-10 h-10 sm:w-12 sm:h-12 transform -rotate-45 drop-shadow-[0_2px_8px_rgba(245,158,11,0.6)]" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="6" cy="6" r="3"></circle>
+                  <circle cx="6" cy="18" r="3"></circle>
+                  <line x1="20" y1="4" x2="8.12" y2="15.88"></line>
+                  <line x1="14.47" y1="14.48" x2="20" y2="20"></line>
+                  <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
+                </svg>
+              </div>
+
+              <span class="text-[9px] sm:text-[10px] font-mono font-bold tracking-[0.2em] text-amber-300 uppercase mt-0.5">
+                INAUGURATE
+              </span>
+            </div>
+          </div>
+
+          <!-- Elegant Badge Callout -->
+          <div class="mt-4 px-5 py-2 rounded-full bg-gradient-to-r from-amber-500/20 via-amber-500/30 to-amber-500/20 border border-amber-400/50 text-amber-300 text-xs font-mono tracking-widest font-bold shadow-xl group-hover:bg-amber-500 group-hover:text-black group-hover:border-amber-300 transition-all">
+            CUT RIBBON TO ENTER
+          </div>
+        </button>
+      </div>
+
+      <!-- Right Ribbon Half -->
+      <div id="ribbon-right" class="satin-cloth h-16 sm:h-20 w-1/2 rounded-r-lg transition-all duration-700 ease-out origin-right flex items-center justify-start pl-8 shadow-2xl overflow-hidden">
+        <div class="gold-hem-top"></div>
+        <div class="gold-hem-bottom"></div>
+        <div class="sheen-glow absolute inset-0 w-32 bg-gradient-to-r from-transparent via-white/35 to-transparent pointer-events-none"></div>
+        <span class="text-[11px] sm:text-xs font-serif tracking-[0.2em] text-amber-200 uppercase font-bold hidden md:inline-block drop-shadow">
+          FINTECH • ENTERPRISE SUITE
+        </span>
+      </div>
+
+    </div>
+
+    <!-- Status Subtitle -->
+    <div id="inauguration-status" class="text-xs font-mono text-slate-400 mt-3 tracking-widest flex items-center space-x-2">
+      <span class="h-2 w-2 rounded-full bg-amber-400"></span>
+      <span>AWAITING CEREMONIAL RIBBON CUTTING</span>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full max-w-5xl flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 font-mono border-t border-slate-800/80 pt-4 z-20">
+    <div class="flex items-center space-x-3">
+      <span class="text-white font-semibold">RUNIT INFOTECH (runito.in)</span>
+      <span class="text-slate-600">•</span>
+      <span>Founder: S Varunakshay</span>
+    </div>
+    
+    <div class="mt-2 sm:mt-0 flex items-center space-x-4">
+      <a href="index.html" class="text-amber-400 hover:text-white transition-colors underline underline-offset-4">
+        Direct Portal Access →
+      </a>
+    </div>
+  </footer>
+
+  <!-- FULLSCREEN CURTAIN REVEAL OVERLAY -->
+  <div id="curtain-overlay" class="fixed inset-0 pointer-events-none z-50 opacity-0 transition-opacity duration-500 flex items-center justify-center bg-black">
+    
+    <!-- Left Velvet Curtain -->
+    <div id="curtain-left" class="w-1/2 h-full bg-gradient-to-r from-[#38020A] via-[#6B0516] to-[#8E001A] border-r-4 border-amber-400 shadow-[20px_0_50px_rgba(0,0,0,0.9)] transform -translate-x-full transition-transform duration-800 ease-in-out"></div>
+    
+    <!-- Center Inactive Medallion Seal (Visible when curtains meet) -->
+    <div id="curtain-seal" class="absolute z-50 flex flex-col items-center justify-center opacity-0 scale-75 transition-all duration-500 pointer-events-none">
+      <div class="h-20 w-20 rounded-full bg-gradient-to-b from-amber-300 via-amber-500 to-amber-700 p-[3px] shadow-[0_0_50px_rgba(245,158,11,0.7)] flex items-center justify-center mb-4">
+        <div class="h-full w-full rounded-full bg-[#120914] flex items-center justify-center border-2 border-amber-200">
+          <img src="assets/Runit logo pack/app-icon-red.png" alt="R" class="h-10 w-10 object-contain drop-shadow" />
+        </div>
+      </div>
+      <img src="assets/Runit logo pack/horizontal-lockup-light.png" alt="RUNITO" class="h-9 mb-2 drop-shadow-[0_4px_20px_rgba(234,179,8,0.8)]" />
+      <div class="px-4 py-1.5 rounded-full bg-amber-500/20 border border-amber-400/60 text-amber-300 font-mono text-xs tracking-widest uppercase font-bold shadow-lg">
+        INAUGURATION COMPLETE • ENTERING PORTAL...
+      </div>
+    </div>
+
+    <!-- Right Velvet Curtain -->
+    <div id="curtain-right" class="w-1/2 h-full bg-gradient-to-l from-[#38020A] via-[#6B0516] to-[#8E001A] border-l-4 border-amber-400 shadow-[-20px_0_50px_rgba(0,0,0,0.9)] transform translate-x-full transition-transform duration-800 ease-in-out"></div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    // WEB AUDIO SYNTHESIZER: Ceremonial Snip & Fanfare
+    function playCeremonyAudio() {
+      try {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (!AudioCtx) return;
+        const ctx = new AudioCtx();
+
+        // 1. Sharp Scissor Snip
+        const bufferSize = ctx.sampleRate * 0.08;
+        const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+        const data = buffer.getChannelData(0);
+        for (let i = 0; i < bufferSize; i++) {
+          data[i] = Math.random() * 2 - 1;
+        }
+
+        const noise = ctx.createBufferSource();
+        noise.buffer = buffer;
+        const filter = ctx.createBiquadFilter();
+        filter.type = 'highpass';
+        filter.frequency.value = 2200;
+
+        const noiseGain = ctx.createGain();
+        noiseGain.gain.setValueAtTime(0.7, ctx.currentTime);
+        noiseGain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.08);
+
+        noise.connect(filter);
+        filter.connect(noiseGain);
+        noiseGain.connect(ctx.destination);
+        noise.start();
+
+        // 2. Harmonic Inauguration Chime (Orchestral C-Major)
+        const notes = [523.25, 659.25, 783.99, 1046.50];
+        notes.forEach((freq, idx) => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(freq, ctx.currentTime + 0.04 + idx * 0.04);
+
+          gain.gain.setValueAtTime(0.01, ctx.currentTime + 0.04);
+          gain.gain.linearRampToValueAtTime(0.22, ctx.currentTime + 0.12 + idx * 0.04);
+          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 2.4);
+
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start(ctx.currentTime + 0.04 + idx * 0.04);
+          osc.stop(ctx.currentTime + 2.5);
+        });
+      } catch (e) {}
+    }
+
+    // PAPARAZZI CAMERA FLASHES
+    function triggerCameraFlashes() {
+      const flashLayer = document.getElementById('flash-layer');
+      for (let i = 0; i < 18; i++) {
+        setTimeout(() => {
+          const flash = document.createElement('div');
+          const posX = Math.random() * 88 + 6;
+          const posY = Math.random() * 78 + 10;
+          const size = Math.random() * 140 + 80;
+
+          flash.className = 'absolute rounded-full bg-white blur-xl paparazzi-flash';
+          flash.style.left = `${posX}%`;
+          flash.style.top = `${posY}%`;
+          flash.style.width = `${size}px`;
+          flash.style.height = `${size}px`;
+
+          flashLayer.appendChild(flash);
+          setTimeout(() => flash.remove(), 450);
+        }, i * 110);
+      }
+    }
+
+    // CEREMONIAL RIBBON CUTTING ACTION
+    let hasCut = false;
+
+    function executeRibbonCutting() {
+      if (hasCut) return;
+      hasCut = true;
+
+      playCeremonyAudio();
+
+      const ribbonLeft = document.getElementById('ribbon-left');
+      const ribbonRight = document.getElementById('ribbon-right');
+      const ribbonCenter = document.getElementById('ribbon-center');
+      const statusText = document.getElementById('inauguration-status');
+
+      // 1. Snip & Drop Ribbon Halves
+      ribbonCenter.classList.add('scale-0', 'opacity-0');
+      ribbonLeft.classList.add('ribbon-drop-left');
+      ribbonRight.classList.add('ribbon-drop-right');
+
+      statusText.innerHTML = `<span class="text-amber-400 font-bold text-sm tracking-wider">🎉 OFFICIALLY INAUGURATED! CLOSING CURTAINS...</span>`;
+
+      // 2. Confetti Explosion
+      if (window.confetti) {
+        confetti({
+          particleCount: 160,
+          spread: 110,
+          origin: { y: 0.55 },
+          colors: ['#C8102E', '#F59E0B', '#FDE68A', '#FFFFFF', '#7D081B']
+        });
+
+        setTimeout(() => {
+          confetti({
+            particleCount: 90,
+            angle: 60,
+            spread: 60,
+            origin: { x: 0 },
+            colors: ['#F59E0B', '#C8102E', '#FFFFFF']
+          });
+          confetti({
+            particleCount: 90,
+            angle: 120,
+            spread: 60,
+            origin: { x: 1 },
+            colors: ['#F59E0B', '#C8102E', '#FFFFFF']
+          });
+        }, 300);
+      }
+
+      // 3. Camera Flashbulbs
+      triggerCameraFlashes();
+
+      // 4. SCREEN CLOSES: Velvet Curtains Slide to Center & Meet
+      const curtainOverlay = document.getElementById('curtain-overlay');
+      const curtainLeft = document.getElementById('curtain-left');
+      const curtainRight = document.getElementById('curtain-right');
+      const curtainSeal = document.getElementById('curtain-seal');
+
+      setTimeout(() => {
+        curtainOverlay.classList.remove('pointer-events-none', 'opacity-0');
+        curtainOverlay.classList.add('opacity-100');
+
+        curtainLeft.classList.remove('-translate-x-full');
+        curtainLeft.classList.add('translate-x-0');
+
+        curtainRight.classList.remove('translate-x-full');
+        curtainRight.classList.add('translate-x-0');
+      }, 700);
+
+      // Show Golden Seal in center when curtains meet
+      setTimeout(() => {
+        curtainSeal.classList.remove('opacity-0', 'scale-75');
+        curtainSeal.classList.add('opacity-100', 'scale-100');
+      }, 1200);
+
+      // 5. Navigate to index.html with inaugurated flag
+      setTimeout(() => {
+        sessionStorage.setItem('runito_inaugurated', 'true');
+        window.location.href = 'index.html?launch=true';
+      }, 1900);
+    }
+  </script>
+</body>
+</html>
